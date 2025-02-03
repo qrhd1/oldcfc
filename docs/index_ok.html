@@ -5,55 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visualiseur de PDF</title>
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            margin: 0; 
-            padding: 20px; 
-            background-color: #f0f0f0;
-        }
-        h1 { 
-            color: #2c3e50; 
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        h2 { 
-            color: #34495e; 
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-        }
-        .file-group { 
-            background-color: white;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .file-table { 
-            display: grid; 
-            grid-template-columns: repeat(4, 1fr); 
-            gap: 15px; 
-        }
-        .file-cell {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-        .file-link { 
-            text-decoration: none; 
-            color: #2980b9; 
-            margin-bottom: 5px;
-        }
-        .file-link:hover { 
-            text-decoration: underline; 
-        }
-        .file-link.corrige { 
-            font-size: 0.85em; 
-            color: #27ae60;
-        }
-        .year-separator { 
-            border-top: 1px solid #bdc3c7; 
-            margin: 20px 0; 
-        }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
+        h1, h2 { color: #333; }
+        .file-group { margin-bottom: 30px; }
+        .file-table { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+        .file-link { text-decoration: none; color: #0366d6; }
+        .file-link:hover { text-decoration: underline; }
+        .year-separator { border-top: 1px solid #ccc; margin: 20px 0; }
     </style>
 </head>
 <body>
@@ -66,10 +24,10 @@
 
         function groupFiles(files) {
             const groups = {
-                'Électricien.ne de montage': { files: [] },
-                'Installateur.trice-électricien.ne': { files: [] },
-                'Planificateur.trice-électricien.ne': { files: [] },
-                'Télématicien.ne': { files: [] }
+                'Électricien.ne de montage': { donnee: [], corrige: [] },
+                'Installateur.trice-électricien.ne': { donnee: [], corrige: [] },
+                'Planificateur.trice-électricien.ne': { donnee: [], corrige: [] },
+                'Télématicien.ne': { donnee: [], corrige: [] }
             };
 
             files.forEach(file => {
@@ -86,7 +44,11 @@
                 }
 
                 if (group) {
-                    group.files.push(file);
+                    if (name.endsWith('corrige.pdf') || name.endsWith('exp.pdf')) {
+                        group.corrige.push(file);
+                    } else if (name.endsWith('donnee.pdf') || name.endsWith('cand.pdf')) {
+                        group.donnee.push(file);
+                    }
                 }
             });
 
@@ -110,7 +72,7 @@
         function renderFiles(container, files) {
             const groups = groupFiles(files);
 
-            for (const [groupName, groupData] of Object.entries(groups)) {
+            for (const [groupName, groupFiles] of Object.entries(groups)) {
                 const groupDiv = document.createElement('div');
                 groupDiv.className = 'file-group';
                 container.appendChild(groupDiv);
@@ -119,7 +81,8 @@
                 groupTitle.textContent = groupName;
                 groupDiv.appendChild(groupTitle);
 
-                groupData.files.sort((a, b) => {
+                const combinedFiles = groupFiles.donnee.concat(groupFiles.corrige);
+                combinedFiles.sort((a, b) => {
                     const yearA = getYear(a.name);
                     const yearB = getYear(b.name);
                     return yearB - yearA;
@@ -129,7 +92,7 @@
                 let fileTable = document.createElement('div');
                 fileTable.className = 'file-table';
 
-                groupData.files.forEach(file => {
+                combinedFiles.forEach(file => {
                     const fileYear = getYear(file.name);
                     if (fileYear !== currentYear) {
                         if (currentYear !== null) {
@@ -143,25 +106,8 @@
                         currentYear = fileYear;
                     }
 
-                    const fileCell = document.createElement('div');
-                    fileCell.className = 'file-cell';
-
-                    const mainLink = createFileLink(file);
-                    fileCell.appendChild(mainLink);
-
-                    // Cherche le fichier corrigé correspondant
-                    const baseName = file.name.replace(/_(donnee|cand)\.pdf$/, '');
-                    const corrigeFile = groupData.files.find(f => 
-                        f.name.startsWith(baseName) && (f.name.endsWith('_corrige.pdf') || f.name.includes('exp'))
-                    );
-
-                    if (corrigeFile) {
-                        const corrigeLink = createFileLink(corrigeFile);
-                        corrigeLink.className = 'file-link corrige';
-                        fileCell.appendChild(corrigeLink);
-                    }
-
-                    fileTable.appendChild(fileCell);
+                    const fileLink = createFileLink(file);
+                    fileTable.appendChild(fileLink);
                 });
 
                 groupDiv.appendChild(fileTable);
