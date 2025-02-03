@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accès aux fichiers PDF</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Accès aux fichiers PDF</h1>
+
+    <h2>Électricien.ne de montage</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Corrigé/Exp</th>
+                <th>Donnée/Cand</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="elm-corrige-exp"></td>
+                <td id="elm-donnee-cand"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Installateur.trice-électricien.ne</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Corrigé/Exp</th>
+                <th>Donnée/Cand</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="iel-corrige-exp"></td>
+                <td id="iel-donnee-cand"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Planificateur.trice-électricien.ne</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Corrigé/Exp</th>
+                <th>Donnée/Cand</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="pele-corrige-exp"></td>
+                <td id="pele-donnee-cand"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Télématicien.ne</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Corrigé/Exp</th>
+                <th>Donnée/Cand</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="tlm-corrige-exp"></td>
+                <td id="tlm-donnee-cand"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        // Liste des fichiers PDF
+        const pdfFiles = [
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_BT_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_BT_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_BT_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_BT_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_BT_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_BT_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_BT_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_BT_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_DT_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_DT_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_DT_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_DT_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_DTno_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_DTno_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_DTno_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_DTno_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_DTpl_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_DTpl_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_DTpl_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_DTpl_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_DTsc_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_DTsc_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_DTsc_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_DTsc_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_TC_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_TC_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_TC_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_TC_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_TR_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_TR_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_TS_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_TS_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_TS_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_TS_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_TS_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_TS_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_TS_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2011_TS_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_BT_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_BT_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_BT_IELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_BT_IELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_BT_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_BT_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_BT_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_BT_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_DT_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_DT_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_DT_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_DT_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_DTno_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_DTno_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_DTno_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_DTno_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_DTpl_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_DTpl_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_DTpl_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_DTpl_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_DTsc_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_DTsc_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_DTsc_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_DTsc_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_TC_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_TC_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_TC_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_TC_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_TR_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_TR_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_TS_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_TS_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_TS_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_TS_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_TS_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_TS_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_TS_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2012_TS_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_BT_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_BT_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_BT_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_BT_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_BT_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_BT_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_BT_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_BT_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_DT_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_DT_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_DT_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_DT_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_DTno_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_DTno_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_DTno_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_DTno_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_DTpl_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_DTpl_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_DTpl_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_DTpl_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_DTsc_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_DTsc_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_DTsc_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_DTsc_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_TC_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_TC_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_TC_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_TC_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_TC_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_TC_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_TS_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_TS_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_TS_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_TS_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_TS_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_TS_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_TS_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2013_TS_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_BT_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_BT_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_BT_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_BT_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_BT_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_BT_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_BT_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_BT_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_DTSC_annexe_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_DT_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_DT_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_DT_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_DT_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_DTno_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_DTno_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_DTno_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_DTno_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_DTpl_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_DTpl_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_DTpl_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_DTpl_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_DTsc_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_DTsc_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_DTsc_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_DTsc_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_DTsc_annexe_IELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_TC_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_TC_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_TC_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_TC_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_TR_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_TR_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_TS_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_TS_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_TS_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_TS_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_TS_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_TS_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_TS_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2014_TS_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_BT_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_BT_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_BT_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_BT_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_BT_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_BT_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_BT_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_BT_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_DT_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_DT_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_DT_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_DT_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_DTno_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_DTno_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_DTno_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_DTno_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_DTpl_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_DTpl_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_DTpl_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_DTpl_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_DTsc_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_DTsc_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_DTsc_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_DTsc_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_TC_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_TC_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_TC_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_TC_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_TR_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_TR_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_TS_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_TS_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_TS_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_TS_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_TS_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_TS_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_TS_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_TS_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_DT_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_DT_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_DT_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_DT_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_DTno_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_DTno_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_DTno_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_DTno_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_DTpl_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_DTpl_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_DTpl_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_DTpl_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_DTsc_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_DTsc_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_DTsc_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_DTsc_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_TC_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_TC_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_TC_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_TC_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_TR_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_TR_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_TS_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_TS_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_TS_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_TS_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_TS_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_TS_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_TS_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2015_zero_TS_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_BT_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_BT_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_BT_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_BT_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_BT_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_BT_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_BT_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_BT_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_DT_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_DT_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_DT_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_DT_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_DTno_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_DTno_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_DTno_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_DTno_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_DTpl_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_DTpl_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_DTpl_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_DTpl_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_DTsc_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_DTsc_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_DTsc_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_DTsc_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_TC_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_TC_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_TC_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_TC_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_TR_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_TR_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_TS_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_TS_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_TS_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_TS_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_TS_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_TS_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_TS_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2016_TS_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_BT_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_BT_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_BT_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_BT_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_BT_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_BT_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_BT_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_BT_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_DT_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_DT_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_DT_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_DT_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_DTno_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_DTno_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_DTno_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_DTno_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_DTpl_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_DTpl_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_DTpl_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_DTpl_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_DTsc_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_DTsc_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_DTsc_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_DTsc_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_TC_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_TC_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_TC_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_TC_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_TR_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_TR_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_TS_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_TS_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_TS_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_TS_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_TS_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_TS_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_TS_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2017_TS_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_BT_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_BT_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_BT_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_BT_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_BT_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_BT_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_DT_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_DT_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_DT_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_DT_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_DTno_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_DTno_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_DTno_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_DTpl_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_DTpl_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_DTpl_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_DTpl_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_DTsc_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_DTsc_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_DTsc_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_DTsc_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_TC_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_TC_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_TC_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_TC_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_TR_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_TR_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_TS_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_TS_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_TS_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_TS_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_TS_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_TS_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_TS_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2018_TS_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_DT_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_DT_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_DT_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_DT_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_DTno_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_DTno_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_DTno_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_DTno_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_DTpl_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_DTpl_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_DTpl_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_DTpl_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_DTsc_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_DTsc_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_DTsc_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_DTsc_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_TC_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_TC_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_TC_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_TC_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_TP_EM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_TP_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_TP_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_TR_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_TR_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_TS_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_TS_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_TS_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_TS_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_TS_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_TS_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_TS_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2019_TS_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_DT_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_DT_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_DT_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_DT_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_DTno_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_DTno_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_DTno_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_DTno_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_DTpl_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_DTpl_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_DTpl_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_DTsc_ELM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_DTsc_ELM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_DTsc_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_DTsc_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_TC_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_TC_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_TC_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_TC_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_TR_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_TR_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_TS_IEL_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_TS_IEL_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_TS_PELE_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_TS_PELE_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_TS_TLM_corrige.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/2021_TS_TLM_donnee.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/EM_Pos_3_DT_Règles_techn_cand_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/EM_Pos_3_DT_Règles_techn_cand_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/EM_Pos_3_DT_Règles_techn_exp_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/EM_Pos_3_DT_Règles_techn_exp_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/EM_Pos_4_DT_Schéma_installation_cand_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/EM_Pos_4_DT_Schéma_installation_cand_QV22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/EM_Pos_4_DT_Schéma_installation_exp_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/EM_Pos_4_DT_Schéma_installation_exp_QV22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/EM_Pos_5_DT_Plan_installation_cand_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/EM_Pos_5_DT_Plan_installation_cand_PQ23_A3.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/EM_Pos_5_DT_Plan_installation_exp_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/EM_Pos_5_DT_Plan_installation_exp_PQ23_A3.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/EM_Pos_5_TD_Plan_installation_cand_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/EM_Pos_5_TD_Plan_installation_exp_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/EM_Pos_5_TD_Plan_installation_exp_eva_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/EM_Pos_5_TD_Plan_installation_exp_eva_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/EM_Pos_7_Techn_système_élec_incl_bases_techn_cand_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/EM_Pos_7_Techn_système_élec_incl_bases_techn_cand_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/EM_Pos_7_Techn_système_élec_incl_bases_techn_exp_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/EM_Pos_7_Techn_système_élec_incl_bases_techn_exp_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/IE_Pos_3_DT_Regles_techn_cand_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/IE_Pos_3_DT_Regles_techn_cand_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/IE_Pos_3_DT_Regles_techn_exp_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/IE_Pos_3_DT_Regles_techn_exp_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/IE_Pos_4_DT_Schema_installation_cand_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/IE_Pos_4_DT_Schema_installation_exp_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/IE_Pos_4_DT_Schéma_installation_cand_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/IE_Pos_4_DT_Schéma_installation_exp_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/IE_Pos_5_DT_Plan_installation_cand_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/IE_Pos_5_DT_Plan_installation_cand_PQ23_A3.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/IE_Pos_5_DT_Plan_installation_exp_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/IE_Pos_5_DT_Plan_installation_exp_PQ23_A3.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/IE_Pos_5_DT_Plan_installation_exp_eva_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/IE_Pos_5_TD_Plan_installation_cand_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/IE_Pos_5_TD_Plan_installation_exp_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/IE_Pos_5_TD_Plan_installation_exp_eva_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/IE_Pos_7_Techn_systeme_elec_incl_bases_techn_cand_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/IE_Pos_7_Techn_systeme_elec_incl_bases_techn_exp_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/IE_Pos_7_Techn_système_élec_incl_bases_techn_cand_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/IE_Pos_7_Techn_système_élec_incl_bases_techn_exp_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/IE_Pos_8_Techn_communication_cand_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/IE_Pos_8_Techn_communication_cand_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/IE_Pos_8_Techn_communication_exp_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/IE_Pos_8_Techn_communication_exp_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/PE_Pos_3_DT_Regles_techn_cand_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/PE_Pos_3_DT_Regles_techn_cand_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/PE_Pos_3_DT_Regles_techn_exp_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/PE_Pos_3_DT_Regles_techn_exp_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/PE_Pos_5_Techn_système_élec_incl_bases_techn_cand_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/PE_Pos_5_Techn_système_élec_incl_bases_techn_cand_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/PE_Pos_5_Techn_système_élec_incl_bases_techn_exp_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/PE_Pos_5_Techn_système_élec_incl_bases_techn_exp_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/PE_Pos_6_Techn_communication_cand_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/PE_Pos_6_Techn_communication_cand_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/PE_Pos_6_Techn_communication_exp_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/PE_Pos_6_Techn_communication_exp_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/TM_Pos_2_DT_Docu_installation_cand_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/TM_Pos_2_DT_Docu_installation_cand_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/TM_Pos_2_DT_Docu_installation_cand_PQ23_plan_A3.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/TM_Pos_2_DT_Docu_installation_exp_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/TM_Pos_2_DT_Docu_installation_exp_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/TM_Pos_2_DT_Docu_installation_exp_PQ23_plan_A3.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/TM_Pos_4_Télém_techn_réseau_cand_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/TM_Pos_4_Télém_techn_réseau_cand_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/TM_Pos_4_Télém_techn_réseau_exp_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/TM_Pos_4_Télém_techn_réseau_exp_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/TM_Pos_6_Techn_système_élec_incl_bases_techn_cand_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/TM_Pos_6_Techn_système_élec_incl_bases_techn_cand_PQ23.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/TM_Pos_6_Techn_système_élec_incl_bases_techn_exp_PQ22.pdf",
+    "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/TM_Pos_6_Techn_système_élec_incl_bases_techn_exp_PQ23.pdf"
+];
+//https://github.com/qrhd1/oldcfc/blob/main/pdf_files/2011_BT_ELM_corrige.pdf
+
+        //const baseUrl = "https://github.com/qrhd1/oldcfc/raw/main/pdf_files/";
+        const baseUrl = "";
+
+        function categorizeFiles(files) {
+            const categories = {
+                elm: { corrigeExp: [], donneeCand: [] },
+                iel: { corrigeExp: [], donneeCand: [] },
+                pele: { corrigeExp: [], donneeCand: [] },
+                tlm: { corrigeExp: [], donneeCand: [] }
+            };
+
+            files.forEach(file => {
+                if (file.includes("ELM") || file.startsWith("EM")) {
+                    if (file.includes("corrige") || file.includes("exp")) {
+                        categories.elm.corrigeExp.push(file);
+                    } else if (file.includes("donnee") || file.includes("cand")) {
+                        categories.elm.donneeCand.push(file);
+                    }
+                } else if (file.includes("IEL") || file.startsWith("IE")) {
+                    if (file.includes("corrige") || file.includes("exp")) {
+                        categories.iel.corrigeExp.push(file);
+                    } else if (file.includes("donnee") || file.includes("cand")) {
+                        categories.iel.donneeCand.push(file);
+                    }
+                } else if (file.includes("PELE") || file.startsWith("PE")) {
+                    if (file.includes("corrige") || file.includes("exp")) {
+                        categories.pele.corrigeExp.push(file);
+                    } else if (file.includes("donnee") || file.includes("cand")) {
+                        categories.pele.donneeCand.push(file);
+                    }
+                } else if (file.includes("TLM") || file.startsWith("TM")) {
+                    if (file.includes("corrige") || file.includes("exp")) {
+                        categories.tlm.corrigeExp.push(file);
+                    } else if (file.includes("donnee") || file.includes("cand")) {
+                        categories.tlm.donneeCand.push(file);
+                    }
+                }
+            });
+
+            return categories;
+        }
+
+        function displayFiles(categories) {
+            displayCategory(categories.elm, "elm-corrige-exp", "elm-donnee-cand");
+            displayCategory(categories.iel, "iel-corrige-exp", "iel-donnee-cand");
+            displayCategory(categories.pele, "pele-corrige-exp", "pele-donnee-cand");
+            displayCategory(categories.tlm, "tlm-corrige-exp", "tlm-donnee-cand");
+        }
+
+        function displayCategory(category, corrigeExpId, donneeCandId) {
+            const corrigeExpElement = document.getElementById(corrigeExpId);
+            const donneeCandElement = document.getElementById(donneeCandId);
+
+            category.corrigeExp.forEach(file => {
+                corrigeExpElement.innerHTML += `<a href="${baseUrl}${file}" target="_blank">${file}</a><br>`;
+            });
+
+            category.donneeCand.forEach(file => {
+                donneeCandElement.innerHTML += `<a href="${baseUrl}${file}" target="_blank">${file}</a><br>`;
+            });
+        }
+
+        const categories = categorizeFiles(pdfFiles);
+        displayFiles(categories);
+    </script>
+</body>
+</html>
