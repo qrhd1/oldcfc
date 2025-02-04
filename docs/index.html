@@ -2,191 +2,136 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fichiers PDF - CFC</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            background-color: #f0f0f0;
         }
-        h1 {
-            color: #333;
+        .file-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .file-item {
+            border: 1px solid #ddd;
+            padding: 10px;
             text-align: center;
+            display: flex;
+            flex-direction: column;
         }
-        h2 {
-            color: #444;
-            margin-top: 30px;
+        .file-name {
+            font-size: 14px;
+            margin-bottom: 5px;
         }
-        .file-group {
-            background-color: white;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        td {
-            padding: 5px;
-            vertical-align: top;
-        }
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .corrige {
-            font-size: 0.8em;
+        .file-corrige {
+            font-size: 10px;
             color: #666;
-            margin-left: 10px;
-        }
-        .year-separator {
-            background-color: #e0e0e0;
-            padding: 5px;
-            margin: 10px 0;
-            font-weight: bold;
-            text-align: center;
-        }
-        #pdfPreview {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.8);
-            display: none;
-            justify-content: center;
-            align-items: center;
-        }
-        #pdfPreview iframe {
-            width: 80%;
-            height: 80%;
-            border: none;
-        }
-        #closePreview {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
+            margin-top: 3px;
         }
     </style>
 </head>
 <body>
-    <h1>Fichiers PDF - CFC</h1>
-    <div id="fileContainer"></div>
-    <div id="pdfPreview">
-        <span id="closePreview">&times;</span>
-        <iframe></iframe>
-    </div>
+    <h1>Fichiers PDF CFC</h1>
+
+    <h2>Électricien.ne de montage</h2>
+    <div id="elm-files" class="file-grid"></div>
+
+    <h2>Installateur.trice-électricien.ne</h2>
+    <div id="iel-files" class="file-grid"></div>
+
+    <h2>Planificateur.trice-électricien.ne</h2>
+    <div id="pele-files" class="file-grid"></div>
+
+    <h2>Télématicien.ne</h2>
+    <div id="tlm-files" class="file-grid"></div>
 
     <script>
-        const owner = 'qrhd1';
-        const repo = 'oldcfc';
-        const path = 'pdf_files';
-
         async function fetchFiles() {
-            const response = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`);
-            const data = await response.json();
-            return data.filter(file => file.name.endsWith('.pdf'));
+            const apiUrl = 'https://api.github.com/repos/qrhd1/oldcfc/contents/pdf_files';
+            const response = await fetch(apiUrl);
+            const files = await response.json();
+            return files.filter(file => file.name.endsWith('.pdf'));
         }
 
         function groupFiles(files) {
             const groups = {
-                'Électricien.ne de montage': { donnee: [], corrige: [] },
-                'Installateur.trice-électricien.ne': { donnee: [], corrige: [] },
-                'Planificateur.trice-électricien.ne': { donnee: [], corrige: [] },
-                'Télématicien.ne': { donnee: [], corrige: [] }
+                'elm': [], 'iel': [], 'pele': [], 'tlm': []
             };
 
             files.forEach(file => {
-                const fileName = file.name;
-                let group;
-                if (fileName.includes('ELM')) group = 'Électricien.ne de montage';
-                else if (fileName.includes('IEL')) group = 'Installateur.trice-électricien.ne';
-                else if (fileName.includes('PELE')) group = 'Planificateur.trice-électricien.ne';
-                else if (fileName.includes('TLM')) group = 'Télématicien.ne';
+                const name = file.name.toLowerCase();
+                let category;
+
+                if (name.includes('elm')) category = 'elm';
+                else if (name.includes('iel')) category = 'iel';
+                else if (name.includes('pele')) category = 'pele';
+                else if (name.includes('tlm')) category = 'tlm';
                 else return;
 
-                if (fileName.endsWith('corrige.pdf')) {
-                    groups[group].corrige.push(file);
-                } else {
-                    groups[group].donnee.push(file);
-                }
+                groups[category].push(file);
             });
 
             return groups;
         }
 
-        function getYearFromFileName(fileName) {
-            const yearMatch = fileName.match(/(20\d{2}|PQ\d{2})/);
-            return yearMatch ? yearMatch[0] : null;
+        function createFileElement(files) {
+            const container = document.createElement('div');
+            container.className = 'file-item';
+
+            // Trouver le fichier "donnee"
+            const donneeFile = files.find(f => f.name.toLowerCase().includes('donnee'));
+            const corrigeFile = files.find(f => f.name.toLowerCase().includes('corrige'));
+
+            if (donneeFile) {
+                const donneeLink = document.createElement('a');
+                donneeLink.href = donneeFile.download_url;
+                donneeLink.target = '_blank';
+                donneeLink.className = 'file-name';
+                donneeLink.textContent = donneeFile.name.split('/').pop().replace('.pdf', '');
+                container.appendChild(donneeLink);
+
+                if (corrigeFile) {
+                    const corrigeLink = document.createElement('a');
+                    corrigeLink.href = corrigeFile.download_url;
+                    corrigeLink.target = '_blank';
+                    corrigeLink.className = 'file-corrige';
+                    corrigeLink.textContent = corrigeFile.name.split('/').pop().replace('.pdf', '');
+                    container.appendChild(corrigeLink);
+                }
+            }
+
+            return container;
         }
 
-        function displayFiles(groups) {
-            const container = document.getElementById('fileContainer');
-            
-            for (const [groupName, files] of Object.entries(groups)) {
-                const groupDiv = document.createElement('div');
-                groupDiv.className = 'file-group';
-                groupDiv.innerHTML = `<h2>${groupName}</h2>`;
+        function displayGroupedFiles(groupedFiles) {
+            for (const [category, files] of Object.entries(groupedFiles)) {
+                const container = document.getElementById(`${category}-files`);
 
-                const table = document.createElement('table');
-                let currentYear = null;
-                let row;
+                // Regrouper les fichiers par base (sans corrige/donnee)
+                const groupedByBase = files.reduce((acc, file) => {
+                    const baseName = file.name.replace(/_corrige|_donnee/i, '');
+                    if (!acc[baseName]) acc[baseName] = [];
+                    acc[baseName].push(file);
+                    return acc;
+                }, {});
 
-                files.donnee.forEach((file, index) => {
-                    const fileName = file.name.split('/').pop();
-                    const year = getYearFromFileName(fileName);
-
-                    if (year !== currentYear) {
-                        if (currentYear !== null) {
-                            groupDiv.appendChild(table);
-                            table.innerHTML = '';
-                        }
-                        currentYear = year;
-                    }
-
-                    if (index % 4 === 0) {
-                        row = table.insertRow();
-                    }
-
-                    const cell = row.insertCell();
-                    const corrigeFile = files.corrige.find(f => f.name.replace('corrige', '') === file.name);
-                    
-                    cell.innerHTML = `
-                        <a href="#" onclick="previewPDF('${file.download_url}')">${fileName.replace(/\.(pdf|PDF)$/, '')}</a>
-                        ${corrigeFile ? `<br><a href="#" class="corrige" onclick="previewPDF('${corrigeFile.download_url}')">Corrigé</a>` : ''}
-                    `;
+                // Créer les éléments pour chaque groupe
+                Object.values(groupedByBase).forEach(fileGroup => {
+                    const fileElement = createFileElement(fileGroup);
+                    container.appendChild(fileElement);
                 });
-
-                groupDiv.appendChild(table);
-                container.appendChild(groupDiv);
             }
         }
 
-        function previewPDF(url) {
-            const preview = document.getElementById('pdfPreview');
-            const iframe = preview.querySelector('iframe');
-            iframe.src = url;
-            preview.style.display = 'flex';
+        async function main() {
+            const files = await fetchFiles();
+            const groupedFiles = groupFiles(files);
+            displayGroupedFiles(groupedFiles);
         }
 
-        document.getElementById('closePreview').addEventListener('click', () => {
-            document.getElementById('pdfPreview').style.display = 'none';
-        });
-
-        fetchFiles().then(files => {
-            const groups = groupFiles(files);
-            displayFiles(groups);
-        });
+        main();
     </script>
 </body>
 </html>
