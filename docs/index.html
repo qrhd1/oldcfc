@@ -14,6 +14,13 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 10px;
         }
+        .year-separator {
+            grid-column: 1 / -1;
+            border-top: 2px solid #ccc;
+            margin: 15px 0;
+            text-align: center;
+            color: #888;
+        }
         .file-item {
             border: 1px solid #ddd;
             padding: 10px;
@@ -33,7 +40,7 @@
     </style>
 </head>
 <body>
-    <h1>Fichiers PDF CFC</h1>
+    <h1>Fichiers PDF CFC (2025.02.08)</h1>
 
     <h2>Électricien.ne de montage</h2>
     <div id="elm-files" class="file-grid"></div>
@@ -55,9 +62,15 @@
             return files.filter(file => file.name.endsWith('.pdf'));
         }
 
+        function extractYear(filename) {
+            // Extraire l'année au début du nom de fichier
+            const match = filename.match(/^(\d{4})_/);
+            return match ? match[1] : 'Autres';
+        }
+
         function groupFiles(files) {
             const groups = {
-                'elm': [], 'iel': [], 'pele': [], 'tlm': []
+                'elm': {}, 'iel': {}, 'pele': {}, 'tlm': {}
             };
 
             files.forEach(file => {
@@ -70,10 +83,21 @@
                 else if (name.includes('tlm')) category = 'tlm';
                 else return;
 
-                groups[category].push(file);
+                const year = extractYear(file.name);
+                if (!groups[category][year]) {
+                    groups[category][year] = [];
+                }
+                groups[category][year].push(file);
             });
 
             return groups;
+        }
+
+        function createYearSeparator(year) {
+            const separator = document.createElement('div');
+            separator.className = 'year-separator';
+            separator.textContent = year !== 'Autres' ? year : '';
+            return separator;
         }
 
         function createFileElement(files) {
@@ -106,21 +130,31 @@
         }
 
         function displayGroupedFiles(groupedFiles) {
-            for (const [category, files] of Object.entries(groupedFiles)) {
+            for (const [category, years] of Object.entries(groupedFiles)) {
                 const container = document.getElementById(`${category}-files`);
+                
+                // Trier les années par ordre décroissant
+                const sortedYears = Object.keys(years).sort((a, b) => b.localeCompare(a));
 
-                // Regrouper les fichiers par base (sans corrige/donnee)
-                const groupedByBase = files.reduce((acc, file) => {
-                    const baseName = file.name.replace(/_corrige|_donnee/i, '');
-                    if (!acc[baseName]) acc[baseName] = [];
-                    acc[baseName].push(file);
-                    return acc;
-                }, {});
+                sortedYears.forEach(year => {
+                    // Ajouter un séparateur d'année
+                    if (year !== 'Autres') {
+                        container.appendChild(createYearSeparator(year));
+                    }
 
-                // Créer les éléments pour chaque groupe
-                Object.values(groupedByBase).forEach(fileGroup => {
-                    const fileElement = createFileElement(fileGroup);
-                    container.appendChild(fileElement);
+                    // Regrouper les fichiers par base (sans corrige/donnee)
+                    const groupedByBase = years[year].reduce((acc, file) => {
+                        const baseName = file.name.replace(/_corrige|_donnee/i, '');
+                        if (!acc[baseName]) acc[baseName] = [];
+                        acc[baseName].push(file);
+                        return acc;
+                    }, {});
+
+                    // Créer les éléments pour chaque groupe
+                    Object.values(groupedByBase).forEach(fileGroup => {
+                        const fileElement = createFileElement(fileGroup);
+                        container.appendChild(fileElement);
+                    });
                 });
             }
         }
