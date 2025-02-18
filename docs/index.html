@@ -28,6 +28,11 @@
             display: flex;
             flex-direction: column;
         }
+        /* Ajout des couleurs spécifiques pour chaque profession */
+        .elm .file-item { background-color: #f0f8ff; } /* AliceBlue */
+        .iel .file-item { background-color: #e6e6fa; } /* Lavender */
+        .pele .file-item { background-color: #fff0f5; } /* LavenderBlush */
+        .tlm .file-item { background-color: #f5fffa; } /* MintCream */        
         .file-name {
             font-size: 14px;
             margin-bottom: 5px;
@@ -87,7 +92,7 @@
             <button class="success-button elm" onclick="window.location.href='elmo_index.html';">Pour réussir les CP en Électricien.ne de montage</button>
         </div>
     </div>
-    <div id="elm-files" class="file-grid"></div>
+    <div id="elm-files" class="file-grid elm"></div>
 
     <div class="section-header">
         <div class="title-container">
@@ -96,7 +101,7 @@
              <button class="success-button iel" onclick="window.location.href='iele_index.html';">Pour réussir les CP en Installateur.trice-électricien.ne</button>
         </div>
     </div>
-    <div id="iel-files" class="file-grid"></div>
+    <div id="iel-files" class="file-grid iel"></div>
 
     <div class="section-header">
         <div class="title-container">
@@ -105,7 +110,7 @@
             <button class="success-button pele" onclick="window.location.href='pele_index.html';">Pour réussir les CP en Planificateur.trice-électricien.ne</button>
         </div>
     </div>
-    <div id="pele-files" class="file-grid"></div>
+    <div id="pele-files" class="file-grid pele"></div>
 
     <div class="section-header">
         <div class="title-container">
@@ -114,7 +119,7 @@
             <button class="success-button tlm">Pour réussir les CP en Télématicien.ne</button>
         </div>
     </div>
-    <div id="tlm-files" class="file-grid"></div>
+    <div id="tlm-files" class="file-grid tlm"></div>
 
     <script>
         async function fetchFiles() {
