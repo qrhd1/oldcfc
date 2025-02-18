@@ -14,6 +14,13 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 10px;
         }
+        .year-separator {
+            grid-column: 1 / -1;
+            border-top: 2px solid #ccc;
+            margin: 15px 0;
+            text-align: center;
+            color: #888;
+        }
         .file-item {
             border: 1px solid #ddd;
             padding: 10px;
@@ -30,21 +37,79 @@
             color: #666;
             margin-top: 3px;
         }
+        .title-container {
+            display: flex;
+            flex-direction: column;
+        }
+        .disclaimer {
+            color: red;
+            font-size: 0.8em;
+            margin: 0;
+        }
+        h2 {
+            margin-bottom: 0;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .success-button {
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .success-button.home { background-color: #af4c86; color: #ffffff; }
+        .success-button.elm { background-color: #4CAF50; color: #ffffff; }
+        .success-button.iel { background-color: #2196F3; color: white; }
+        .success-button.pele { background-color: #FF9800; color: white; }
+        .success-button.tlm { background-color: #9C27B0; color: white; }
+        .success-button:hover { opacity: 0.8; }        
     </style>
 </head>
 <body>
-    <h1>Fichiers PDF CFC</h1>
+    <div class="section-header">
+        <h1>Fichiers PDF CFC (2025.02.18)</h1>
+        <button class="success-button home" onclick="window.open('https://cfctselec.github.io/cfcflashcards/', '_blank');">D'autres façons de réviser votre CFC</button>
+    </div>
 
-    <h2>Électricien.ne de montage</h2>
+    <div class="section-header">
+        <div class="title-container">
+            <h2>Électricien.ne de montage</h2>
+            <p class="disclaimer">Les données et les corrigés peuvent contenir des erreurs</p>
+        </div>
+        <button class="success-button elm" onclick="window.open('elmo_index.html', '_blank');">Pour réussir les CP en Électricien.ne de montage</button>
+    </div>
     <div id="elm-files" class="file-grid"></div>
 
-    <h2>Installateur.trice-électricien.ne</h2>
+    <div class="section-header">
+        <div class="title-container">
+            <h2>Installateur.trice-électricien.ne</h2>
+            <p class="disclaimer">Les données et les corrigés peuvent contenir des erreurs</p>
+        </div>
+        <button class="success-button iel">Pour réussir les CP en Installateur.trice-électricien.ne</button>
+    </div>
     <div id="iel-files" class="file-grid"></div>
 
-    <h2>Planificateur.trice-électricien.ne</h2>
+    <div class="section-header">
+        <div class="title-container">
+            <h2>Planificateur.trice-électricien.ne</h2>
+            <p class="disclaimer">Les données et les corrigés peuvent contenir des erreurs</p>
+        </div>
+        <button class="success-button pele">Pour réussir les CP en Planificateur.trice-électricien.ne</button>
+    </div>
     <div id="pele-files" class="file-grid"></div>
 
-    <h2>Télématicien.ne</h2>
+    <div class="section-header">
+        <div class="title-container">
+            <h2>Télématicien.ne</h2>
+            <p class="disclaimer">Les données et les corrigés peuvent contenir des erreurs</p>
+        </div>
+        <button class="success-button tlm">Pour réussir les CP en Télématicien.ne</button>
+    </div>
     <div id="tlm-files" class="file-grid"></div>
 
     <script>
@@ -55,9 +120,15 @@
             return files.filter(file => file.name.endsWith('.pdf'));
         }
 
+        function extractYear(filename) {
+            // Extraire l'année au début du nom de fichier
+            const match = filename.match(/^(\d{4})_/);
+            return match ? match[1] : 'Autres';
+        }
+
         function groupFiles(files) {
             const groups = {
-                'elm': [], 'iel': [], 'pele': [], 'tlm': []
+                'elm': {}, 'iel': {}, 'pele': {}, 'tlm': {}
             };
 
             files.forEach(file => {
@@ -70,10 +141,21 @@
                 else if (name.includes('tlm')) category = 'tlm';
                 else return;
 
-                groups[category].push(file);
+                const year = extractYear(file.name);
+                if (!groups[category][year]) {
+                    groups[category][year] = [];
+                }
+                groups[category][year].push(file);
             });
 
             return groups;
+        }
+
+        function createYearSeparator(year) {
+            const separator = document.createElement('div');
+            separator.className = 'year-separator';
+            separator.textContent = year !== 'Autres' ? year : '';
+            return separator;
         }
 
         function createFileElement(files) {
@@ -106,21 +188,31 @@
         }
 
         function displayGroupedFiles(groupedFiles) {
-            for (const [category, files] of Object.entries(groupedFiles)) {
+            for (const [category, years] of Object.entries(groupedFiles)) {
                 const container = document.getElementById(`${category}-files`);
+                
+                // Trier les années par ordre décroissant
+                const sortedYears = Object.keys(years).sort((a, b) => b.localeCompare(a));
 
-                // Regrouper les fichiers par base (sans corrige/donnee)
-                const groupedByBase = files.reduce((acc, file) => {
-                    const baseName = file.name.replace(/_corrige|_donnee/i, '');
-                    if (!acc[baseName]) acc[baseName] = [];
-                    acc[baseName].push(file);
-                    return acc;
-                }, {});
+                sortedYears.forEach(year => {
+                    // Ajouter un séparateur d'année
+                    if (year !== 'Autres') {
+                        container.appendChild(createYearSeparator(year));
+                    }
 
-                // Créer les éléments pour chaque groupe
-                Object.values(groupedByBase).forEach(fileGroup => {
-                    const fileElement = createFileElement(fileGroup);
-                    container.appendChild(fileElement);
+                    // Regrouper les fichiers par base (sans corrige/donnee)
+                    const groupedByBase = years[year].reduce((acc, file) => {
+                        const baseName = file.name.replace(/_corrige|_donnee/i, '');
+                        if (!acc[baseName]) acc[baseName] = [];
+                        acc[baseName].push(file);
+                        return acc;
+                    }, {});
+
+                    // Créer les éléments pour chaque groupe
+                    Object.values(groupedByBase).forEach(fileGroup => {
+                        const fileElement = createFileElement(fileGroup);
+                        container.appendChild(fileElement);
+                    });
                 });
             }
         }

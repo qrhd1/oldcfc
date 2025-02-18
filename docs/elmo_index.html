@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conseils pour réussir son CFC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+        }
+        .left-column {
+            width: 40%;
+            padding-right: 20px;
+        }
+        .right-column {
+            width: 60%;
+            border-left: 1px solid #ccc;
+            padding-left: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .method {
+            margin-bottom: 20px;
+        }
+        .file-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .file-name {
+            font-size: 14px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .file-corrige {
+            font-size: 12px;
+            color: #666;
+            display: block;
+        }
+        .success-button {
+            padding: 10px 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 5px; /* Add some space between title and button */
+            text-align: left; /* Ensure text inside the button is left-aligned */
+            background-color: #af4c86; color: #ffffff;
+        }
+        .success-button:hover { opacity: 0.8; }
+    </style>
+</head>
+<body>
+    <div class="section-header">
+        <h1>Conseils pour réussir son CFC</h1>
+        <button class="success-button" onclick="window.open('https://cfctselec.github.io/cfcflashcards/', '_blank');">D'autres façons de réviser votre CFC</button>
+    </div>
+    <div class="container">
+        <div class="left-column">
+            <p>Pour préparer efficacement vos révisions, choisissez au hasard une donnée concernant votre profession. Ne jamais ouvrir le corrigé avant d'avoir essayé de résoudre le problème.</p>
+
+            <h2>Méthodes de révision</h2>
+            <div class="method">
+                <ol>
+                    <li>Le temps est l'assassin de votre réussite, vous devez être rapide</li>
+                    <li>Divisez le temps accordé par le nombre de questions</li>
+                    <li>Utilisez votre montre (smartphone interdits)</li>
+                </ol>
+            </div>
+
+            <h2>Statistiques et répétition</h2>
+            <p>Prenez un problème au hasard dans les séries de 2011 à 2023 et cherchez le même genre de problèmes dans les autres années. Vous constaterez que les exercices se répètent souvent dans les différentes sessions d'examens.</p>
+
+            <h2>Utilisation de l'intelligence artificielle</h2>
+            <p>Si vous utilisez une intelligence artificielle, ne faites pas forcément confiance aux résolutions proposées. Utilisez-la plutôt pour reformuler les questions, c'est le secret de votre préparation.</p>
+
+            <h2>Techniques de révision efficaces</h2>
+            <h3>Auto-évaluation</h3>
+            <p>Posez-vous des questions sur le sujet de révision. Utilisez des fiches avec des questions au recto et des réponses au verso.</p>
+
+            <h3>Révisions croisées</h3>
+            <p>Organisez des sessions de révision en groupe. Expliquer une notion à quelqu'un permet de mieux la comprendre et la retenir.</p>
+        </div>
+
+        <div class="right-column">
+            <h2>Fichiers d'entraînement</h2>
+            <div id="file-links">
+                <p>Chargement des liens...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const githubRepoUrl = 'https://api.github.com/repos/qrhd1/oldcfc/contents/pdf_files';
+
+        async function fetchFiles() {
+            try {
+                const response = await fetch(githubRepoUrl);
+                const data = await response.json();
+                return data.filter(file => file.name.toLowerCase().endsWith('.pdf'));
+            } catch (error) {
+                console.error('Error fetching files from GitHub:', error);
+                document.getElementById('file-links').textContent = 'Erreur lors du chargement des fichiers depuis GitHub.';
+                return [];
+            }
+        }
+
+        async function displayFiles() {
+            const files = await fetchFiles();
+            const fileLinksDiv = document.getElementById('file-links');
+            fileLinksDiv.innerHTML = '';
+
+            // Group files by base name (removing "_donnee" or "_corrige")
+            const groupedFiles = files.reduce((acc, file) => {
+                const baseName = file.name.replace(/_corrige|_donnee/i, '').replace('.pdf', '');
+                if (!acc[baseName]) {
+                    acc[baseName] = [];
+                }
+                acc[baseName].push(file);
+                return acc;
+            }, {});
+
+            // Create and append file elements
+            for (const baseName in groupedFiles) {
+                const files = groupedFiles[baseName];
+                const donneeFile = files.find(file => file.name.toLowerCase().includes('donnee'));
+                const corrigeFile = files.find(file => file.name.toLowerCase().includes('corrige'));
+
+                const fileItemDiv = document.createElement('div');
+                fileItemDiv.className = 'file-item';
+
+                if (donneeFile) {
+                    const donneeLink = document.createElement('a');
+                    donneeLink.href = donneeFile.download_url;
+                    donneeLink.textContent = 'Données: ' + donneeFile.name.replace('.pdf', '');
+                    donneeLink.className = 'file-name';
+                    donneeLink.target = '_blank';
+                    fileItemDiv.appendChild(donneeLink);
+                }
+
+                if (corrigeFile) {
+                    const corrigeLink = document.createElement('a');
+                    corrigeLink.href = corrigeFile.download_url;
+                    corrigeLink.textContent = 'Corrigé: ' + corrigeFile.name.replace('.pdf', '');
+                    corrigeLink.className = 'file-corrige';
+                    corrigeLink.target = '_blank';
+                    fileItemDiv.appendChild(corrigeLink);
+                }
+
+                if (donneeFile || corrigeFile) {
+                    fileLinksDiv.appendChild(fileItemDiv);
+                }
+            }
+
+            if (fileLinksDiv.children.length === 0) {
+                fileLinksDiv.textContent = 'Aucun fichier "donnee" ou "corrige" trouvé dans le répertoire GitHub.';
+            }
+        }
+
+        displayFiles();
+    </script>
+</body>
+</html>

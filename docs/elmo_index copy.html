@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conseils pour réussir son CFC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+        }
+        .left-column {
+            width: 40%;
+            padding-right: 20px;
+        }
+        .right-column {
+            width: 60%;
+            border-left: 1px solid #ccc;
+            padding-left: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .method {
+            margin-bottom: 20px;
+        }
+        .corrige-link {
+            font-size: 0.8em; /* Police plus petite pour le corrigé */
+        }
+    </style>
+</head>
+<body>
+    <div class="section-header">
+        <h1>Conseils pour réussir son CFC</h1>
+        <button class="success-button home" onclick="window.open('https://cfctselec.github.io/cfcflashcards/', '_blank');">D'autres façons de réviser votre CFC</button>
+    </div>
+    <div class="container">
+        <div class="left-column">
+            <p>Pour préparer efficacement vos révisions, choisissez au hasard une donnée concernant votre profession. Ne jamais ouvrir le corrigé avant d'avoir essayé de résoudre le problème.</p>
+
+            <h2>Méthodes de révision</h2>
+            <div class="method">
+                <ol>
+                    <li>Le temps est l'assassin de votre réussite, vous devez être rapide</li>
+                    <li>Divisez le temps accordé par le nombre de questions</li>
+                    <li>Utilisez votre montre (smartphone interdits)</li>
+                </ol>
+            </div>
+
+            <h2>Statistiques et répétition</h2>
+            <p>Prenez un problème au hasard dans les séries de 2011 à 2023 et cherchez le même genre de problèmes dans les autres années. Vous constaterez que les exercices se répètent souvent dans les différentes sessions d'examens.</p>
+
+            <h2>Utilisation de l'intelligence artificielle</h2>
+            <p>Si vous utilisez une intelligence artificielle, ne faites pas forcément confiance aux résolutions proposées. Utilisez-la plutôt pour reformuler les questions, c'est le secret de votre préparation.</p>
+
+            <h2>Techniques de révision efficaces</h2>
+            <h3>Auto-évaluation</h3>
+            <p>Posez-vous des questions sur le sujet de révision. Utilisez des fiches avec des questions au recto et des réponses au verso.</p>
+
+            <h3>Révisions croisées</h3>
+            <p>Organisez des sessions de révision en groupe. Expliquer une notion à quelqu'un permet de mieux la comprendre et la retenir.</p>
+        </div>
+
+        <div class="right-column">
+            <h2>Exemples de fichiers</h2>
+            <div id="file-links">
+                <p>Chargement des liens...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // *** Ce code JavaScript devrait être exécuté dans un environnement navigateur ***
+        // *** Il utilise l'API GitHub pour lister les fichiers et générer les liens ***
+
+        const githubRepoUrl = 'https://api.github.com/repos/qrhd1/oldcfc/contents/pdf_files';
+
+        fetch(githubRepoUrl)
+            .then(response => response.json())
+            .then(data => {
+                const fileLinksDiv = document.getElementById('file-links');
+                fileLinksDiv.innerHTML = ''; // Effacer le message "Chargement des liens..."
+
+                // Filtrer les fichiers pour trouver ceux contenant "donnee" et "corrige"
+                const donneeFile = data.find(file => file.name.toLowerCase().includes('donnee') && file.name.toLowerCase().endsWith('.pdf'));
+                const corrigeFile = data.find(file => file.name.toLowerCase().includes('corrige') && file.name.toLowerCase().endsWith('.pdf'));
+
+                if (donneeFile) {
+                    const donneeLink = document.createElement('a');
+                    donneeLink.href = donneeFile.download_url;  // Utiliser download_url
+                    donneeLink.textContent = 'Fichier Données: ' + donneeFile.name;
+                    donneeLink.target = '_blank'; // Ouvrir dans un nouvel onglet
+                    fileLinksDiv.appendChild(donneeLink);
+                    fileLinksDiv.appendChild(document.createElement('br')); // Saut de ligne
+                }
+
+                if (corrigeFile) {
+                    const corrigeLink = document.createElement('a');
+                    corrigeLink.href = corrigeFile.download_url;  // Utiliser download_url
+                    corrigeLink.textContent = 'Corrigé: ' + corrigeFile.name;
+                    corrigeLink.classList.add('corrige-link'); // Appliquer la classe pour la taille de police
+                    corrigeLink.target = '_blank';
+                    fileLinksDiv.appendChild(corrigeLink);
+                    fileLinksDiv.appendChild(document.createElement('br'));
+                }
+
+                if (!donneeFile && !corrigeFile) {
+                    fileLinksDiv.textContent = 'Aucun fichier "donnee" ou "corrige" trouvé dans le répertoire GitHub.';
+                } else if (!donneeFile) {
+                    fileLinksDiv.textContent = 'Aucun fichier "donnee" trouvé dans le répertoire GitHub.';
+                } else if (!corrigeFile) {
+                    fileLinksDiv.textContent = 'Aucun fichier "corrige" trouvé dans le répertoire GitHub.';
+                }
+
+            })
+            .catch(error => {
+                console.error('Erreur lors de la récupération des fichiers depuis GitHub:', error);
+                const fileLinksDiv = document.getElementById('file-links');
+                fileLinksDiv.textContent = 'Erreur lors du chargement des liens depuis GitHub.';
+            });
+    </script>
+</body>
+</html>
