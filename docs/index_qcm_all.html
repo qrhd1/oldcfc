@@ -95,8 +95,8 @@
             container.className = `file-item ${professionType}`;
 
             const fileLink = document.createElement('a');
-            // Utiliser l'URL raw_url pour afficher directement le contenu HTML
-            fileLink.href = `https://qrhd1.github.io/oldcfc/qcm_files/${file.name}`;
+            // Utiliser l'URL pour afficher directement le contenu HTML depuis le répertoire docs
+            fileLink.href = `https://qrhd1.github.io/oldcfc/${file.name}`;
             fileLink.target = '_blank'; // Ouvre dans un nouvel onglet
             fileLink.className = 'file-name';
             
