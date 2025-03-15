@@ -54,12 +54,7 @@
             text-align: left; /* Ensure text inside the button is left-aligned */
             background-color: #e72696; color: #ffffff;
         }
-        .success-button.retour { background-color: #FF9800; color: white; }
-        .file-links {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-        }
+        .success-button.retour { background-color: #FF9800; color: white; }        
     </style>
 </head>
 <body>
@@ -73,34 +68,10 @@
 
     <script>
         async function fetchFiles() {
-            const apiUrl = 'https://api.github.com/repos/qrhd1/oldcfc/contents/qcm_files';
-            try {
-                const response = await fetch(apiUrl);
-                if (!response.ok) {
-                    throw new Error(`Erreur de l'API GitHub: ${response.status}`);
-                }
-                const files = await response.json();
-                return files.filter(file => file.name.endsWith('.html') && file.name.startsWith('qcm_'));
-            } catch (error) {
-                console.error("Erreur lors de la récupération des fichiers:", error);
-                
-                // Simuler une liste de fichiers si l'API échoue
-                // Cette liste est basée sur le format observé dans le code
-                const simulatedFiles = [];
-                
-                // Générer des fichiers pour les chapitres 1-10 et les 4 professions
-                const professions = ['elm', 'iel', 'pele', 'tlm'];
-                for (let chapter = 1; chapter <= 10; chapter++) {
-                    for (const profession of professions) {
-                        simulatedFiles.push({
-                            name: `qcm_chapitre_${chapter}_${profession}.html`,
-                            path: `qcm_files/qcm_chapitre_${chapter}_${profession}.html`
-                        });
-                    }
-                }
-                
-                return simulatedFiles;
-            }
+            const apiUrl = 'https://api.github.com/repos/qrhd1/oldcfc/contents/docs';
+            const response = await fetch(apiUrl);
+            const files = await response.json();
+            return files.filter(file => file.name.endsWith('.html') && file.name.startsWith('qcm_'));
         }
         
         function extractChapterNumber(filename) {
@@ -123,6 +94,12 @@
             const professionType = extractProfessionType(file.name);
             container.className = `file-item ${professionType}`;
 
+            const fileLink = document.createElement('a');
+            // Utiliser l'URL raw_url pour afficher directement le contenu HTML
+            fileLink.href = `https://qrhd1.github.io/oldcfc/qcm_files/${file.name}`;
+            fileLink.target = '_blank'; // Ouvre dans un nouvel onglet
+            fileLink.className = 'file-name';
+            
             // Simplifier l'affichage du nom du fichier
             let displayName = file.name;
             if (file.name.startsWith('qcm_chapitre_')) {
@@ -131,34 +108,8 @@
                 displayName = `Chapitre ${chapterNum} - ${profession}`;
             }
             
-            // Ajouter le titre
-            const title = document.createElement('div');
-            title.className = 'file-name';
-            title.textContent = displayName;
-            container.appendChild(title);
-            
-            // Ajouter les liens (deux options)
-            const linksContainer = document.createElement('div');
-            linksContainer.className = 'file-links';
-            
-            // Option 1: Lien GitHub Pages
-            const linkGithubPages = document.createElement('a');
-            linkGithubPages.href = `https://qrhd1.github.io/oldcfc/qcm_files/${file.name}`;
-            linkGithubPages.target = '_blank';
-            linkGithubPages.textContent = 'Ouvrir';
-            linkGithubPages.className = 'success-button';
-            linksContainer.appendChild(linkGithubPages);
-            
-            // Option 2: Lien HTML Preview (alternative)
-            const linkHtmlPreview = document.createElement('a');
-            linkHtmlPreview.href = `https://htmlpreview.github.io/?https://github.com/qrhd1/oldcfc/blob/main/qcm_files/${file.name}`;
-            linkHtmlPreview.target = '_blank';
-            linkHtmlPreview.textContent = 'Alternative';
-            linkHtmlPreview.className = 'success-button retour';
-            linkHtmlPreview.style.fontSize = '12px';
-            linksContainer.appendChild(linkHtmlPreview);
-            
-            container.appendChild(linksContainer);
+            fileLink.textContent = displayName;
+            container.appendChild(fileLink);
 
             return container;
         }
