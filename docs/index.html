@@ -76,7 +76,25 @@
         .success-button.iel { background-color: #2196F3; color: white; }
         .success-button.pele { background-color: #FF9800; color: white; }
         .success-button.tlm { background-color: #9C27B0; color: white; }
-        .success-button:hover { opacity: 0.8; }        
+        .success-button:hover { opacity: 0.8; }
+
+        .oraux-button {
+            border: 2px solid orange;
+            animation: blink 1s infinite;
+            margin-left: 10px;
+        }
+
+        @keyframes blink {
+            0% { border-color: orange; }
+            50% { border-color: transparent; }
+            100% { border-color: orange; }
+        }
+        
+        .button-container {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
@@ -89,7 +107,10 @@
         <div class="title-container">
             <h2>Électricien.ne de montage</h2>
             <p class="disclaimer">Les données et les corrigés peuvent contenir des erreurs</p>
-            <button class="success-button elm" onclick="window.location.href='elmo_index.html';">Pour réussir les CP en Électricien.ne de montage</button>
+            <div class="button-container">
+                <button class="success-button elm" onclick="window.location.href='elmo_index.html';">Pour réussir les CP en Électricien.ne de montage</button>
+                <button class="success-button oraux-button" onclick="window.location.href='qcm_all.html';">ORAUX</button>
+            </div>
         </div>
     </div>
     <div id="elm-files" class="file-grid elm"></div>
@@ -98,7 +119,10 @@
         <div class="title-container">
             <h2>Installateur.trice-électricien.ne</h2>
             <p class="disclaimer">Les données et les corrigés peuvent contenir des erreurs.</p>
-             <button class="success-button iel" onclick="window.location.href='iele_index.html';">Pour réussir les CP en Installateur.trice-électricien.ne</button>
+            <div class="button-container">
+                <button class="success-button iel" onclick="window.location.href='iele_index.html';">Pour réussir les CP en Installateur.trice-électricien.ne</button>
+                <button class="success-button oraux-button" onclick="window.location.href='qcm_all.html';">ORAUX</button>
+            </div>
         </div>
     </div>
     <div id="iel-files" class="file-grid iel"></div>
@@ -107,7 +131,10 @@
         <div class="title-container">
             <h2>Planificateur.trice-électricien.ne</h2>
             <p class="disclaimer">Les données et les corrigés peuvent contenir des erreurs.</p>
-            <button class="success-button pele" onclick="window.location.href='pele_index.html';">Pour réussir les CP en Planificateur.trice-électricien.ne</button>
+            <div class="button-container">
+                <button class="success-button pele" onclick="window.location.href='pele_index.html';">Pour réussir les CP en Planificateur.trice-électricien.ne</button>
+                <button class="success-button oraux-button" onclick="window.location.href='qcm_all.html';">ORAUX</button>
+            </div>
         </div>
     </div>
     <div id="pele-files" class="file-grid pele"></div>
@@ -116,7 +143,10 @@
         <div class="title-container">
             <h2>Télématicien.ne</h2>
             <p class="disclaimer">Les données et les corrigés peuvent contenir des erreurs.</p>
-            <button class="success-button tlm">Pour réussir les CP en Télématicien.ne</button>
+            <div class="button-container">
+                <button class="success-button tlm" onclick="window.location.href='tlm_index.html';">Pour réussir les CP en Télématicien.ne</button>
+                <button class="success-button oraux-button" onclick="window.location.href='qcm_all.html';">ORAUX</button>
+            </div>
         </div>
     </div>
     <div id="tlm-files" class="file-grid tlm"></div>

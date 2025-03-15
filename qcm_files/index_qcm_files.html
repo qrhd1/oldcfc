@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .file-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        .file-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+        /* Couleurs spécifiques pour chaque profession */
+        .elm .file-item { background-color: #f0f8ff; } /* AliceBlue */
+        .iel .file-item { background-color: #e6e6fa; } /* Lavender */
+        .pele .file-item { background-color: #fff0f5; } /* LavenderBlush */
+        .tlm .file-item { background-color: #f5fffa; } /* MintCream */        
+        .file-name {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .title-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .disclaimer {
+            color: red;
+            font-size: 0.8em;
+            margin: 0;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fichiers QCM CFC (2025.03.15)</h1>
+    
+    <div class="file-grid" id="qcm-files"></div>
+
+    <script>
+        async function fetchFiles() {
+            const apiUrl = 'https://api.github.com/repos/qrhd1/oldcfc/contents/qcm_files';
+            const response = await fetch(apiUrl);
+            const files = await response.json();
+            return files.filter(file => file.name.endsWith('.html') && file.name.startsWith('qcm_'));
+        }
+
+        function extractChapterNumber(filename) {
+            // Extraire le numéro de chapitre du nom de fichier (ex: qcm_chapitre_1_iel.html -> 1)
+            const match = filename.match(/qcm_chapitre_(\d+)_/);
+            return match ? parseInt(match[1]) : 0;
+        }
+
+        function extractProfessionType(filename) {
+            // Extraire le type de profession (elm, iel, pele, tlm)
+            if (filename.includes('_elm')) return 'elm';
+            if (filename.includes('_iel')) return 'iel';
+            if (filename.includes('_pele')) return 'pele';
+            if (filename.includes('_tlm')) return 'tlm';
+            return '';
+        }
+
+        function createFileElement(file) {
+            const container = document.createElement('div');
+            const professionType = extractProfessionType(file.name);
+            container.className = `file-item ${professionType}`;
+
+            const fileLink = document.createElement('a');
+            fileLink.href = file.html_url || file.download_url;
+            fileLink.target = '_blank';
+            fileLink.className = 'file-name';
+            
+            // Simplifier l'affichage du nom du fichier
+            let displayName = file.name;
+            if (file.name.startsWith('qcm_chapitre_')) {
+                const chapterNum = extractChapterNumber(file.name);
+                const profession = extractProfessionType(file.name).toUpperCase();
+                displayName = `Chapitre ${chapterNum} - ${profession}`;
+            }
+            
+            fileLink.textContent = displayName;
+            container.appendChild(fileLink);
+
+            return container;
+        }
+
+        function displayFiles(files) {
+            const container = document.getElementById('qcm-files');
+            
+            // Trier les fichiers par numéro de chapitre
+            const sortedFiles = [...files].sort((a, b) => {
+                const numA = extractChapterNumber(a.name);
+                const numB = extractChapterNumber(b.name);
+                if (numA === numB) {
+                    return a.name.localeCompare(b.name);
+                }
+                return numA - numB;
+            });
+
+            // Créer et ajouter les éléments pour chaque fichier
+            sortedFiles.forEach(file => {
+                const fileElement = createFileElement(file);
+                container.appendChild(fileElement);
+            });
+        }
+
+        async function main() {
+            try {
+                const files = await fetchFiles();
+                displayFiles(files);
+            } catch (error) {
+                console.error("Erreur lors du chargement des fichiers:", error);
+                const container = document.getElementById('qcm-files');
+                container.innerHTML = '<p>Erreur lors du chargement des fichiers. Veuillez réessayer plus tard.</p>';
+            }
+        }
+
+        main();
+    </script>
+</body>
+</html>

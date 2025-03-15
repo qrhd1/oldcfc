@@ -26,7 +26,7 @@ c) Depuis le milieu du 20ème siècle
 Réponse correcte: b
 Explication: L'utilisation industrielle de l'énergie électrique a commencé à la fin du 19ème siècle, notamment avec les travaux de Thomas Edison et Nikola Tesla.
 
-5. Quels sont les avantages de cette forme d'énergie ?
+5. Quels sont les avantages de l'énergie électrique ?
 a) Facilité de transport, transformation et utilisation
 b) Coût faible, absence de pollution et disponibilité illimitée
 c) Stockage aisé, production simple et sécurité totale
@@ -35,7 +35,7 @@ Explication: Les principaux avantages de l'énergie électrique sont sa facilit�
 
 6. Citer 3 appareils qui ne fonctionnent qu'avec du courant électrique.
 a) Ordinateur, téléphone portable, four à micro-ondes
-b) Réfrigérateur, lampe, téléviseur
+b) Réfrigérateur, lampe à huile, téléviseur
 c) Ventilateur, aspirateur, lave-linge
 Réponse correcte: a
 Explication: L'ordinateur, le téléphone portable et le four à micro-ondes sont des exemples d'appareils qui ne peuvent fonctionner qu'avec du courant électrique.
@@ -125,18 +125,18 @@ Réponse correcte: a
 Explication: Le verre et le caoutchouc sont des isolants, le cuivre et l'argent sont d'excellents conducteurs, et le silicium et le germanium sont des semi-conducteurs typiques.
 
 19. Comment peut-on déceler le passage du courant électrique ?
-a) Par les effets magnétiques, thermiques ou chimiques qu'il produit
+a) Par les effets magnétiques, thermiques ou chimiques qu'il génère
 b) Par la résistance mesurée dans le circuit électrique
 c) Par la couleur des conducteurs utilisés
 Réponse correcte: a
 Explication: Le passage du courant électrique se détecte par ses effets observables comme les effets magnétiques (déviation d'une boussole), thermiques (chaleur) ou chimiques.
 
-20. Citer les principaux effets du courant électrique et donner chaque fois un ou deux exemples pratiques.
-a) Effet thermique (chauffage), lumineux (éclairage), magnétique (moteur)
-b) Effet mécanique (ventilateur), chimique (électrolyse), sonore (haut-parleur)
-c) Effet optique (laser), gravitationnel (lévitation), radioactif (détecteur)
-Réponse correcte: a
-Explication: Les principaux effets du courant sont thermiques (radiateur électrique), lumineux (ampoule), magnétiques (électroaimant, moteur électrique) et chimiques (électrolyse, batterie).
+20. Citer un effet principal du courant électrique et donner des exemples pratiques.
+a) Effet lumineux : Le courant électrique génère directement de la lumière sans transformation d'énergie intermédiaire.
+b) Effet thermique : Le courant électrique génère de la chaleur, utilisée dans les appareils de chauffage électrique.
+c) Effet sonore : Le courant électrique génère naturellement des ondes sonores dans tous les conducteurs.
+Réponse correcte: b
+Explication: L'effet thermique est basé sur l'effet Joule, qui stipule que la chaleur obtenue est proportionnelle au carré de l'intensité du courant et à la résistance du conducteur. Les autres propositions sont clairement incorrectes : L'effet lumineux direct n'existe pas ; la lumière dans les ampoules est obtenue par l'effet thermique (incandescence) ou par d'autres phénomènes (luminescence dans les LED). L'effet sonore tel que décrit n'existe pas ; le son dans les appareils électriques est généralement obtenu par des vibrations mécaniques induites électromagnétiquement, et non directement par le courant.
 
 21. Quels sont les dangers de l'électricité ?
 a) Électrocution, incendies, explosions
@@ -159,7 +159,7 @@ c) Centrales électriques, éoliennes, barrages
 Réponse correcte: a
 Explication: Les piles, batteries et cellules photovoltaïques sont des sources typiques de courant continu.
 
-24. Citer deux récepteurs fonctionnant en courant continu.
+24. Citer deux récepteurs qui doivent être alimentés avec une tension continue.
 a) Moteurs universels et plaque à induction
 b) LED et circuits électroniques
 c) Machines à laver et fours électriques
