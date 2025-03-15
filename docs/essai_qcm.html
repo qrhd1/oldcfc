@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCM Notions Fondamentales d'Électricité</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .question {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .options {
+            margin-top: 10px;
+        }
+        .option {
+            margin-bottom: 8px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .result {
+            margin-top: 10px;
+            padding: 5px;
+            border-radius: 5px;
+            display: none;
+        }
+        .correct {
+            background-color: rgba(46, 204, 113, 0.2);
+            color: #27ae60;
+            border-left: 4px solid #27ae60;
+            padding-left: 10px;
+        }
+        .incorrect {
+            background-color: rgba(231, 76, 60, 0.2);
+            color: #c0392b;
+            border-left: 4px solid #c0392b;
+            padding-left: 10px;
+        }
+        .score {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .explanation {
+            margin-top: 8px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1>QCM sur les notions fondamentales d'électricité</h1>
+    
+    <div id="quiz">
+        <div class="question" id="q1">
+            <p><strong>1. Qu'est-ce que l'électricité?</strong></p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q1" id="q1a" value="a">
+                    <label for="q1a">Un phénomène magnétique créé par les molécules d'air en mouvement dans l'atmosphère</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q1" id="q1b" value="b">
+                    <label for="q1b">Un phénomène physique dû à la présence et au mouvement de charges électriques</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q1" id="q1c" value="c">
+                    <label for="q1c">Une source d'énergie renouvelable produite uniquement par les centrales nucléaires modernes</label>
+                </div>
+            </div>
+            <div class="result" id="result1"></div>
+        </div>
+
+        <div class="question" id="q2">
+            <p><strong>2. De quoi se compose un atome?</strong></p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q2" id="q2a" value="a">
+                    <label for="q2a">D'un noyau contenant des protons et des neutrons, et d'électrons qui gravitent autour</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q2" id="q2b" value="b">
+                    <label for="q2b">De molécules positives et négatives qui s'attirent pour former une structure stable</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q2" id="q2c" value="c">
+                    <label for="q2c">D'une coquille extérieure solide et d'un centre liquide contenant l'énergie atomique</label>
+                </div>
+            </div>
+            <div class="result" id="result2"></div>
+        </div>
+
+        <div class="question" id="q3">
+            <p><strong>3. Qu'appelle-t-on un ion?</strong></p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q3" id="q3a" value="a">
+                    <label for="q3a">Un atome particulier qui ne possède ni protons ni neutrons dans son noyau</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q3" id="q3b" value="b">
+                    <label for="q3b">Un atome ou groupe d'atomes ayant perdu ou gagné un ou plusieurs électrons</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q3" id="q3c" value="c">
+                    <label for="q3c">Une particule élémentaire qui se déplace uniquement dans les circuits électriques</label>
+                </div>
+            </div>
+            <div class="result" id="result3"></div>
+        </div>
+
+        <div class="question" id="q4">
+            <p><strong>4. Depuis quand transforme-t-on et utilise-t-on industriellement l'énergie électrique?</strong></p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q4" id="q4a" value="a">
+                    <label for="q4a">Depuis l'Antiquité, quand les Égyptiens ont découvert le principe des piles électriques</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q4" id="q4b" value="b">
+                    <label for="q4b">Depuis la fin du XIXe siècle, avec le développement des générateurs et moteurs</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q4" id="q4c" value="c">
+                    <label for="q4c">Depuis les années 1950, après les découvertes majeures en physique quantique</label>
+                </div>
+            </div>
+            <div class="result" id="result4"></div>
+        </div>
+
+        <div class="question" id="q5">
+            <p><strong>5. Quels sont les avantages de l'énergie électrique?</strong></p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q5" id="q5a" value="a">
+                    <label for="q5a">Elle est facilement transportable, transformable et divisible en petites quantités</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q5" id="q5b" value="b">
+                    <label for="q5b">Elle ne produit aucune pollution et son coût de production est très faible</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q5" id="q5c" value="c">
+                    <label for="q5c">Elle se stocke facilement dans des réservoirs spéciaux et ne nécessite pas d'entretien</label>
+                </div>
+            </div>
+            <div class="result" id="result5"></div>
+        </div>
+
+        <div class="question" id="q6">
+            <p><strong>6. Citer 3 appareils qui ne fonctionnent qu'avec du courant électrique.</strong></p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q6" id="q6a" value="a">
+                    <label for="q6a">Téléviseur, ordinateur, smartphone</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q6" id="q6b" value="b">
+                    <label for="q6b">Voiture à essence, réfrigérateur à gaz, poêle à bois</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q6" id="q6c" value="c">
+                    <label for="q6c">Bicyclette, sablier, thermomètre à mercure</label>
+                </div>
+            </div>
+            <div class="result" id="result6"></div>
+        </div>
+
+        <div class="question" id="q7">
+            <p><strong>7. Un atome de cuivre possède 29 protons et 35 neutrons. Combien possède-t-il d'électrons?</strong></p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q7" id="q7a" value="a">
+                    <label for="q7a">35 électrons</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q7" id="q7b" value="b">
+                    <label for="q7b">29 électrons</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q7" id="q7c" value="c">
+                    <label for="q7c">64 électrons</label>
+                </div>
+            </div>
+            <div class="result" id="result7"></div>
+        </div>
+
+        <div class="question" id="q8">
+            <p><strong>8. Quels sont les électrons susceptibles de passer d'un atome à l'autre?</strong></p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q8" id="q8a" value="a">
+                    <label for="q8a">Les électrons de la couche interne, qui sont fortement liés au noyau atomique</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q8" id="q8b" value="b">
+                    <label for="q8b">Les électrons de valence, situés sur la couche externe de l'atome</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q8" id="q8c" value="c">
+                    <label for="q8c">Tous les électrons ont la même probabilité de passer d'un atome à l'autre</label>
+                </div>
+            </div>
+            <div class="result" id="result8"></div>
+        </div>
+
+        <div class="question" id="q9">
+            <p><strong>9. Quel est le sens de déplacement des électrons dans un conducteur et pourquoi?</strong></p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q9" id="q9a" value="a">
+                    <label for="q9a">Du pôle positif vers le pôle négatif, car ils sont attirés par la charge positive</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q9" id="q9b" value="b">
+                    <label for="q9b">Du pôle négatif vers le pôle positif, car ils sont attirés par la charge positive</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q9" id="q9c" value="c">
+                    <label for="q9c">Dans les deux sens simultanément, car le courant alternatif change constamment</label>
+                </div>
+            </div>
+            <div class="result" id="result9"></div>
+        </div>
+
+        <div class="question" id="q10">
+            <p><strong>10. Qu'appelle-t-on source de tension?</strong></p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q10" id="q10a" value="a">
+                    <label for="q10a">Un dispositif capable de fournir une énergie mécanique continue au circuit</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q10" id="q10b" value="b">
+                    <label for="q10b">Un dispositif capable de maintenir une différence de potentiel électrique</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q10" id="q10c" value="c">
+                    <label for="q10c">Un appareil qui mesure le voltage dans un circuit fermé avec précision</label>
+                </div>
+            </div>
+            <div class="result" id="result10"></div>
+        </div>
+
+        <div class="question" id="q11">
+            <p><strong>11. Que se passe-t-il lorsque l'on ferme un circuit alimenté par une source de tension?</strong></p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q11" id="q11a" value="a">
+                    <label for="q11a">La tension diminue progressivement jusqu'à atteindre une valeur nulle</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q11" id="q11b" value="b">
+                    <label for="q11b">Un courant électrique s'établit instantanément dans tout le circuit</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q11" id="q11c" value="c">
+                    <label for="q11c">Les électrons s'accumulent au point de fermeture et créent une surtension locale</label>
+                </div>
+            </div>
+            <div class="result" id="result11"></div>
+        </div>
+
+        <div class="question" id="q12">
+            <p><strong>12. Dans un circuit électrique fermé composé d'une pile, d'une résistance et de conducteurs, quel est le sens conventionnel du courant?</strong></p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q12" id="q12a" value="a">
+                    <label for="q12a">Du pôle négatif vers le pôle positif à l'extérieur de la pile</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q12" id="q12b" value="b">
+                    <label for="q12b">Du pôle positif vers le pôle négatif à l'extérieur de la pile</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q12" id="q12c" value="c">
+                    <label for="q12c">Dans le même sens que celui du déplacement réel des électrons dans le circuit</label>
+                </div>
+            </div>
+            <div class="result" id="result12"></div>
+        </div>
+
+        <div class="question" id="q13">
+            <p><strong>13. Comment expliquer que le courant (ou l'ordre électrique) se propage à une vitesse proche de celle de la lumière, alors que le déplacement des électrons est lent?</strong></p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q13" id="q13a" value="a">
+                    <label for="q13a">C'est l'information électrique qui se propage rapidement à travers le champ électrique</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q13" id="q13b" value="b">
+                    <label for="q13b">Les électrons se déplacent en réalité très vite mais sont ralentis par les obstacles</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q13" id="q13c" value="c">
+                    <label for="q13c">La vitesse des électrons augmente exponentiellement avec la longueur du circuit</label>
+                </div>
+            </div>
+            <div class="result" id="result13"></div>
+        </div>
+
+        <div class="question" id="q14">
+            <p><strong>14. Pourquoi n'a-t-on pas fixé le sens conventionnel du courant dans le sens de déplacement des électrons?</strong></p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q14" id="q14a" value="a">
+                    <label for="q14a">Pour des raisons de simplicité dans les calculs de tensions dans les circuits complexes</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q14" id="q14b" value="b">
+                    <label for="q14b">Pour des raisons historiques, car on ignorait le sens réel de déplacement des électrons</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q14" id="q14c" value="c">
+                    <label for="q14c">Pour éviter les confusions avec le mouvement des protons dans certains conducteurs</label>
+                </div>
+            </div>
+            <div class="result" id="result14"></div>
+        </div>
+
+        <div class="question" id="q15">
+            <p><strong>15. Qu'appelle-t-on une différence de potentiel?</strong></p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q15" id="q15a" value="a">
+                    <label for="q15a">La différence d'énergie potentielle électrique entre deux points d'un circuit</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q15" id="q15b" value="b">
+                    <label for="q15b">L'écart entre la tension réelle et la tension théorique maximale du circuit</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q15" id="q15c" value="c">
+                    <label for="q15c">La quantité d'électrons qui traverse un conducteur pendant une seconde</label>
+                </div>
+            </div>
+            <div class="result" id="result15"></div>
+        </div>
+
+        <div class="question" id="q16">
+            <p><strong>16. Quelles sont les conditions pour qu'un courant électrique s'établisse?</strong></p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q16" id="q16a" value="a">
+                    <label for="q16a">Un circuit fermé et une source d'énergie créant une différence de potentiel</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q16" id="q16b" value="b">
+                    <label for="q16b">Un circuit ouvert et une résistance suffisamment élevée pour éviter les courts-circuits</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q16" id="q16c" value="c">
+                    <label for="q16c">Une source de courant alternative et un transformateur pour adapter la tension</label>
+                </div>
+            </div>
+            <div class="result" id="result16"></div>
+        </div>
+
+        <div class="question" id="q17">
+            <p><strong>17. Quelle est la caractéristique des conducteurs électriques?</strong></p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q17" id="q17a" value="a">
+                    <label for="q17a">Ils ont une grande résistance au passage du courant électrique</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q17" id="q17b" value="b">
+                    <label for="q17b">Ils possèdent des électrons libres pouvant se déplacer facilement</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q17" id="q17c" value="c">
+                    <label for="q17c">Ils sont composés uniquement de matériaux synthétiques modernes</label>
+                </div>
+            </div>
+            <div class="result" id="result17"></div>
+        </div>
+
+        <div class="question" id="q18">
+            <p><strong>18. Citez quelques exemples d'isolants, de conducteurs électriques et de semi-conducteurs.</strong></p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q18" id="q18a" value="a">
+                    <label for="q18a">Isolants: verre, caoutchouc, plastique / Conducteurs: cuivre, aluminium / Semi-conducteurs: silicium, germanium</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q18" id="q18b" value="b">
+                    <label for="q18b">Isolants: fer, zinc, plomb / Conducteurs: bois, papier / Semi-conducteurs: verre, céramique</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q18" id="q18c" value="c">
+                    <label for="q18c">Isolants: acier, bronze / Conducteurs: plastique, porcelaine / Semi-conducteurs: carbone, magnésium</label>
+                </div>
+            </div>
+            <div class="result" id="result18"></div>
+        </div>
+
+        <div class="question" id="q19">
+            <p><strong>19. Comment peut-on déceler le passage du courant électrique?</strong></p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q19" id="q19a" value="a">
+                    <label for="q19a">Uniquement par l'observation directe des électrons à l'aide d'un microscope électronique</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q19" id="q19b" value="b">
+                    <label for="q19b">Par ses effets: lumineux, thermiques, magnétiques, chimiques ou mécaniques</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q19" id="q19c" value="c">
+                    <label for="q19c">Par le changement de couleur que subissent tous les conducteurs traversés par l'électricité</label>
+                </div>
+            </div>
+            <div class="result" id="result19"></div>
+        </div>
+
+        <div class="question" id="q20">
+            <p><strong>20. Citez les principaux effets du courant électrique et donnez des exemples pratiques.</strong></p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q20" id="q20a" value="a">
+                    <label for="q20a">Effet thermique (radiateur), effet lumineux (ampoule), effet magnétique (moteur électrique)</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q20" id="q20b" value="b">
+                    <label for="q20b">Effet gravitationnel (lévitation), effet sonique (ultra-sons), effet temporel (horloge)</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q20" id="q20c" value="c">
+                    <label for="q20c">Effet de vieillissement (aliments), effet de pressurisation (pompes), effet d'assainissement (eau)</label>
+                </div>
+            </div>
+            <div class="result" id="result20"></div>
+        </div>
+
+        <div class="question" id="q21">
+            <p><strong>21. Quels sont les dangers de l'électricité?</strong></p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q21" id="q21a" value="a">
+                    <label for="q21a">Uniquement le risque de court-circuit qui peut endommager les appareils électriques</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q21" id="q21b" value="b">
+                    <label for="q21b">Électrocution, brûlures, incendies et explosions en cas de dysfonctionnement</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q21" id="q21c" value="c">
+                    <label for="q21c">Rayonnement électromagnétique potentiellement cancérigène pour toute personne proche</label>
+                </div>
+            </div>
+            <div class="result" id="result21"></div>
+        </div>
+
+        <div class="question" id="q22">
+            <p><strong>22. Que désigne le symbole DC et d'où vient cette abréviation?</strong></p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q22" id="q22a" value="a">
+                    <label for="q22a">Dual Current, qui désigne un courant pouvant fonctionner dans les deux sens de circulation</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q22" id="q22b" value="b">
+                    <label for="q22b">Direct Current (courant continu), qui désigne un courant circulant toujours dans le même sens</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q22" id="q22c" value="c">
+                    <label for="q22c">Decreased Current, qui désigne un courant dont l'intensité diminue progressivement</label>
+                </div>
+            </div>
+            <div class="result" id="result22"></div>
+        </div>
+
+        <div class="question" id="q23">
+            <p><strong>23. Quelles sont les sources qui fournissent du courant continu?</strong></p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q23" id="q23a" value="a">
+                    <label for="q23a">Les centrales hydroélectriques et les réacteurs nucléaires uniquement</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q23" id="q23b" value="b">
+                    <label for="q23b">Les piles, batteries, accumulateurs et cellules photovoltaïques</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q23" id="q23c" value="c">
+                    <label for="q23c">Les alternateurs industriels et les générateurs à haute tension</label>
+                </div>
+            </div>
+            <div class="result" id="result23"></div>
+        </div>
+
+        <div class="question" id="q24">
+            <p><strong>24. Citez deux récepteurs fonctionnant en courant continu.</strong></p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q24" id="q24a" value="a">
+                    <label for="q24a">Circuits électroniques et moteurs à courant continu</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q24" id="q24b" value="b">
+                    <label for="q24b">Réfrigérateurs domestiques et machines à laver modernes</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q24" id="q24c" value="c">
+                    <label for="q24c">Fours à micro-ondes et chauffages électriques résidentiels</label>
+                </div>
+            </div>
+            <div class="result" id="result24"></div>
+        </div>
+
+        <div class="question" id="q25">
+            <p><strong>25. Que désigne le symbole AC et d'où vient cette abréviation?</strong></p>
+            <div class="options">
+                <div class="option">
+                    <input type="radio" name="q25" id="q25a" value="a">
+                    <label for="q25a">Advanced Current, qui désigne un courant de technologie avancée utilisé dans l'industrie</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q25" id="q25b" value="b">
+                    <label for="q25b">Alternating Current (courant alternatif), courant qui change périodiquement de sens</label>
+                </div>
+                <div class="option">
+                    <input type="radio" name="q25" id="q25c" value="c">
+                    <label for="q25c">Amplified Current, qui désigne un courant dont l'intensité a été augmentée artificiellement</label>
+                </div>
+            </div>
+            <div class="result" id="result25"></div>
+        </div>
+
+        <div class="question
