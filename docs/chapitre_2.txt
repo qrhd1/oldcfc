@@ -105,7 +105,7 @@ c) 16 A
 Réponse correcte: b
 Explication: D'après la loi d'Ohm: $I = \frac{U}{R} = \frac{240 V}{20 \Omega} = 12 A$
 
-16. Un récepteur est marqué: $$R = 160 \Omega$$ et $$I = 1,5 A$$. Sous quelle tension doit-il être alimenté?
+16. Un récepteur est marqué: $R = 160 \Omega$ et $I = 1,5 A$. Sous quelle tension doit-il être alimenté?
 a) 240 V
 b) 220 V
 c) 200 V
