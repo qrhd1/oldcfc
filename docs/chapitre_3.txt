@@ -61,14 +61,14 @@ c) 0,45 $[\Omega]$
 Réponse correcte: a
 Explication: La section $S = \pi \cdot \frac{d^2}{4} = \pi \cdot \frac{0,3^2}{4} \approx 0,07 \, [mm^2]$. Donc $R = \rho \cdot \frac{l}{S} = 0,016 \cdot \frac{0,2}{0,07} \approx 0,016 \cdot 2,8 \approx 0,045 \, [\Omega]$
 
-10. Les caractéristiques d'un fil sont: $l = 355$ cm et $d = 1$ [mm]. Lorsque ce fil est soumis à une tension de 12 [V], l'intensité du courant est de 5,3 A. De quelle matière ce fil est-il constitué ?
+10. Les caractéristiques d'un fil sont: $l = 355$ cm et $d = 1$ [mm]. Lorsque ce fil est soumis à une tension de 12 [V], l'intensité du courant est de 5,3 [A]. De quelle matière ce fil est-il constitué ?
 a) Cuivre ($\rho = 0,0175 \, [\Omega] \cdot [mm^2]/[m]$)
 b) Aluminium ($\rho = 0,028 \, [\Omega] \cdot [mm^2]/[m]$)
 c) Fer ($\rho = 0,1 \, [\Omega] \cdot [mm^2]/[m]$)
 Réponse correcte: b
 Explication: $R = \frac{U}{I} = \frac{12}{5,3} \approx 2,26 \, [\Omega]$ et $S = \pi \cdot \frac{d^2}{4} = \pi \cdot \frac{1^2}{4} \approx 0,8 \, [mm^2]$. Donc $\rho = \frac{R \cdot S}{l} = \frac{2,26 \cdot 0,8}{3,55} \approx \frac{1,8}{3,55} \approx 0,028 \, [\Omega] \cdot [mm^2]/[m]$, ce qui correspond à l'aluminium.
 
-11. Un récepteur est parcouru par un courant de 6,6 A sous 230 [V]. Son corps de chauffe est en alliage chrome-nickel ($\rho = 1 \, [\Omega] \cdot [mm^2]/[m]$) et sa longueur est de 4,5 [m]. Calculer la section du fil.
+11. Un récepteur est parcouru par un courant de 6,6 [A] sous 230 [V]. Son corps de chauffe est en alliage chrome-nickel ($\rho = 1 \, [\Omega] \cdot [mm^2]/[m]$) et sa longueur est de 4,5 [m]. Calculer la section du fil.
 a) 0,5 $[mm^2]$
 b) 0,3 $[mm^2]$
 c) 0,15 $[mm^2]$
