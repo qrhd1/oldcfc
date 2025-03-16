@@ -39,7 +39,7 @@
         };
 
         // Nom du fichier de questions (dans le même répertoire)
-        const QUIZ_FILE_NAME = 'chapitre_2.txt';
+        const QUIZ_FILE_NAME = 'chapitre_3.txt';
         
         // Charger automatiquement le fichier de questions au chargement de la page
         window.addEventListener('DOMContentLoaded', function() {
@@ -237,7 +237,7 @@
                     
                     const label = document.createElement('label');
                     label.htmlFor = `${question.id}${option.id}`;
-                    label.textContent = option.text;
+                    label.innerHTML = option.text; // Utiliser innerHTML pour permettre le rendu des formules MathJax
                     
                     optionDiv.appendChild(input);
                     optionDiv.appendChild(label);
@@ -268,6 +268,11 @@
             
             // Ajouter l'écouteur d'événement pour le bouton de vérification
             document.getElementById('check-answers').addEventListener('click', checkAnswers);
+            
+            // Rendre les formules MathJax après avoir généré le HTML
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
         }
 
         // Fonction pour vérifier les réponses
@@ -328,7 +333,7 @@
             // Rendre les formules MathJax après avoir affiché les résultats
             if (window.MathJax) {
                 MathJax.typesetPromise();
-            }            
+            }
         }
     </script>
 </body>
