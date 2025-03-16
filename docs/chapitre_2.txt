@@ -14,12 +14,12 @@ c) $R$ pour la grandeur et $[\Omega]$ pour l'unité
 Réponse correcte: b
 Explication: Le symbole $I$ (intensité) représente la grandeur du courant électrique et l'unité est l'ampère, symbolisé par $[A]$.
 
-3. Quelle est l'expérience qui permet de réaliser l'unité d'intensité du courant ?
-a) La force électromotrice entre deux conducteurs parallèles
-b) La force électrostatique entre deux charges ponctuelles
-c) La force électromagnétique entre deux conducteurs parallèles
+3. Depuis 2019, quelle est l'expérience qui permet de valider l'unité d'intensité du courant ?
+a) En 2025, l'unité d'intensité du courant (le volt) est réalisée grâce à une expérience basée sur un générateur quantique de courant développé par le Laboratoire National de Métrologie et d'Essais (LNE) en France
+b) En 2025, l'unité d'intensité du courant (le newton) est réalisée grâce à une expérience basée sur un générateur quantique de courant développé par le Laboratoire National de Métrologie et d'Essais (LNE) en France
+c) En 2025, l'unité d'intensité du courant (l'ampère) est réalisée grâce à une expérience basée sur un générateur quantique de courant développé par le Laboratoire National de Métrologie et d'Essais (LNE) en France
 Réponse correcte: c
-Explication: L'unité d'intensité du courant (ampère) est définie par la force électromagnétique qui s'exerce entre deux conducteurs parallèles parcourus par un courant.
+Explication: Cette expérience s'inscrit dans le cadre du nouveau Système International d'unités (SI) adopté en 2019, où les unités sont définies par des constantes fondamentales de la nature. Le générateur quantique de courant utilise des effets quantiques pour produire un courant électrique avec une très grande précision. Cette méthode permet de réaliser la définition de l'ampère conformément au SI, qui relie l'ampère à la charge élémentaire (e) et à la fréquence de l'horloge atomique au césium.
 
 4. Pour quelle intensité du courant maximale les prises électriques domestiques sont-elles souvent prévues ?
 a) 10 ampères
