@@ -56,7 +56,7 @@ Explication: $R = \rho \cdot \frac{l}{S} = 0,0175 \cdot \frac{25}{2,5} = 0,0175 
 
 9. Calculer la résistance d'un fil d'argent de 0,2 [m] de long et de 0,3 [mm] de diamètre, sachant que la résistivité de l'argent est de 0,016 $[\Omega] \cdot [mm^2]/[m]$.
 a) 0,045 $[\Omega]$
-b) 0,045 $[\milli\Omega]$
+b) 0,045 $[m\Omega]$
 c) 0,45 $[\Omega]$
 Réponse correcte: a
 Explication: La section $S = \pi \cdot \frac{d^2}{4} = \pi \cdot \frac{0,3^2}{4} \approx 0,07 \, [mm^2]$. Donc $R = \rho \cdot \frac{l}{S} = 0,016 \cdot \frac{0,2}{0,07} \approx 0,016 \cdot 2,8 \approx 0,045 \, [\Omega]$
@@ -75,7 +75,7 @@ c) 0,15 $[mm^2]$
 Réponse correcte: b
 Explication: $R = \frac{U}{I} = \frac{230}{6,6} \approx 35 \, [\Omega]$. D'où $S = \rho \cdot \frac{l}{R} = 1 \cdot \frac{4,5}{35} \approx \frac{4,5}{35} \approx 0,3 \, [mm^2]$
 
-12. Quelle est la résistivité du cuivre en $[\Omega] \cdot [mm^2]/[m]$ ?
+12. Quelle est la résistivité du cuivre en $\dfrac{[\Omega] \cdot [mm^2]}{[m]}$ ?
 a) 0,0175
 b) 0,028
 c) 0,016
