@@ -34,8 +34,8 @@ Réponse correcte: a
 Explication: Bien que l'unité officielle de l'énergie soit le joule $[J]$, l'unité pratique utilisée pour mesurer l'énergie électrique est le kilowatt-heure $[kWh]$ (correspondant à l'énergie consommée par un appareil de 1 kilowatt pendant 1 heure).
 
 6. Quel est le prix approximatif d'un kilowatt-heure d'électricité en Suisse ?
-a) Environ 0,20 CHF
-b) Environ 2,00 CHF
+a) Environ 0,25 CHF
+b) Environ 1,00 CHF
 c) Environ 5,00 CHF
 Réponse correcte: a
 Explication: Le prix moyen du kilowatt-heure en Suisse se situe aux alentours de 0,20 CHF, bien que ce prix puisse varier selon les régions et les fournisseurs d'électricité.
