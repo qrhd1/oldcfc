@@ -75,7 +75,7 @@ c) 0,15 $[mm^2]$
 Réponse correcte: b
 Explication: $R = \frac{U}{I} = \frac{230}{6,6} \approx 35 \, [\Omega]$. D'où $S = \rho \cdot \frac{l}{R} = 1 \cdot \frac{4,5}{35} \approx \frac{4,5}{35} \approx 0,3 \, [mm^2]$
 
-12. Pour compléter le tableau, quelle est la résistivité du cuivre en $[\Omega] \cdot [mm^2]/[m]$ ?
+12. Quelle est la résistivité du cuivre en $[\Omega] \cdot [mm^2]/[m]$ ?
 a) 0,0175
 b) 0,028
 c) 0,016
