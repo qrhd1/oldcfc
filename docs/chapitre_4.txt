@@ -1,9 +1,9 @@
-1. Citer trois formes d'énergie différentes.
-a) Énergie chimique, énergie thermique, énergie lumineuse
-b) Énergie électrique, énergie mécanique, énergie nucléaire
-c) Énergie magnétique, énergie potentielle, énergie cinétique
-Réponse correcte: a
-Explication: Il existe plusieurs formes d'énergie, dont l'énergie chimique (stockée dans les liaisons chimiques), l'énergie thermique (liée à la chaleur) et l'énergie lumineuse (associée aux ondes électromagnétiques visibles). Les options b et c contiennent également des formes d'énergie valides.
+1. Quelles sont les trois formes d'énergie principalement utilisées dans les centrales électriques conventionnelles ?
+a) Énergie solaire, énergie éolienne, énergie géothermique
+b) Énergie nucléaire, énergie thermique (combustibles fossiles), énergie hydraulique
+c) Énergie marémotrice, énergie chimique des batteries, énergie biomasse
+Réponse correcte : b
+Explication : Les centrales électriques conventionnelles utilisent principalement l'énergie nucléaire (centrales nucléaires), l'énergie thermique issue de la combustion de combustibles fossiles (centrales thermiques), et l'énergie hydraulique (barrages hydroélectriques). Les options a et c présentent des formes d'énergie renouvelables ou alternatives qui ne sont généralement pas considérées comme conventionnelles dans la production d'électricité à grande échelle.
 
 2. À partir de quelles sources énergétiques produit-on principalement l'énergie électrique en Suisse ?
 a) Énergie nucléaire (40%) et énergie hydraulique (55%)
