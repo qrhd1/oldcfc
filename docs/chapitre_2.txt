@@ -1,141 +1,141 @@
 Je vais convertir les questions en utilisant MathJax pour les formules. Voici le QCM avec la syntaxe MathJax appropriée:
 
-1. Qu'est-ce qu'un courant électrique?
+1. Qu'est-ce qu'un courant électrique ?
 a) Un déplacement de charges négatives dans un conducteur
 b) Un déplacement ordonné de charges électriques dans un conducteur
 c) Une différence de potentiel entre deux points
 Réponse correcte: b
 Explication: Le courant électrique est défini comme un déplacement ordonné de charges électriques (généralement des électrons) dans un conducteur.
 
-2. Quels sont les symboles de grandeur et d'unité du courant électrique?
+2. Quels sont les symboles de grandeur et d'unité du courant électrique ?
 a) $U$ pour la grandeur et $[V]$ pour l'unité
 b) $I$ pour la grandeur et $[A]$ pour l'unité
-c) $R$ pour la grandeur et $\Omega$ pour l'unité
+c) $R$ pour la grandeur et $[\Omega]$ pour l'unité
 Réponse correcte: b
 Explication: Le symbole $I$ (intensité) représente la grandeur du courant électrique et l'unité est l'ampère, symbolisé par $[A]$.
 
-3. Quelle est l'expérience qui permet de réaliser l'unité d'intensité du courant?
+3. Quelle est l'expérience qui permet de réaliser l'unité d'intensité du courant ?
 a) La force électromotrice entre deux conducteurs parallèles
 b) La force électrostatique entre deux charges ponctuelles
 c) La force électromagnétique entre deux conducteurs parallèles
 Réponse correcte: c
 Explication: L'unité d'intensité du courant (ampère) est définie par la force électromagnétique qui s'exerce entre deux conducteurs parallèles parcourus par un courant.
 
-4. Pour quelle intensité du courant maximale les prises électriques domestiques sont-elles souvent prévues?
+4. Pour quelle intensité du courant maximale les prises électriques domestiques sont-elles souvent prévues ?
 a) 10 ampères
 b) 16 ampères
 c) 20 ampères
 Réponse correcte: b
 Explication: Les prises électriques domestiques standard sont généralement prévues pour une intensité maximale de 16 ampères.
 
-5. Comment doit-on connecter un ampèremètre dans un circuit électrique?
+5. Comment doit-on connecter un ampèremètre dans un circuit électrique ?
 a) En parallèle avec le récepteur
 b) En série avec le récepteur
 c) Entre les bornes du générateur
 Réponse correcte: b
 Explication: Un ampèremètre doit être connecté en série avec le récepteur pour que tout le courant le traverse et puisse être mesuré.
 
-6. Qu'est-ce que la tension électrique?
+6. Qu'est-ce que la tension électrique ?
 a) Le travail par unité de charge électrique
 b) La quantité de charges qui circulent par seconde
 c) La résistance qu'oppose un conducteur au passage du courant
 Réponse correcte: a
 Explication: La tension électrique représente le travail par unité de charge électrique, ou la différence de potentiel électrique entre deux points.
 
-7. Quels sont les symboles de grandeur et d'unité de la tension électrique?
+7. Quels sont les symboles de grandeur et d'unité de la tension électrique ?
 a) $I$ pour la grandeur et $[A]$ pour l'unité
-b) $R$ pour la grandeur et $\Omega$ pour l'unité
+b) $R$ pour la grandeur et $[\Omega]$ pour l'unité
 c) $U$ pour la grandeur et $[V]$ pour l'unité
 Réponse correcte: c
 Explication: Le symbole $U$ représente la grandeur de la tension électrique et l'unité est le volt, symbolisé par $V$.
 
-8. Que vaut approximativement la tension d'une pile "carrée" pour lampe de poche?
+8. Que vaut approximativement la tension d'une pile "carrée" pour lampe de poche ?
 a) 1,5 volts
 b) 4,5 volts
 c) 9 volts
 Réponse correcte: c
 Explication: Une pile "carrée" pour lampe de poche a généralement une tension d'environ 9 volts.
 
-9. Que vaut approximativement la tension d'une batterie d'automobile?
+9. Que vaut approximativement la tension d'une batterie d'automobile classique (à moteur thermique, non hybride, bref une "vieille voiture" quoi !!!) ?
 a) 6 volts
 b) 12 volts
 c) 24 volts
 Réponse correcte: b
 Explication: Une batterie d'automobile standard a généralement une tension nominale de 12 volts.
 
-10. Comment doit-on connecter un voltmètre dans un circuit électrique?
+10. Comment doit-on connecter un voltmètre dans un circuit électrique ?
 a) En série avec le récepteur
 b) En parallèle avec le récepteur
 c) Entre les deux fils d'alimentation
 Réponse correcte: b
 Explication: Un voltmètre doit être connecté en parallèle avec le récepteur pour mesurer la différence de potentiel à ses bornes.
 
-11. Qu'est-ce que la résistance électrique?
+11. Qu'est-ce que la résistance électrique ?
 a) La capacité d'un matériau à emmagasiner des charges
 b) La propriété d'un conducteur à s'opposer au passage du courant
 c) La quantité de courant qui traverse un conducteur
 Réponse correcte: b
 Explication: La résistance électrique est la propriété d'un conducteur à s'opposer au passage du courant électrique.
 
-12. Quels sont les symboles de grandeur et d'unité de la résistance?
-a) $R$ pour la grandeur et $\Omega$ pour l'unité
+12. Quels sont les symboles de grandeur et d'unité de la résistance ?
+a) $R$ pour la grandeur et $[\Omega]$ pour l'unité
 b) $U$ pour la grandeur et $[V]$ pour l'unité
 c) $I$ pour la grandeur et $[A]$ pour l'unité
 Réponse correcte: a
-Explication: Le symbole $R$ représente la grandeur de la résistance électrique et l'unité est l'ohm, symbolisé par $\Omega$.
+Explication: Le symbole $R$ représente la grandeur de la résistance électrique et l'unité est l'ohm, symbolisé par $[\Omega]$.
 
-13. Comment est définie l'unité de résistance?
-a) $1 \Omega = \frac{1 [V]}{1 [A]}$
-b) $1 \Omega = \frac{1 [A]}{1 [V]}$
-c) $1 \Omega = 1 [V] \cdot 1 [A]$
+13. Comment est définie l'unité de résistance ?
+a) $1 [\Omega] = \frac{1 [V]}{1 [A]}$
+b) $1 [\Omega] = \frac{1 [A]}{1 [V]}$
+c) $1 [\Omega] = 1 [V] \cdot 1 [A]$
 Réponse correcte: a
-Explication: L'ohm est défini comme la résistance d'un conducteur qui, traversé par un courant de 1 ampère, présente à ses bornes une tension de 1 volt. Soit $1 \Omega = \frac{1 [V]}{1 [A]}$.
+Explication: L'ohm est défini comme la résistance d'un conducteur qui, traversé par un courant de 1 ampère, présente à ses bornes une tension de 1 volt. Soit $1 [\Omega] = \frac{1 [V]}{1 [A]}$.
 
-14. Avec quel appareil mesure-t-on la résistance?
+14. Avec quel appareil mesure-t-on la résistance ?
 a) Un ampèremètre
 b) Un voltmètre
 c) Un ohmmètre
 Réponse correcte: c
 Explication: La résistance se mesure avec un ohmmètre, qui peut souvent être intégré dans un multimètre.
 
-15. Quelle est l'intensité du courant qui circule dans un récepteur de 20 $\Omega$, alimenté sous 240 [V]?
+15. Quelle est l'intensité du courant qui circule dans un récepteur de 20 $[\Omega]$, alimenté sous 240 [V] ?
 a) 8 [A]
 b) 12 [A]
 c) 16 [A]
 Réponse correcte: b
-Explication: D'après la loi d'Ohm: $I = \frac{U}{R} = \frac{240 [V]}{20 \Omega} = 12 [A]$
+Explication: D'après la loi d'Ohm: $I = \frac{U}{R} = \frac{240 [V]}{20 [\Omega]} = 12 [A]$
 
-16. Un récepteur est marqué: $R = 160 \Omega$ et $I = 1,5 [A]$. Sous quelle tension doit-il être alimenté?
+16. Un récepteur est marqué: $R = 160 [\Omega]$ et $I = 1,5 [A]$. Sous quelle tension doit-il être alimenté ?
 a) 240 [V]
 b) 220 [V]
 c) 200 [V]
 Réponse correcte: a
-Explication: D'après la loi d'Ohm: $U = R \cdot I = 160 \Omega \cdot 1,5 [A] = 240 [V]$
+Explication: D'après la loi d'Ohm: $U = R \cdot I = 160 [\Omega] \cdot 1,5 [A] = 240 [V]$
 
-17. Calculer la valeur nominale du fusible permettant de protéger un récepteur de 10 $\Omega$ alimenté sous 200 [V].
+17. Calculer la valeur nominale du fusible permettant de protéger un récepteur de 10 $[\Omega]$ alimenté sous 200 [V].
 a) 10 [A]
 b) 20 [A]
 c) 25 [A]
 Réponse correcte: b
-Explication: Le courant est $I = \frac{U}{R} = \frac{200 [V]}{10 \Omega} = 20 [A]$. Le fusible doit avoir une valeur nominale identique ou légèrement supérieure au courant calculé.
+Explication: Le courant est $I = \frac{U}{R} = \frac{200 [V]}{10 [\Omega]} = 20 [A]$. Le fusible doit avoir une valeur nominale identique ou légèrement supérieure au courant calculé.
 
-18. Un récepteur est marqué: $R = 25 \Omega$ et $I = 4 [A]$. Peut-on le raccorder sur le réseau domestique standard en Europe?
+18. Un récepteur est marqué: $R = 25 [\Omega]$ et $I = 4 [A]$. Peut-on le raccorder sur le réseau domestique standard en Europe ?
 a) Oui, car la puissance est inférieure à 3600 W
 b) Non, car l'intensité dépasse la valeur nominale d'un fusible standard
 c) Oui, si on utilise un fusible de 20 [A]
 Réponse correcte: b
-Explication: La tension nécessaire est $U = R \cdot I = 25 \Omega \cdot 4 [A] = 100 [V]$. Cette tension est inférieure à celle du réseau domestique européen (230 [V]), donc ce récepteur est probablement conçu pour un autre réseau (comme celui des États-Unis à 110 [V]).
+Explication: La tension nécessaire est $U = R \cdot I = 25 [\Omega] \cdot 4 [A] = 100 [V]$. Cette tension est inférieure à celle du réseau domestique européen (230 [V]), donc ce récepteur est probablement conçu pour un autre réseau (comme celui des États-Unis à 110 [V]).
 
-19. Quelle est la relation graphique entre la tension $U$ et le courant $I$ pour une résistance constante?
+19. Quelle est la relation graphique entre la tension $U$ et le courant $I$ pour une résistance constante ?
 a) Une relation exponentielle
 b) Une relation linéaire
 c) Une relation logarithmique
 Réponse correcte: b
 Explication: Pour une résistance constante, la loi d'Ohm indique que $U = R \cdot I$, ce qui correspond à une relation linéaire où la pente est égale à la valeur de la résistance.
 
-20. Quelle sera la tension aux bornes d'une résistance de 40 $\Omega$ traversée par un courant de 5 [A]?
+20. Quelle sera la tension aux bornes d'une résistance de 40 $[\Omega]$ traversée par un courant de 5 [A] ?
 a) 200 [V]
 b) 180 [V]
 c) 160 [V]
 Réponse correcte: a
-Explication: D'après la loi d'Ohm: $U = R \cdot I = 40 \Omega \cdot 5 [A] = 200 [V]$
+Explication: D'après la loi d'Ohm: $U = R \cdot I = 40 [\Omega] \cdot 5 [A] = 200 [V]$
