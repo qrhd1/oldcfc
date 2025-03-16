@@ -59,25 +59,25 @@ a) 0,045 $[\Omega]$
 b) 0,045 $[m\Omega]$
 c) 0,45 $[\Omega]$
 Réponse correcte: a
-Explication: La section $A = \pi \cdot \dfrac{d^2}{4} = \pi \cdot \dfrac{0,3^2}{4} \approx 0,07 \, [mm^2]$. Donc $R = \rho \cdot \dfrac{l}{A} = 0,016 \cdot \dfrac{0,2}{0,07} \approx 0,016 \cdot 2,8 \approx 0,045 \, [\Omega]$
+Explication: La section $A = \pi \cdot \dfrac{d^2}{4} = \pi \cdot \dfrac{0,3^2}{4} = 0,07 \, [mm^2]$. Donc $R = \rho \cdot \dfrac{l}{A} = 0,016 \cdot \dfrac{0,2}{0,07} = 0,016 \cdot 2,8 = 0,045 \, [\Omega]$
 
-10. Les caractéristiques d'un fil sont: $l = 355$ cm et $d = 1$ [mm]. Lorsque ce fil est soumis à une tension de 12 [V], l'intensité du courant est de 5,3 [A]. De quelle matière ce fil est-il constitué ?
+10. Les caractéristiques d'un fil sont: $l = 355$ [cm] et $d = 1$ [mm]. Lorsque ce fil est soumis à une tension de 12 [V], l'intensité du courant est de 5,3 [A]. De quelle matière ce fil est-il constitué ?
 a) Cuivre ($\rho = 0,0175 \, [\Omega] \cdot [mm^2]/[m]$)
 b) Aluminium ($\rho = 0,028 \, [\Omega] \cdot [mm^2]/[m]$)
 c) Fer ($\rho = 0,1 \, [\Omega] \cdot [mm^2]/[m]$)
 Réponse correcte: b
-Explication: $R = \dfrac{U}{I} = \dfrac{12}{5,3} \approx 2,26 \, [\Omega]$ et $A = \pi \cdot \dfrac{d^2}{4} = \pi \cdot \dfrac{1^2}{4} \approx 0,8 \, [mm^2]$. Donc $\rho = \dfrac{R \cdot A}{l} = \dfrac{2,26 \cdot 0,8}{3,55} \approx \dfrac{1,8}{3,55} \approx 0,028 \, [\Omega] \cdot [mm^2]/[m]$, ce qui correspond à l'aluminium.
+Explication: $R = \dfrac{U}{I} = \dfrac{12}{5,3} = 2,26 \, [\Omega]$ et $A = \pi \cdot \dfrac{d^2}{4} = \pi \cdot \dfrac{1^2}{4} = 0,8 \, [mm^2]$. Donc $\rho = \dfrac{R \cdot A}{l} = \dfrac{2,26 \cdot 0,8}{3,55} = \dfrac{1,8}{3,55} = 0,028 \, [\Omega] \cdot [mm^2]/[m]$, ce qui correspond à l'aluminium.
 
 11. Un récepteur est parcouru par un courant de 6,6 [A] sous 230 [V]. Son corps de chauffe est en alliage chrome-nickel ($\rho = 1 \, [\Omega] \cdot [mm^2]/[m]$) et sa longueur est de 4,5 [m]. Calculer la section du fil.
 a) 0,5 $[mm^2]$
 b) 0,3 $[mm^2]$
 c) 0,15 $[mm^2]$
 Réponse correcte: b
-Explication: $R = \dfrac{U}{I} = \dfrac{230}{6,6} \approx 35 \, [\Omega]$. D'où $A = \rho \cdot \dfrac{l}{R} = 1 \cdot \dfrac{4,5}{35} \approx \dfrac{4,5}{35} \approx 0,3 \, [mm^2]$
+Explication: $R = \dfrac{U}{I} = \dfrac{230}{6,6} = 35 \, [\Omega]$. D'où $A = \rho \cdot \dfrac{l}{R} = 1 \cdot \dfrac{4,5}{35} = \dfrac{4,5}{35} = 0,3 \, [mm^2]$
 
 12. Quelle est la résistivité du cuivre en $\dfrac{[\Omega] \cdot [mm^2]}{[m]}$ ?
 a) 0,0175
 b) 0,028
 c) 0,016
 Réponse correcte: a
-Explication: Pour le cuivre avec $l = 78 \, [m]$, $d = 1,2 \, [mm]$, la section $A = \pi \cdot \dfrac{d^2}{4} = \pi \cdot \dfrac{1,2^2}{4} \approx 1,13 \, [mm^2]$. Pour calculer la résistivité: $\rho = \dfrac{R \cdot A}{l}$, et on utilise des valeurs connues pour trouver $\rho \approx 0,0175 \, [\Omega] \cdot [mm^2]/[m]$.
+Explication: Pour le cuivre avec $l = 78 \, [m]$, $d = 1,2 \, [mm]$, la section $A = \pi \cdot \dfrac{d^2}{4} = \pi \cdot \dfrac{1,2^2}{4} = 1,13 \, [mm^2]$. Pour calculer la résistivité: $\rho = \dfrac{R \cdot A}{l}$, et on utilise des valeurs connues pour trouver $\rho = 0,0175 \, [\Omega] \cdot [mm^2]/[m]$.
