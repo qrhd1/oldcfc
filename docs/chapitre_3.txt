@@ -47,7 +47,7 @@ c) 3 fois la résistance initiale
 Réponse correcte: a
 Explication: Chaque brin a une longueur $\dfrac{l}{3}$ et un diamètre $d$. Mis en parallèle, les trois résistances identiques donnent une résistance équivalente égale à $\dfrac{R}{3}$ où $R$ est la résistance initiale.
 
-8. Quelle est la résistance d'un fil de cuivre de 25 [m] de longueur et de 2,5 mm² de section, sachant que la résistivité du cuivre est de 0,0175 $[\Omega] \cdot [mm^2]/[m]$ ?
+8. Quelle est la résistance d'un fil de cuivre de 25 [m] de longueur et de 2,5 [mm^2] de section, sachant que la résistivité du cuivre est de 0,0175 $[\Omega] \cdot [mm^2]/[m]$ ?
 a) 0,175 $[\Omega]$
 b) 0,2 $[\Omega]$
 c) 0,125 $[\Omega]$
