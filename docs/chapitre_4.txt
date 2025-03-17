@@ -1,111 +1,111 @@
 1. Quelles sont les trois formes d'énergie principalement utilisées dans les centrales électriques conventionnelles ?
-a) Énergie solaire, énergie éolienne, énergie géothermique
+a) Énergie marémotrice, énergie chimique des batteries, énergie biomasse
 b) Énergie nucléaire, énergie thermique (combustibles fossiles), énergie hydraulique
-c) Énergie marémotrice, énergie chimique des batteries, énergie biomasse
+c) Énergie solaire, énergie éolienne, énergie géothermique
 Réponse correcte : b
 Explication : Les centrales électriques conventionnelles utilisent principalement l'énergie nucléaire (centrales nucléaires), l'énergie thermique issue de la combustion de combustibles fossiles (centrales thermiques), et l'énergie hydraulique (barrages hydroélectriques). Les options a et c présentent des formes d'énergie renouvelables ou alternatives qui ne sont généralement pas considérées comme conventionnelles dans la production d'électricité à grande échelle.
 
 2. À partir de quelles sources énergétiques convertit-on principalement l'énergie électrique en Suisse ?
-a) Énergie nucléaire (40%) et énergie hydraulique (55%)
+a) Biomasse (25%) et géothermie (65%)
 b) Énergie solaire (35%) et énergie éolienne (45%)
-c) Biomasse (25%) et géothermie (65%)
-Réponse correcte: a
+c) Énergie nucléaire (40%) et énergie hydraulique (55%)
+Réponse correcte: c
 Explication: En Suisse, l'énergie électrique est convertie majoritairement à partir de l'énergie hydraulique (environ 55%) et de l'énergie nucléaire (environ 40%). Les énergies renouvelables comme le solaire et l'éolien représentent une part moins importante.
 
 3. Dans une installation hydro-électrique, quel est l'ordre correct des transformations d'énergie ?
 a) Énergie potentielle → énergie cinétique → énergie mécanique → énergie électrique
-b) Énergie cinétique → énergie potentielle → énergie électrique → énergie mécanique
-c) Énergie mécanique → énergie potentielle → énergie cinétique → énergie électrique
+b) Énergie mécanique → énergie potentielle → énergie cinétique → énergie électrique
+c) Énergie cinétique → énergie potentielle → énergie électrique → énergie mécanique
 Réponse correcte: a
 Explication: Dans une installation hydro-électrique, l'eau stockée en hauteur possède une énergie potentielle. En descendant, elle acquiert une énergie cinétique qui fait tourner les turbines (énergie mécanique), lesquelles entraînent les alternateurs qui produisent l'énergie électrique.
 
 4. Quels sont les symboles de grandeur et d'unité de l'énergie ?
-a) $W$ pour la grandeur et $[J]$ pour l'unité
+a) $P$ pour la grandeur et $[W]$ pour l'unité
 b) $W$ pour la grandeur et $[N]$ pour l'unité
-c) $P$ pour la grandeur et $[W]$ pour l'unité
-Réponse correcte: a
+c) $W$ pour la grandeur et $[J]$ pour l'unité
+Réponse correcte: c
 Explication: L'énergie est représentée par le symbole $W$ (pour Énergie) et son unité dans le Système International est le joule, symbolisé par $[J]$.
 
 5. Quelle est l'unité pratique de l'énergie électrique ?
-a) Le kilowatt-heure $[kWh]$
-b) Le joule $[J]$
-c) Le watt $[W]$
-Réponse correcte: a
+a) Le watt $[W]$
+b) Le kilowatt-heure $[kWh]$
+c) Le joule $[J]$
+Réponse correcte: b
 Explication: Bien que l'unité officielle de l'énergie soit le joule $[J]$, l'unité pratique utilisée pour mesurer l'énergie électrique est le kilowatt-heure $[kWh]$ (correspondant à l'énergie consommée par un appareil de 1 kilowatt pendant 1 heure).
 
 6. Quel est le prix approximatif d'un kilowatt-heure d'électricité en Suisse ?
-a) Environ 0,25 CHF
-b) Environ 1,00 CHF
-c) Environ 5,00 CHF
-Réponse correcte: a
+a) Environ 5,00 CHF
+b) Environ 0,25 CHF
+c) Environ 1,00 CHF
+Réponse correcte: b
 Explication: Le prix moyen du kilowatt-heure en Suisse se situe aux alentours de 0,20 CHF, bien que ce prix puisse varier selon les régions et les fournisseurs d'électricité.
 
 7. Comment s'appelle l'appareil qui mesure l'énergie électrique ?
-a) Un compteur électrique
+a) Un ampèremètre
 b) Un wattmètre
-c) Un ampèremètre
-Réponse correcte: a
+c) Un compteur électrique
+Réponse correcte: c
 Explication: L'appareil qui mesure l'énergie électrique consommée est le compteur électrique. Le wattmètre mesure la puissance et l'ampèremètre mesure l'intensité du courant.
 
 8. Qu'indique la constante $c$ sur un compteur ?
-a) Le nombre d'impulsions de comptage correspondant à 1 $[kWh]$
-b) La tension maximale supportée par le compteur
-c) La puissance maximale que peut mesurer le compteur
-Réponse correcte: a
+a) La puissance maximale que peut mesurer le compteur
+b) Le nombre d'impulsions de comptage correspondant à 1 $[kWh]$
+c) La tension maximale supportée par le compteur
+Réponse correcte: b
 Explication: La constante $c$ d'un compteur indique le nombre d'impulsions pour 1 $[kWh]$ (dans les anciens compteurs électromécaniques cela représente le nombre de tours pour 1 $[kWh]$)
 
 9. Un radiateur électrique de 2000 $[W]$ fonctionne pendant 5 heures. Quelle est l'énergie consommée ?
-a) $W = 10$ $[kWh]$
+a) $W = 2,5$ $[kWh]$
 b) $W = 400$ $[kWh]$
-c) $W = 2,5$ $[kWh]$
-Réponse correcte: a
+c) $W = 10$ $[kWh]$
+Réponse correcte: c
 Explication: L'énergie consommée se calcule par la formule $W = P \cdot t$, où $P$ est la puissance et $t$ le temps. Donc $W = 2000 \cdot 5 = 10000 [Wh] = 10 [kWh]$.
 
 10. L'énergie absorbée par un appareil est de 7,5 $[kWh]$. Si l'appareil a fonctionné de 8 h à 13 h sous une tension de 250 $[V]$, quelle est l'intensité du courant ?
-a) $I = 6$ $[A]$
-b) $I = 3$ $[A]$
-c) $I = 10$ $[A]$
-Réponse correcte: a
+a) $I = 10$ $[A]$
+b) $I = 6$ $[A]$
+c) $I = 3$ $[A]$
+Réponse correcte: b
 Explication: L'appareil a fonctionné pendant $t = 5$ heures. La puissance est $P = \dfrac{W}{t} = \dfrac{7,5}{5} = 1,5 [kW] = 1500 [W]$. Sachant que $P = U \cdot I$, on a $I = \dfrac{P}{U} = \dfrac{1500}{250} = 6 [A]$.
 
 11. Qu'est-ce que la puissance électrique ?
-a) L'énergie consommée par unité de temps
-b) La quantité d'électricité qui circule dans un circuit
+a) La quantité d'électricité qui circule dans un circuit
+b) L'énergie consommée par unité de temps
 c) La puissance d'un générateur raccordé à un récepteur
-Réponse correcte: a
+Réponse correcte: b
 Explication: La puissance électrique est définie comme l'énergie consommée (ou fournie) par unité de temps. Elle s'exprime en watts $[W]$.
 
 12. Quels sont les symboles de grandeur et d'unité de la puissance ?
-a) $P$ pour la grandeur et $[W]$ pour l'unité
-b) $W$ pour la grandeur et $[J]$ pour l'unité
+a) $W$ pour la grandeur et $[J]$ pour l'unité
+b) $P$ pour la grandeur et $[W]$ pour l'unité
 c) $W$ pour la grandeur et $[kWh]$ pour l'unité
-Réponse correcte: a
+Réponse correcte: b
 Explication: La puissance est représentée par le symbole $P$ et son unité dans le Système International est le watt, symbolisé par $[W]$.
 
 13. On lit sur la plaquette signalétique d'un radiateur $P = 1500 [W]$. De quelle puissance s'agit-il ?
-a) De la puissance active
-b) De la puissance réactive
-c) De la puissance apparente
-Réponse correcte: a
+a) De la puissance réactive
+b) De la puissance apparente
+c) De la puissance active
+Réponse correcte: c
 Explication: La puissance indiquée sur les appareils électriques domestiques est généralement la puissance active, qui correspond à la puissance réellement consommée et transformée en chaleur, lumière, etc.
 
 14. Comment s'appelle l'appareil qui mesure la puissance ?
-a) Un wattmètre
+a) Un voltmètre
 b) Un compteur électrique
-c) Un voltmètre
-Réponse correcte: a
+c) Un wattmètre
+Réponse correcte: c
 Explication: L'appareil qui mesure la puissance électrique est le wattmètre. Le compteur électrique mesure l'énergie consommée et le voltmètre mesure la tension.
 
 15. La consommation d'un appareil est de 720 $[MJ]$ pendant 4 heures. Quelle est sa puissance ?
-a) $P = 50$ $[kW]$
-b) $P = 180$ $[kW]$
-c) $P = 2,88$ $[MW]$
-Réponse correcte: a
+a) $P = 2,88$ $[MW]$
+b) $P = 50$ $[kW]$
+c) $P = 180$ $[kW]$
+Réponse correcte: b
 Explication: Conversion en $[kWh]$ : $W = 720 [MJ] = 720 \cdot 10^6 \cdot \dfrac{1}{3600} = 200 [kWh]$. Puis $P = \dfrac{W}{t} = \dfrac{200}{4} = 50 [kW]$.
 
 16. Un ampèremètre placé sur le conducteur de phase alimentant un radiateur monophasé indique 5 $[A]$. Quelle est la puissance du récepteur si la tension est de 220 $[V]$ ?
-a) $P = 1100$ $[W]$
+a) $P = 225$ $[W]$
 b) $P = 44$ $[W]$
-c) $P = 225$ $[W]$
-Réponse correcte: a
+c) $P = 1100$ $[W]$
+Réponse correcte: c
 Explication: Pour un récepteur résistif comme un radiateur, on utilise la formule $P = U \cdot I$, où $U$ est la tension et $I$ l'intensité. Donc $P = 220 \cdot 5 = 1100 [W]$.
