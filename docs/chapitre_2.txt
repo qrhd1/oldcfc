@@ -1,5 +1,3 @@
-Je vais convertir les questions en utilisant MathJax pour les formules. Voici le QCM avec la syntaxe MathJax appropriée:
-
 1. Qu'est-ce qu'un courant électrique ?
 a) Un déplacement de charges négatives dans un conducteur
 b) Un déplacement ordonné de charges électriques dans un conducteur
