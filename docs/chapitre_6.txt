@@ -34,7 +34,7 @@ Réponse correcte: a
 Explication: La quantité d'électricité correspond à la charge électrique transportée par un courant pendant un temps donné. Elle représente le nombre d'électrons qui circulent dans un circuit.
 
 6. Quels sont les symboles de grandeur et d'unité de la quantité d'électricité ?
-a) $Q$ en $[C]$ ou $[A \cdot s]$
+a) $Q$ en $[C]$
 b) $I$ en $[A]$
 c) $W$ en $[J]$
 Réponse correcte: a
