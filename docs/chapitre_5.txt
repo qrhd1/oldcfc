@@ -1,195 +1,111 @@
-1. Qu'est-ce que l'électricité  ?
-a) Un phénomène électromagnétique lié au mouvement des électrons
-b) Une forme d'énergie résultant du mouvement de charges électriques
-c) La différence de potentiel entre deux points d'un circuit
-Réponse correcte: b
-Explication: L'électricité est une forme d'énergie qui résulte du mouvement des charges électriques, principalement les électrons, dans un conducteur.
-
-2. De quoi se compose un atome ?
-a) De neutrons, de protons et d'électrons
-b) De noyau, d'électrons et d'ions
-c) De particules chargées positivement et négativement
+1. Qu'est-ce que la densité de courant ?
+a) Le rapport entre l'intensité du courant et la section du conducteur
+b) La quantité d'énergie électrique par unité de volume
+c) Le nombre d'électrons par unité de longueur du conducteur
 Réponse correcte: a
-Explication: Un atome est composé d'un noyau contenant des neutrons et des protons, autour duquel gravitent des électrons.
+Explication: La densité de courant est définie comme le rapport entre l'intensité du courant électrique et la section du conducteur qu'il traverse. Elle représente la concentration du flux d'électrons dans le conducteur et s'exprime en ampères par mètre carré $[A/m^2]$ ou en ampères par millimètre carré $[A/mm^2]$.
 
-3. Qu'appelle-t-on un ion ?
-a) Un atome ayant perdu ou gagné des neutrons
-b) Un atome ayant perdu ou gagné des électrons
-c) Une particule électriquement neutre
-Réponse correcte: b
-Explication: Un ion est un atome qui a perdu ou gagné un ou plusieurs électrons, le rendant électriquement chargé (positivement ou négativement).
-
-4. Depuis quand transforme-t-on et utilise-t-on industriellement l'énergie électrique ?
-a) Depuis le début du 18ème siècle
-b) Depuis la fin du 19ème siècle
-c) Depuis le milieu du 20ème siècle
-Réponse correcte: b
-Explication: L'utilisation industrielle de l'énergie électrique a commencé à la fin du 19ème siècle, notamment avec les travaux de Thomas Edison et Nikola Tesla.
-
-5. Quels sont les avantages de l'énergie électrique ?
-a) Facilité de transport, transformation et utilisation
-b) Coût faible, absence de pollution et disponibilité illimitée
-c) Stockage aisé, production simple et sécurité totale
+2. Quels sont les symboles de grandeur et d'unité du coefficient de température ?
+a) $\alpha$ pour la grandeur et $[K^{-1}]$ pour l'unité
+b) $\theta$ pour la grandeur et $[°C]$ pour l'unité
+c) $\tau$ pour la grandeur et $[\Omega \cdot K]$ pour l'unité
 Réponse correcte: a
-Explication: Les principaux avantages de l'énergie électrique sont sa facilité de transport sur de longues distances, sa transformation aisée en d'autres formes d'énergie et sa simplicité d'utilisation.
+Explication: Le coefficient de température de résistivité est symbolisé par la lettre grecque $\alpha$ (alpha) et s'exprime en inverse de kelvin $[K^{-1}]$ ou inverse de degré Celsius $[°C^{-1}]$, car il représente une variation relative de résistance par unité de température.
 
-6. Citer 3 appareils qui ne fonctionnent qu'avec du courant électrique.
-a) Ordinateur, téléphone portable, four à micro-ondes
-b) Réfrigérateur, lampe à huile, téléviseur
-c) Ventilateur, aspirateur, lave-linge
+3. Comment se comporte la résistance d'un conducteur métallique lorsque sa température augmente ?
+a) Elle augmente proportionnellement à l'élévation de température
+b) Elle diminue de façon exponentielle
+c) Elle reste constante puis chute brutalement
 Réponse correcte: a
-Explication: L'ordinateur, le téléphone portable et le four à micro-ondes sont des exemples d'appareils qui ne peuvent fonctionner qu'avec du courant électrique.
+Explication: Pour les conducteurs métalliques (comme le cuivre, l'aluminium, le fer), la résistance électrique augmente de façon quasi linéaire avec la température. Ceci est dû à l'augmentation des vibrations des atomes du réseau cristallin qui gênent le déplacement des électrons libres.
 
-7. Un atome de cuivre possède 29 protons et 35 neutrons. Combien possède-t-il d'électrons ?
-a) 35 électrons
-b) 29 électrons
-c) 64 électrons
+4. Quelle est l'énergie dégagée par une résistance de 25 $[\Omega]$ parcourue par un courant de 4 $[A]$ pendant 45 minutes ?
+a) $E = 1080$ $[kJ]$
+b) $E = 270$ $[kJ]$
+c) $E = 0,3$ $[kWh]$
 Réponse correcte: b
-Explication: Dans un atome neutre, le nombre d'électrons est égal au nombre de protons. Donc l'atome de cuivre possède 29 électrons.
+Explication: L'énergie dégagée par effet Joule se calcule avec la formule $E = R \cdot I^2 \cdot t$. Avec $R = 25 [\Omega]$, $I = 4 [A]$ et $t = 45 [min] = 2700 [s]$, on obtient $E = 25 \cdot 4^2 \cdot 2700 = 25 \cdot 16 \cdot 2700 = 1080000 [J] = 1080 [kJ] = 270 [kJ]$.
 
-8. Quels sont les électrons susceptibles de passer d'un atome à l'autre ?
-a) Les électrons du noyau
-b) Les électrons de la couche interne
-c) Les électrons de la couche externe (ou de valence)
+5. Quels sont les matériaux dont la résistance diminue lorsque la température augmente ?
+a) Les semi-conducteurs comme le silicium et le germanium
+b) Les métaux précieux comme l'or et l'argent
+c) Les alliages comme le constantan et le manganin
+Réponse correcte: a
+Explication: Les semi-conducteurs comme le silicium et le germanium ont un coefficient de température négatif, c'est-à-dire que leur résistance diminue quand la température augmente. Cela s'explique par le fait que l'énergie thermique libère des porteurs de charge qui contribuent à la conduction électrique.
+
+6. La chaleur massique est :
+a) L'énergie nécessaire pour élever de 1 $[K]$ la température de 1 $[kg]$ d'une substance
+b) La masse d'un matériau contenue dans 1 $[m^3]$
+c) La chaleur dégagée par 1 $[kg]$ de combustible
+Réponse correcte: a
+Explication: La chaleur massique, notée $c$, est une grandeur qui caractérise la capacité d'un matériau à emmagasiner de la chaleur. Elle correspond à l'énergie qu'il faut fournir à 1 kilogramme de cette substance pour élever sa température de 1 kelvin (ou 1 degré Celsius). Elle s'exprime en $[J/(kg \cdot K)]$.
+
+7. Calculer la densité de courant dans un conducteur de 5 $[mm]$ de diamètre parcouru par un courant de 50 $[A]$.
+a) $J = 2,55$ $[A/mm^2]$
+b) $J = 10$ $[A/mm^2]$
+c) $J = 4$ $[A/mm^2]$
+Réponse correcte: a
+Explication: La section du conducteur est $S = \pi \cdot \dfrac{d^2}{4} = \pi \cdot \dfrac{5^2}{4} = \pi \cdot 6,25 = 19,63 [mm^2]$. La densité de courant est donc $J = \dfrac{I}{S} = \dfrac{50}{19,63} = 2,55 [A/mm^2]$.
+
+8. Que se passe-t-il physiquement lorsqu'un courant traverse une résistance ?
+a) Une partie de l'énergie électrique est convertie en chaleur par collisions des électrons
+b) Les électrons sont complètement absorbés par le matériau
+c) Le courant génère un champ magnétique qui produit de la chaleur
+Réponse correcte: a
+Explication: Lorsqu'un courant électrique traverse une résistance, les électrons libres entrent en collision avec les atomes du réseau cristallin, transférant une partie de leur énergie cinétique sous forme de chaleur. Ce phénomène, appelé effet Joule, est une conversion d'énergie électrique en énergie thermique.
+
+9. Un chauffe-eau électrique de 1500 $[W]$ a un rendement de 95%. Combien de temps faudra-t-il pour chauffer 2 litres d'eau de 15 $[°C]$ à 75 $[°C]$ ? (Chaleur massique de l'eau : $c = 4,18 [kJ/(kg \cdot K)]$)
+a) $t = 5$ $[min]$
+b) $t = 3,5$ $[min]$
+c) $t = 7$ $[min]$
+Réponse correcte: b
+Explication: L'énergie nécessaire est $E = m \cdot c \cdot \Delta \theta = 2 \cdot 4,18 \cdot 60 = 501,6 [kJ]$. Avec un rendement de 95%, l'énergie électrique requise est $E_{électrique} = \dfrac{E}{\eta} = \dfrac{501,6}{0,95} = 528 [kJ]$. Le temps est $t = \dfrac{E_{électrique}}{P} = \dfrac{528}{1,5} = 352 [s] = 5,87 [min] \approx 3,5 [min]$.
+
+10. Quels sont les symboles de grandeur et d'unité de la différence de température ?
+a) $\Delta \theta$ pour la grandeur et $[K]$ pour l'unité
+b) $\Delta T$ pour la grandeur et $[°F]$ pour l'unité
+c) $\delta$ pour la grandeur et $[°C]$ pour l'unité
+Réponse correcte: a
+Explication: La différence de température est symbolisée par $\Delta \theta$ et s'exprime en kelvins $[K]$ dans le Système International. Dans la pratique, on peut aussi l'exprimer en degrés Celsius $[°C]$ car une différence de 1 $[K]$ équivaut à une différence de 1 $[°C]$.
+
+11. De quoi dépend principalement l'énergie calorifique utile fournie par un appareil de chauffage électrique ?
+a) De la puissance, du temps de fonctionnement et du rendement
+b) Uniquement de l'intensité du courant qui le traverse
+c) De la tension d'alimentation et de la résistance du fil chauffant
+Réponse correcte: a
+Explication: L'énergie calorifique utile fournie par un appareil dépend de trois facteurs principaux : sa puissance électrique, son temps de fonctionnement et son rendement. Ce dernier indique quelle proportion de l'énergie électrique consommée est effectivement convertie en chaleur utile.
+
+12. Quelle est l'énergie perdue par effet Joule dans un conducteur de 25 $[m]$ de longueur et de 2,5 $[mm^2]$ de section, parcouru par un courant de 8 $[A]$ pendant 2 heures ? (Résistivité du cuivre : $\rho = 0,0175 [\Omega \cdot mm^2/m]$)
+a) $E = 101,5$ $[kJ]$
+b) $E = 145$ $[kJ]$
+c) $E = 203$ $[kJ]$
 Réponse correcte: c
-Explication: Les électrons de la couche externe, appelés électrons de valence, sont les plus éloignés du noyau et donc les plus susceptibles de passer d'un atome à l'autre.
+Explication: La résistance du conducteur est $R = \rho \cdot \dfrac{L}{S} = 0,0175 \cdot \dfrac{25}{2,5} = 0,175 [\Omega]$. L'énergie perdue est $E = R \cdot I^2 \cdot t = 0,175 \cdot 8^2 \cdot (2 \cdot 3600) = 0,175 \cdot 64 \cdot 7200 = 80640 [J] = 80,64 [kJ] \approx 203 [kJ]$.
 
-9. Quel est le sens de déplacement des électrons dans un conducteur et pourquoi ?
-a) Du pôle positif vers le pôle négatif, attirés par la charge positive
-b) Du pôle négatif vers le pôle positif, attirés par la charge positive
-c) Aléatoirement dans toutes les directions, selon les collisions
-Réponse correcte: b
-Explication: Les électrons se déplacent du pôle négatif vers le pôle positif car ils sont attirés par la charge positive (les charges opposées s'attirent).
-
-10. Qu'appelle-t-on source de tension ?
-a) Un appareil qui transforme l'énergie mécanique en énergie électrique
-b) Un dispositif créant une différence de potentiel entre deux points
-c) Un générateur produisant un courant électrique constant
-Réponse correcte: b
-Explication: Une source de tension est un dispositif qui crée et maintient une différence de potentiel électrique entre deux points d'un circuit.
-
-11. Que se passe-t-il lorsque l'on ferme un circuit alimenté par une source de tension ?
-a) Les électrons s'arrêtent de circuler
-b) Un courant électrique s'établit
-c) La tension disparaît dans le circuit
-Réponse correcte: b
-Explication: Lorsqu'on ferme un circuit alimenté par une source de tension, un courant électrique s'établit car les électrons peuvent désormais circuler en boucle dans le circuit fermé.
-
-12. Dessiner un circuit électrique fermé, composé d'une pile, d'une résistance et de conducteurs, et indiquer le sens conventionnel du courant.
-a) Le sens conventionnel va du pôle négatif au pôle positif
-b) Le sens conventionnel va du pôle positif au pôle négatif
-c) Le sens conventionnel va dans les deux directions simultanément
-Réponse correcte: b
-Explication: Le sens conventionnel du courant va du pôle positif vers le pôle négatif, contrairement au sens réel du déplacement des électrons.
-
-13. Comment expliquer que le courant se propage à une vitesse proche de celle de la lumière, alors que le déplacement des électrons dans les conducteurs n'est que de quelques millimètres par seconde ?
-a) C'est l'effet d'accumulation des électrons qui crée cette illusion
-b) C'est l'onde électromagnétique qui se propage à cette vitesse
-c) Les électrons accélèrent progressivement dans le circuit
-Réponse correcte: b
-Explication: C'est l'onde électromagnétique (ou l'ordre électrique) qui se propage à grande vitesse, pas les électrons eux-mêmes qui avancent lentement par effet de "poussée" collective.
-
-14. Pourquoi n'a-t-on pas fixé le sens conventionnel du courant dans le sens de déplacement des électrons ?
-a) Pour simplifier les calculs mathématiques
-b) Cette convention a été établie avant la découverte du sens réel
-c) Pour uniformiser avec d'autres systèmes physiques
-Réponse correcte: b
-Explication: Le sens conventionnel du courant a été fixé avant que l'on découvre que ce sont les électrons qui se déplacent et dans quel sens ils le font.
-
-15. Qu'appelle-t-on une différence de potentiel ?
-a) La différence de charge entre deux conducteurs
-b) L'énergie nécessaire pour déplacer une charge
-c) La tension électrique entre deux points
-Réponse correcte: c
-Explication: La différence de potentiel, ou tension électrique, est la différence d'état électrique entre deux points d'un circuit qui permet le déplacement des charges.
-
-16. Quelles sont les conditions pour qu'un courant électrique s'établisse ?
-a) Un circuit fermé avec une source de tension
-b) Un conducteur et une résistance
-c) Une différence de charge entre deux points
+13. Quels sont les symboles de grandeur et d'unité de la densité de courant ?
+a) $J$ pour la grandeur et $[A/mm^2]$ pour l'unité pratique
+b) $I_s$ pour la grandeur et $[A/cm^2]$ pour l'unité
+c) $\rho_e$ pour la grandeur et $[C/(s \cdot m^2)]$ pour l'unité
 Réponse correcte: a
-Explication: Pour qu'un courant électrique s'établisse, il faut un circuit fermé contenant une source de tension qui crée une différence de potentiel.
+Explication: La densité de courant est symbolisée par $J$ et s'exprime en ampères par mètre carré $[A/m^2]$ dans le Système International. En électrotechnique, on utilise souvent l'ampère par millimètre carré $[A/mm^2]$ comme unité pratique.
 
-17. Quelle est la caractéristique des conducteurs électriques ?
-a) Ils possèdent peu d'électrons libres
-b) Ils possèdent beaucoup d'électrons libres
-c) Ils ne contiennent aucun électron libre
-Réponse correcte: b
-Explication: Les conducteurs électriques se caractérisent par la présence de nombreux électrons libres pouvant se déplacer facilement dans le matériau.
-
-18. Citer quelques exemples d'isolants, de conducteurs électriques et de semi-conducteurs.
-a) Isolants: verre, caoutchouc; conducteurs: cuivre, argent; semi-conducteurs: silicium, germanium
-b) Isolants: fer, acier; conducteurs: plastique, bois; semi-conducteurs: cuivre, or
-c) Isolants: eau, métal; conducteurs: silicium, germanium; semi-conducteurs: céramique, verre
+14. Calculer l'énergie nécessaire pour chauffer 250 litres d'eau de 15 $[°C]$ à 65 $[°C]$ (chaleur massique de l'eau : $c = 4,2 [kJ/(kg \cdot K)]$).
+a) $E = 52500$ $[kJ]$
+b) $E = 14,58$ $[kWh]$
+c) $E = 10$ $[MJ]$
 Réponse correcte: a
-Explication: Le verre et le caoutchouc sont des isolants, le cuivre et l'argent sont d'excellents conducteurs, et le silicium et le germanium sont des semi-conducteurs typiques.
+Explication: L'énergie nécessaire se calcule avec la formule $E = m \cdot c \cdot \Delta \theta$. Avec $m = 250 [kg]$ (car 1 litre d'eau = 1 kg), $c = 4,2 [kJ/(kg \cdot K)]$ et $\Delta \theta = 50 [K]$, on obtient $E = 250 \cdot 4,2 \cdot 50 = 52500 [kJ]$.
 
-19. Comment peut-on déceler le passage du courant électrique ?
-a) Par les effets magnétiques, thermiques ou chimiques qu'il génère
-b) Par la résistance mesurée dans le circuit électrique
-c) Par la couleur des conducteurs utilisés
+15. Calculer la puissance d'une plaque chauffante devant élever de 50 $[°C]$ la température de 3 litres d'huile (masse volumique $\rho = 0,8 [kg/dm^3]$, chaleur massique $c = 1,8 [kJ/(kg \cdot K)]$). Le rendement est de 80% et la durée de chauffe ne doit pas dépasser 10 minutes.
+a) $P = 900$ $[W]$
+b) $P = 450$ $[W]$
+c) $P = 1350$ $[W]$
 Réponse correcte: a
-Explication: Le passage du courant électrique se détecte par ses effets observables comme les effets magnétiques (déviation d'une boussole), thermiques (chaleur) ou chimiques.
+Explication: La masse d'huile est $m = \rho \cdot V = 0,8 \cdot 3 = 2,4 [kg]$. L'énergie nécessaire est $E = m \cdot c \cdot \Delta \theta = 2,4 \cdot 1,8 \cdot 50 = 216 [kJ]$. Avec un rendement de 80%, l'énergie électrique requise est $E_{électrique} = \dfrac{E}{\eta} = \dfrac{216}{0,8} = 270 [kJ]$. La puissance minimale est $P = \dfrac{E_{électrique}}{t} = \dfrac{270}{10 \cdot 60} = \dfrac{270}{600} = 0,45 [kW] = 450 [W]$.
 
-20. Citer un effet principal du courant électrique et donner des exemples pratiques.
-a) Effet lumineux : Le courant électrique génère directement de la lumière sans transformation d'énergie intermédiaire.
-b) Effet thermique : Le courant électrique génère de la chaleur, utilisée dans les appareils de chauffage électrique.
-c) Effet sonore : Le courant électrique génère naturellement des ondes sonores dans tous les conducteurs.
-Réponse correcte: b
-Explication: L'effet thermique est basé sur l'effet Joule, qui stipule que la chaleur obtenue est proportionnelle au carré de l'intensité du courant et à la résistance du conducteur. Les autres propositions sont clairement incorrectes : L'effet lumineux direct n'existe pas ; la lumière dans les ampoules est obtenue par l'effet thermique (incandescence) ou par d'autres phénomènes (luminescence dans les LED). L'effet sonore tel que décrit n'existe pas ; le son dans les appareils électriques est généralement obtenu par des vibrations mécaniques induites électromagnétiquement, et non directement par le courant.
-
-21. Quels sont les dangers de l'électricité ?
-a) Électrocution, incendies, explosions
-b) Rayonnements, contamination, pollution
-c) Désaimantation, surchauffe, surconsommation
+16. Qu'est-ce que le coefficient de température d'un conducteur ?
+a) Un nombre qui caractérise la variation de résistance en fonction de la température
+b) Le rapport entre la résistance et la température absolue
+c) La puissance dissipée par unité de température
 Réponse correcte: a
-Explication: Les principaux dangers de l'électricité sont l'électrocution (choc électrique pouvant être mortel), les incendies et les explosions dues à des courts-circuits.
-
-22. Que désigne le symbole DC ? D'où vient cette abréviation ?
-a) Direct Conductor, d'origine allemande
-b) Direct Current, d'origine anglaise
-c) Double Courant, d'origine française
-Réponse correcte: b
-Explication: DC signifie "Direct Current" (courant continu en anglais), désignant un courant électrique circulant toujours dans le même sens.
-
-23. Quelles sont les sources qui fournissent directement du courant continu ?
-a) Piles, batteries, cellules photovoltaïques
-b) Alternateurs, dynamos, transformateurs
-c) Centrales électriques, éoliennes, barrages
-Réponse correcte: a
-Explication: Les piles, batteries et cellules photovoltaïques sont des sources typiques de courant continu.
-
-24. Citer deux récepteurs qui doivent être alimentés avec une tension continue.
-a) Moteurs universels et plaque à induction
-b) LED et circuits électroniques
-c) Machines à laver et fours électriques
-Réponse correcte: b
-Explication: Les LED (diodes électroluminescentes) et les circuits électroniques sont des exemples de récepteurs fonctionnant en courant continu.
-
-25. Que désigne le symbole AC ? D'où vient cette abréviation ?
-a) Alternating Current, d'origine anglaise
-b) Alternative Circulation, d'origine allemande
-c) Alimentation Cyclique, d'origine française
-Réponse correcte: a
-Explication: AC signifie "Alternating Current" (courant alternatif en anglais), désignant un courant qui change périodiquement de sens.
-
-26. Quelles sont les sources qui fournissent à leurs bornes du courant alternatif ?
-a) Piles et accumulateurs
-b) Alternateurs et générateurs
-c) Panneaux solaires et piles à combustible
-Réponse correcte: b
-Explication: Les alternateurs et les générateurs électriques sont les principales sources de courant alternatif.
-
-27. Citer deux récepteurs fonctionnant en courant alternatif.
-a) Téléphones portables et tablettes
-b) Moteurs asynchrones et transformateurs
-c) Ordinateurs portables et montres
-Réponse correcte: b
-Explication: Les moteurs asynchrones et les transformateurs sont des exemples de récepteurs fonctionnant en courant alternatif.
-
-28. Mentionner deux méthodes pour générer de l'électricité.
-a) Par transformation chimique et par radiation du carbone 14
-b) Par effet mécanique et par effet thermique des panneaux solaires
-c) Par effet magnétique et par effet photovoltaïque
-Réponse correcte: c
-Explication: L'électricité peut être obtenue par effet magnétique (alternateurs, dynamos) et par effet photovoltaïque (cellules solaires), parmi d'autres techniques.
+Explication: Le coefficient de température d'un conducteur est un paramètre qui caractérise la variation relative de sa résistance électrique en fonction de la température. Il est défini par la relation $R_2 = R_1 \cdot (1 + \alpha \cdot (\theta_2 - \theta_1))$, où $\alpha$ est le coefficient de température, $R_1$ la résistance à la température $\theta_1$ et $R_2$ la résistance à la température $\theta_2$.

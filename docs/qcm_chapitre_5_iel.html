@@ -3,105 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QCM CHAPITRE 1 - Notions d'Électricité</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-        }
-        .question {
-            background-color: white;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .options {
-            margin-top: 10px;
-        }
-        .option {
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #eee;
-        }
-        .option img {
-            display: block;
-            margin: 8px 0 8px 25px;
-            max-width: 90%;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-        button {
-            background-color: #3498db;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            margin-top: 20px;
-        }
-        button:hover {
-            background-color: #2980b9;
-        }
-        .result {
-            margin-top: 10px;
-            padding: 5px;
-            border-radius: 5px;
-            display: none;
-        }
-        .correct {
-            background-color: rgba(46, 204, 113, 0.2);
-            color: #27ae60;
-            border-left: 4px solid #27ae60;
-            padding: 10px;
-        }
-        .incorrect {
-            background-color: rgba(231, 76, 60, 0.2);
-            color: #c0392b;
-            border-left: 4px solid #c0392b;
-            padding: 10px;
-        }
-        .score {
-            text-align: center;
-            font-size: 18px;
-            margin-top: 20px;
-            font-weight: bold;
-        }
-        .explanation {
-            margin-top: 8px;
-            font-style: italic;
-        }
-        #loading {
-            text-align: center;
-            margin: 20px 0;
-            font-style: italic;
-            color: #666;
-        }
-        .explanation-image {
-            margin-top: 15px;
-            padding: 10px;
-            background-color: #f9f9f9;
-            border-radius: 4px;
-        }
-        .question-image {
-            max-width: 90%;
-            margin: 10px auto;
-            display: block;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-    </style>
+    <title>QCM CHAPITRE 5 - à vérifier Effets calorifiques du courant</title>
+    <!-- Lien vers le fichier CSS externe -->
+    <link rel="stylesheet" href="custom_style.css">    
+    <!-- Ajout des scripts MathJax -->
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+          }
+        };
+    </script>     
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-    <h1>Chapitre 1 - Notions d'Électricité</h1>
+    <h1>QCM CHAPITRE 5 - Effets calorifiques du courant</h1>
     
     <div id="errorMsg" style="color: red; margin: 20px 0;"></div>
     
@@ -123,7 +39,7 @@
         };
 
         // Nom du fichier de questions (dans le même répertoire)
-        const QUIZ_FILE_NAME = 'chapitre_1.txt';
+        const QUIZ_FILE_NAME = 'chapitre_5.txt';
         
         // Charger automatiquement le fichier de questions au chargement de la page
         window.addEventListener('DOMContentLoaded', function() {
@@ -321,7 +237,7 @@
                     
                     const label = document.createElement('label');
                     label.htmlFor = `${question.id}${option.id}`;
-                    label.textContent = option.text;
+                    label.innerHTML = option.text; // Utiliser innerHTML pour permettre le rendu des formules MathJax
                     
                     optionDiv.appendChild(input);
                     optionDiv.appendChild(label);
@@ -352,6 +268,11 @@
             
             // Ajouter l'écouteur d'événement pour le bouton de vérification
             document.getElementById('check-answers').addEventListener('click', checkAnswers);
+            
+            // Rendre les formules MathJax après avoir généré le HTML
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
         }
 
         // Fonction pour vérifier les réponses
@@ -408,6 +329,11 @@
             
             // Faire défiler vers le haut
             window.scrollTo(0, 0);
+            
+            // Rendre les formules MathJax après avoir affiché les résultats
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
         }
     </script>
 </body>
