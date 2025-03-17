@@ -19,12 +19,12 @@ c) $P$ en $[W]$
 Réponse correcte: b
 Explication: La tension est représentée par le symbole $U$ et s'exprime en volts $[V]$.
 
-4. Quelle différence existe-t-il entre la force électromotrice et la tension $U$ aux bornes d'une pile ?
-a) La Tension est la tension aux bornes de la pile en circuit ouvert, tandis que $U$ est la tension en charge
-b) La Tension est la tension aux bornes de la pile en charge, tandis que $U$ est la tension à vide
+4. Quelle différence existe-t-il entre la tension $U_0$ et la tension $U$ aux bornes d'une pile ?
+a) $U_0$ est la tension aux bornes de la pile en circuit ouvert, tandis que $U$ est la tension en charge
+b) La tension $U_0$ est la tension aux bornes de la pile en charge, tandis que $U$ est la tension à vide
 c) Il n'y a aucune différence, les deux grandeurs sont identiques
 Réponse correcte: a
-Explication: La Tension est la tension théorique fournie par la pile en circuit ouvert (à vide), tandis que $U$ est la tension réelle aux bornes de la pile lorsqu'elle débite un courant (en charge).
+Explication: La tension $U_0$ est la tension théorique fournie par la pile en circuit ouvert (à vide), tandis que $U$ est la tension réelle aux bornes de la pile lorsqu'elle débite un courant (en charge).
 
 5. Qu'est-ce que la quantité d'électricité ?
 a) La charge électrique transportée par un courant pendant un temps donné
