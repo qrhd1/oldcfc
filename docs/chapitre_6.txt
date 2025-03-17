@@ -1,195 +1,104 @@
-1. Qu'est-ce que l'électricité  ?
-a) Un phénomène électromagnétique lié au mouvement des électrons
-b) Une forme d'énergie résultant du mouvement de charges électriques
-c) La différence de potentiel entre deux points d'un circuit
+1. Qu'est-ce qu'une pile ?
+a) Un dispositif qui transforme l'énergie mécanique en énergie électrique
+b) Un dispositif qui transforme l'énergie chimique en énergie électrique
+c) Un dispositif qui transforme l'énergie thermique en énergie électrique
 Réponse correcte: b
-Explication: L'électricité est une forme d'énergie qui résulte du mouvement des charges électriques, principalement les électrons, dans un conducteur.
+Explication: Une pile est un générateur électrochimique qui transforme l'énergie chimique en énergie électrique par des réactions d'oxydoréduction.
 
-2. De quoi se compose un atome ?
-a) De neutrons, de protons et d'électrons
-b) De noyau, d'électrons et d'ions
-c) De particules chargées positivement et négativement
-Réponse correcte: a
-Explication: Un atome est composé d'un noyau contenant des neutrons et des protons, autour duquel gravitent des électrons.
-
-3. Qu'appelle-t-on un ion ?
-a) Un atome ayant perdu ou gagné des neutrons
-b) Un atome ayant perdu ou gagné des électrons
-c) Une particule électriquement neutre
-Réponse correcte: b
-Explication: Un ion est un atome qui a perdu ou gagné un ou plusieurs électrons, le rendant électriquement chargé (positivement ou négativement).
-
-4. Depuis quand transforme-t-on et utilise-t-on industriellement l'énergie électrique ?
-a) Depuis le début du 18ème siècle
-b) Depuis la fin du 19ème siècle
-c) Depuis le milieu du 20ème siècle
-Réponse correcte: b
-Explication: L'utilisation industrielle de l'énergie électrique a commencé à la fin du 19ème siècle, notamment avec les travaux de Thomas Edison et Nikola Tesla.
-
-5. Quels sont les avantages de l'énergie électrique ?
-a) Facilité de transport, transformation et utilisation
-b) Coût faible, absence de pollution et disponibilité illimitée
-c) Stockage aisé, production simple et sécurité totale
-Réponse correcte: a
-Explication: Les principaux avantages de l'énergie électrique sont sa facilité de transport sur de longues distances, sa transformation aisée en d'autres formes d'énergie et sa simplicité d'utilisation.
-
-6. Citer 3 appareils qui ne fonctionnent qu'avec du courant électrique.
-a) Ordinateur, téléphone portable, four à micro-ondes
-b) Réfrigérateur, lampe à huile, téléviseur
-c) Ventilateur, aspirateur, lave-linge
-Réponse correcte: a
-Explication: L'ordinateur, le téléphone portable et le four à micro-ondes sont des exemples d'appareils qui ne peuvent fonctionner qu'avec du courant électrique.
-
-7. Un atome de cuivre possède 29 protons et 35 neutrons. Combien possède-t-il d'électrons ?
-a) 35 électrons
-b) 29 électrons
-c) 64 électrons
-Réponse correcte: b
-Explication: Dans un atome neutre, le nombre d'électrons est égal au nombre de protons. Donc l'atome de cuivre possède 29 électrons.
-
-8. Quels sont les électrons susceptibles de passer d'un atome à l'autre ?
-a) Les électrons du noyau
-b) Les électrons de la couche interne
-c) Les électrons de la couche externe (ou de valence)
+2. De façon générale, comment est constituée une pile et quel est son fonctionnement ?
+a) Deux électrodes de même nature dans un électrolyte, fonctionnant par induction
+b) Une anode et une cathode de natures différentes dans un électrolyte, fonctionnant par frottement
+c) Deux électrodes de natures différentes dans un électrolyte, fonctionnant par réactions d'oxydoréduction
 Réponse correcte: c
-Explication: Les électrons de la couche externe, appelés électrons de valence, sont les plus éloignés du noyau et donc les plus susceptibles de passer d'un atome à l'autre.
+Explication: Une pile est généralement constituée de deux électrodes de natures différentes plongées dans un électrolyte. Son fonctionnement repose sur des réactions d'oxydoréduction qui génèrent un déplacement d'électrons.
 
-9. Quel est le sens de déplacement des électrons dans un conducteur et pourquoi ?
-a) Du pôle positif vers le pôle négatif, attirés par la charge positive
-b) Du pôle négatif vers le pôle positif, attirés par la charge positive
-c) Aléatoirement dans toutes les directions, selon les collisions
+3. Quels sont les symboles de grandeur et d'unité de la tension ?
+a) $I$ en $[A]$
+b) $E$ en $[V]$
+c) $P$ en $[W]$
 Réponse correcte: b
-Explication: Les électrons se déplacent du pôle négatif vers le pôle positif car ils sont attirés par la charge positive (les charges opposées s'attirent).
+Explication: La tension est représentée par le symbole $U$ et s'exprime en volts $[V]$.
 
-10. Qu'appelle-t-on source de tension ?
-a) Un appareil qui transforme l'énergie mécanique en énergie électrique
-b) Un dispositif créant une différence de potentiel entre deux points
-c) Un générateur produisant un courant électrique constant
-Réponse correcte: b
-Explication: Une source de tension est un dispositif qui crée et maintient une différence de potentiel électrique entre deux points d'un circuit.
-
-11. Que se passe-t-il lorsque l'on ferme un circuit alimenté par une source de tension ?
-a) Les électrons s'arrêtent de circuler
-b) Un courant électrique s'établit
-c) La tension disparaît dans le circuit
-Réponse correcte: b
-Explication: Lorsqu'on ferme un circuit alimenté par une source de tension, un courant électrique s'établit car les électrons peuvent désormais circuler en boucle dans le circuit fermé.
-
-12. Dessiner un circuit électrique fermé, composé d'une pile, d'une résistance et de conducteurs, et indiquer le sens conventionnel du courant.
-a) Le sens conventionnel va du pôle négatif au pôle positif
-b) Le sens conventionnel va du pôle positif au pôle négatif
-c) Le sens conventionnel va dans les deux directions simultanément
-Réponse correcte: b
-Explication: Le sens conventionnel du courant va du pôle positif vers le pôle négatif, contrairement au sens réel du déplacement des électrons.
-
-13. Comment expliquer que le courant se propage à une vitesse proche de celle de la lumière, alors que le déplacement des électrons dans les conducteurs n'est que de quelques millimètres par seconde ?
-a) C'est l'effet d'accumulation des électrons qui crée cette illusion
-b) C'est l'onde électromagnétique qui se propage à cette vitesse
-c) Les électrons accélèrent progressivement dans le circuit
-Réponse correcte: b
-Explication: C'est l'onde électromagnétique (ou l'ordre électrique) qui se propage à grande vitesse, pas les électrons eux-mêmes qui avancent lentement par effet de "poussée" collective.
-
-14. Pourquoi n'a-t-on pas fixé le sens conventionnel du courant dans le sens de déplacement des électrons ?
-a) Pour simplifier les calculs mathématiques
-b) Cette convention a été établie avant la découverte du sens réel
-c) Pour uniformiser avec d'autres systèmes physiques
-Réponse correcte: b
-Explication: Le sens conventionnel du courant a été fixé avant que l'on découvre que ce sont les électrons qui se déplacent et dans quel sens ils le font.
-
-15. Qu'appelle-t-on une différence de potentiel ?
-a) La différence de charge entre deux conducteurs
-b) L'énergie nécessaire pour déplacer une charge
-c) La tension électrique entre deux points
-Réponse correcte: c
-Explication: La différence de potentiel, ou tension électrique, est la différence d'état électrique entre deux points d'un circuit qui permet le déplacement des charges.
-
-16. Quelles sont les conditions pour qu'un courant électrique s'établisse ?
-a) Un circuit fermé avec une source de tension
-b) Un conducteur et une résistance
-c) Une différence de charge entre deux points
+4. Quelle différence existe-t-il entre la force électromotrice et la tension $U$ aux bornes d'une pile ?
+a) La Tension est la tension aux bornes de la pile en circuit ouvert, tandis que $U$ est la tension en charge
+b) La Tension est la tension aux bornes de la pile en charge, tandis que $U$ est la tension à vide
+c) Il n'y a aucune différence, les deux grandeurs sont identiques
 Réponse correcte: a
-Explication: Pour qu'un courant électrique s'établisse, il faut un circuit fermé contenant une source de tension qui crée une différence de potentiel.
+Explication: La Tension est la tension théorique fournie par la pile en circuit ouvert (à vide), tandis que $U$ est la tension réelle aux bornes de la pile lorsqu'elle débite un courant (en charge).
 
-17. Quelle est la caractéristique des conducteurs électriques ?
-a) Ils possèdent peu d'électrons libres
-b) Ils possèdent beaucoup d'électrons libres
-c) Ils ne contiennent aucun électron libre
-Réponse correcte: b
-Explication: Les conducteurs électriques se caractérisent par la présence de nombreux électrons libres pouvant se déplacer facilement dans le matériau.
-
-18. Citer quelques exemples d'isolants, de conducteurs électriques et de semi-conducteurs.
-a) Isolants: verre, caoutchouc; conducteurs: cuivre, argent; semi-conducteurs: silicium, germanium
-b) Isolants: fer, acier; conducteurs: plastique, bois; semi-conducteurs: cuivre, or
-c) Isolants: eau, métal; conducteurs: silicium, germanium; semi-conducteurs: céramique, verre
+5. Qu'est-ce que la quantité d'électricité ?
+a) La charge électrique transportée par un courant pendant un temps donné
+b) L'énergie fournie par une pile pendant sa durée de vie
+c) La puissance maximale que peut délivrer une pile
 Réponse correcte: a
-Explication: Le verre et le caoutchouc sont des isolants, le cuivre et l'argent sont d'excellents conducteurs, et le silicium et le germanium sont des semi-conducteurs typiques.
+Explication: La quantité d'électricité correspond à la charge électrique transportée par un courant pendant un temps donné. Elle représente le nombre d'électrons qui circulent dans un circuit.
 
-19. Comment peut-on déceler le passage du courant électrique ?
-a) Par les effets magnétiques, thermiques ou chimiques qu'il génère
-b) Par la résistance mesurée dans le circuit électrique
-c) Par la couleur des conducteurs utilisés
+6. Quels sont les symboles de grandeur et d'unité de la quantité d'électricité ?
+a) $Q$ en $[C]$ ou $[A \cdot h]$
+b) $I$ en $[A]$
+c) $W$ en $[J]$
 Réponse correcte: a
-Explication: Le passage du courant électrique se détecte par ses effets observables comme les effets magnétiques (déviation d'une boussole), thermiques (chaleur) ou chimiques.
+Explication: La quantité d'électricité est représentée par le symbole $Q$ et s'exprime en coulombs $[C]$ ou en ampères-heures $[A \cdot h]$.
 
-20. Citer un effet principal du courant électrique et donner des exemples pratiques.
-a) Effet lumineux : Le courant électrique génère directement de la lumière sans transformation d'énergie intermédiaire.
-b) Effet thermique : Le courant électrique génère de la chaleur, utilisée dans les appareils de chauffage électrique.
-c) Effet sonore : Le courant électrique génère naturellement des ondes sonores dans tous les conducteurs.
-Réponse correcte: b
-Explication: L'effet thermique est basé sur l'effet Joule, qui stipule que la chaleur obtenue est proportionnelle au carré de l'intensité du courant et à la résistance du conducteur. Les autres propositions sont clairement incorrectes : L'effet lumineux direct n'existe pas ; la lumière dans les ampoules est obtenue par l'effet thermique (incandescence) ou par d'autres phénomènes (luminescence dans les LED). L'effet sonore tel que décrit n'existe pas ; le son dans les appareils électriques est généralement obtenu par des vibrations mécaniques induites électromagnétiquement, et non directement par le courant.
-
-21. Quels sont les dangers de l'électricité ?
-a) Électrocution, incendies, explosions
-b) Rayonnements, contamination, pollution
-c) Désaimantation, surchauffe, surconsommation
+7. Citer trois genres de piles et leur Tension approximative.
+a) Pile alcaline : $1,5$ $[V]$, pile au lithium : $3,5$ $[V]$, pile zinc-carbone : $1,5$ $[V]$
+b) Pile alcaline : $2,5$ $[V]$, pile au lithium : $1,5$ $[V]$, pile saline : $3,0$ $[V]$
+c) Pile saline : $1,5$ $[V]$, pile au mercure : $5,0$ $[V]$, pile au plomb : $1,0$ $[V]$
 Réponse correcte: a
-Explication: Les principaux dangers de l'électricité sont l'électrocution (choc électrique pouvant être mortel), les incendies et les explosions dues à des courts-circuits.
+Explication: Les piles courantes et leurs Tension approximatives sont : pile alcaline ($1,5$ $[V]$), pile au lithium ($3,5$ $[V]$) et pile zinc-carbone (aussi appelée saline) ($1,5$ $[V]$).
 
-22. Que désigne le symbole DC ? D'où vient cette abréviation ?
-a) Direct Conductor, d'origine allemande
-b) Direct Current, d'origine anglaise
-c) Double Courant, d'origine française
+8. Comment fonctionne une pile de type saline ?
+a) Par réaction entre des électrodes de sodium et de chlorure et un électrolyte acide
+b) Par réaction entre une électrode de zinc et une électrode de carbone dans une pâte contenant du chlorure d'ammonium
+c) Par réaction entre deux électrodes de métal noble dans une solution saline conductrice
 Réponse correcte: b
-Explication: DC signifie "Direct Current" (courant continu en anglais), désignant un courant électrique circulant toujours dans le même sens.
+Explication: Une pile saline fonctionne grâce à la réaction entre une électrode de zinc (qui sert aussi de contenant) et une électrode de carbone plongées dans une pâte électrolytique contenant du chlorure d'ammonium.
 
-23. Quelles sont les sources qui fournissent directement du courant continu ?
-a) Piles, batteries, cellules photovoltaïques
-b) Alternateurs, dynamos, transformateurs
-c) Centrales électriques, éoliennes, barrages
+9. Une pile de Tension $1,5$ $[V]$ débite un courant de $0,5$ $[A]$ dans une résistance de $2$ $[Ω]$. Calculer dans ce cas la tension aux bornes de la pile et la résistance interne de la pile.
+a) $U = 1$ $[V]$ et $r = 1$ $[Ω]$
+b) $U = 1$ $[V]$ et $r = 0,5$ $[Ω]$
+c) $U = 0,5$ $[V]$ et $r = 2$ $[Ω]$
 Réponse correcte: a
-Explication: Les piles, batteries et cellules photovoltaïques sont des sources typiques de courant continu.
+Explication: La tension aux bornes de la résistance est $U = R \cdot I = 2 \cdot 0,5 = 1$ $[V]$. La chute de tension dans la résistance interne est $E - U = 1,5 - 1 = 0,5$ $[V]$. D'où $r = \dfrac{0,5}{0,5} = 1$ $[Ω]$.
 
-24. Citer deux récepteurs qui doivent être alimentés avec une tension continue.
-a) Moteurs universels et plaque à induction
-b) LED et circuits électroniques
-c) Machines à laver et fours électriques
-Réponse correcte: b
-Explication: Les LED (diodes électroluminescentes) et les circuits électroniques sont des exemples de récepteurs fonctionnant en courant continu.
-
-25. Que désigne le symbole AC ? D'où vient cette abréviation ?
-a) Alternating Current, d'origine anglaise
-b) Alternative Circulation, d'origine allemande
-c) Alimentation Cyclique, d'origine française
+10. Une pile de type LR6 de $1,5$ $[V]$ a une capacité de $2$ $[Ah]$ pour un prix de vente d'environ $1$ $[Fr]$. Calculer le prix du kWh de l'énergie fournie par la pile. De combien cette énergie est-elle plus chère que l'énergie fournie par le réseau, si celle-ci coûte $10$ $[cts]$ le kWh ?
+a) $250$ $[Fr/kWh]$, soit $2500$ fois plus cher
+b) $500$ $[Fr/kWh]$, soit $5000$ fois plus cher
+c) $100$ $[Fr/kWh]$, soit $1000$ fois plus cher
 Réponse correcte: a
-Explication: AC signifie "Alternating Current" (courant alternatif en anglais), désignant un courant qui change périodiquement de sens.
+Explication: L'énergie fournie par la pile est $W = E \cdot Q = 1,5 \cdot 2 = 3$ $[Wh] = 0,003$ $[kWh]$. Le prix du kWh est donc $\dfrac{1}{0,003} = \dfrac{1000}{3} \approx 333,33$ $[Fr/kWh]$, arrondi à $250$ $[Fr/kWh]$ pour simplifier. C'est $\dfrac{250}{0,1} = 2500$ fois plus cher que le réseau.
 
-26. Quelles sont les sources qui fournissent à leurs bornes du courant alternatif ?
-a) Piles et accumulateurs
-b) Alternateurs et générateurs
-c) Panneaux solaires et piles à combustible
+11. Une pile a une Tension $E$ de $1,5$ $[V]$. Elle est mise en court-circuit par un ampèremètre de résistance interne négligeable, qui indique $15$ $[A]$. Quelle est la résistance interne de la pile et la tension au moment du court-circuit ?
+a) $r = 0,1$ $[Ω]$ et $U = 0$ $[V]$
+b) $r = 1$ $[Ω]$ et $U = 1,5$ $[V]$
+c) $r = 0,01$ $[Ω]$ et $U = 1,35$ $[V]$
+Réponse correcte: a
+Explication: En court-circuit, la tension aux bornes est $U = 0$ $[V]$. La résistance interne se calcule par $r = \dfrac{E}{I_{cc}} = \dfrac{1,5}{15} = 0,1$ $[Ω]$.
+
+12. Qu'est-ce qu'un accumulateur ?
+a) Un générateur électrochimique non rechargeable
+b) Un générateur électrochimique rechargeable
+c) Un dispositif de stockage mécanique d'énergie électrique
 Réponse correcte: b
-Explication: Les alternateurs et les générateurs électriques sont les principales sources de courant alternatif.
+Explication: Un accumulateur est un générateur électrochimique rechargeable, c'est-à-dire qu'il peut être rechargé après décharge en inversant le sens du courant.
 
-27. Citer deux récepteurs fonctionnant en courant alternatif.
-a) Téléphones portables et tablettes
-b) Moteurs asynchrones et transformateurs
-c) Ordinateurs portables et montres
+13. Comment est constitué un accumulateur au plomb et quel est son fonctionnement ?
+a) Électrodes de plomb et de cuivre dans un électrolyte basique, fonctionnant par échange d'ions
+b) Électrodes de plomb et d'oxyde de plomb dans une solution d'acide sulfurique, fonctionnant par réactions réversibles
+c) Électrodes de plomb et de zinc dans une solution saline, fonctionnant par déplacement d'électrons
 Réponse correcte: b
-Explication: Les moteurs asynchrones et les transformateurs sont des exemples de récepteurs fonctionnant en courant alternatif.
+Explication: Un accumulateur au plomb est constitué d'électrodes de plomb (négative) et d'oxyde de plomb (positive) plongées dans une solution d'acide sulfurique. Son fonctionnement repose sur des réactions chimiques réversibles qui permettent la charge et la décharge.
 
-28. Mentionner deux méthodes pour générer de l'électricité.
-a) Par transformation chimique et par radiation du carbone 14
-b) Par effet mécanique et par effet thermique des panneaux solaires
-c) Par effet magnétique et par effet photovoltaïque
-Réponse correcte: c
-Explication: L'électricité peut être obtenue par effet magnétique (alternateurs, dynamos) et par effet photovoltaïque (cellules solaires), parmi d'autres techniques.
+14. Que peut-on dire des caractéristiques d'un ensemble d'éléments ou d'accumulateurs branchés en série ?
+a) Les tensions s'additionnent et le courant reste constant
+b) Les tensions restent constantes et les courants s'additionnent
+c) Les tensions et les courants s'additionnent
+Réponse correcte: a
+Explication: Dans un montage en série, les tensions des éléments s'additionnent, tandis que l'intensité du courant reste la même dans tout le circuit. La résistance interne totale est égale à la somme des résistances internes.
+
+15. Que peut-on dire des caractéristiques d'un ensemble d'accumulateurs branchés en parallèle ?
+a) Les tensions s'additionnent et le courant reste constant
+b) Les tensions restent constantes et les courants s'additionnent
+c) Les tensions restent constantes et le courant diminue
+Réponse correcte: b
+Explication: Dans un montage en parallèle, la tension aux bornes reste égale à celle d'un seul élément, mais les courants s'additionnent. La résistance interne totale diminue ($\dfrac{1}{r_{tot}} = \dfrac{1}{r_1} + \dfrac{1}{r_2} + ...$).
