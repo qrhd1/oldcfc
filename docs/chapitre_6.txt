@@ -40,12 +40,12 @@ c) $W$ en $[J]$
 Réponse correcte: a
 Explication: La quantité d'électricité est représentée par le symbole $Q$ et s'exprime en coulombs $[C]$ ou en ampères-secondes $[A \cdot s]$.
 
-7. Citer trois genres de piles et leur Tension approximative.
+7. Citer trois genres de piles et leur tension approximative.
 a) Pile alcaline : $1,5$ $[V]$, pile au lithium : $3,5$ $[V]$, pile zinc-carbone : $1,5$ $[V]$
 b) Pile alcaline : $2,5$ $[V]$, pile au lithium : $1,5$ $[V]$, pile saline : $3,0$ $[V]$
 c) Pile saline : $1,5$ $[V]$, pile au mercure : $5,0$ $[V]$, pile au plomb : $1,0$ $[V]$
 Réponse correcte: a
-Explication: Les piles courantes et leurs Tension approximatives sont : pile alcaline ($1,5$ $[V]$), pile au lithium ($3,5$ $[V]$) et pile zinc-carbone (aussi appelée saline) ($1,5$ $[V]$).
+Explication: Les piles courantes et leurs tension approximatives sont : pile alcaline ($1,5$ $[V]$), pile au lithium ($3,5$ $[V]$) et pile zinc-carbone (aussi appelée saline) ($1,5$ $[V]$).
 
 8. Comment fonctionne une pile de type saline ?
 a) Par réaction entre des électrodes de sodium et de chlorure et un électrolyte acide
@@ -54,7 +54,7 @@ c) Par réaction entre deux électrodes de métal noble dans une solution saline
 Réponse correcte: b
 Explication: Une pile saline fonctionne grâce à la réaction entre une électrode de zinc (qui sert aussi de contenant) et une électrode de carbone plongées dans une pâte électrolytique contenant du chlorure d'ammonium.
 
-9. Une pile de Tension $1,5$ $[V]$ débite un courant de $0,5$ $[A]$ dans une résistance de $2$ $[Ω]$. Calculer dans ce cas la tension aux bornes de la pile et la résistance interne de la pile.
+9. Une pile de tension $1,5$ $[V]$ débite un courant de $0,5$ $[A]$ dans une résistance de $2$ $[Ω]$. Calculer dans ce cas la tension aux bornes de la pile et la résistance interne de la pile.
 a) $U = 1$ $[V]$ et $r = 1$ $[Ω]$
 b) $U = 1$ $[V]$ et $r = 0,5$ $[Ω]$
 c) $U = 0,5$ $[V]$ et $r = 2$ $[Ω]$
@@ -68,7 +68,7 @@ c) $100$ $[Fr/kWh]$, soit $1000$ fois plus cher
 Réponse correcte: a
 Explication: L'énergie fournie par la pile est $W = U0 \cdot Q = 1,5 \cdot 2 = 3$ $[Wh] = 0,003$ $[kWh]$. Le prix du kWh est donc $\dfrac{1}{0,003} = \dfrac{1000}{3} \approx 333,33$ $[Fr/kWh]$, arrondi à $250$ $[Fr/kWh]$ pour simplifier. C'est $\dfrac{250}{0,1} = 2500$ fois plus cher que le réseau.
 
-11. Une pile a une Tension $U0$ de $1,5$ $[V]$. Elle est mise en court-circuit par un ampèremètre de résistance interne négligeable, qui indique $15$ $[A]$. Quelle est la résistance interne de la pile et la tension au moment du court-circuit ?
+11. Une pile a une tension $U0$ de $1,5$ $[V]$. Elle est mise en court-circuit par un ampèremètre de résistance interne négligeable, qui indique $15$ $[A]$. Quelle est la résistance interne de la pile et la tension au moment du court-circuit ?
 a) $r = 0,1$ $[Ω]$ et $U = 0$ $[V]$
 b) $r = 1$ $[Ω]$ et $U = 1,5$ $[V]$
 c) $r = 0,01$ $[Ω]$ et $U = 1,35$ $[V]$
