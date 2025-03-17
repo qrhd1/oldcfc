@@ -61,12 +61,12 @@ c) $U = 0,5$ $[V]$ et $r = 2$ $[Ω]$
 Réponse correcte: a
 Explication: La tension aux bornes de la résistance est $U = R \cdot I = 2 \cdot 0,5 = 1$ $[V]$. La chute de tension dans la résistance interne est $U0 - U = 1,5 - 1 = 0,5$ $[V]$. D'où $r = \dfrac{0,5}{0,5} = 1$ $[Ω]$.
 
-10. Une pile de type LR6 de $1,5$ $[V]$ a une capacité de $2$ $[Ah]$ pour un prix de vente d'environ $1$ $[Fr]$. Calculer le prix du kWh de l'énergie fournie par la pile. De combien cette énergie est-elle plus chère que l'énergie fournie par le réseau, si celle-ci coûte $10$ $[cts]$ le kWh ?
-a) $250$ $[Fr/kWh]$, soit $2500$ fois plus cher
-b) $500$ $[Fr/kWh]$, soit $5000$ fois plus cher
-c) $100$ $[Fr/kWh]$, soit $1000$ fois plus cher
+10. Une pile de type LR6 de $1,5$ $[V]$ a une capacité de $2$ $[Ah]$ pour un prix de vente d'environ 1 CHF. Calculer le prix du kWh de l'énergie fournie par la pile. De combien cette énergie est-elle plus chère que l'énergie fournie par le réseau, si celle-ci coûte $10$ $[cts]$ le kWh ?
+a) $250$ $[CHF/kWh]$, soit $2500$ fois plus cher
+b) $500$ $[CHF/kWh]$, soit $5000$ fois plus cher
+c) $100$ $[CHF/kWh]$, soit $1000$ fois plus cher
 Réponse correcte: a
-Explication: L'énergie fournie par la pile est $W = U0 \cdot Q = 1,5 \cdot 2 = 3$ $[Wh] = 0,003$ $[kWh]$. Le prix du kWh est donc $\dfrac{1}{0,003} = \dfrac{1000}{3} \approx 333,33$ $[Fr/kWh]$, arrondi à $250$ $[Fr/kWh]$ pour simplifier. C'est $\dfrac{250}{0,1} = 2500$ fois plus cher que le réseau.
+Explication: L'énergie fournie par la pile est $W = U0 \cdot Q = 1,5 \cdot 2 = 3$ $[Wh] = 0,003$ $[kWh]$. Le prix du kWh est donc $\dfrac{1}{0,003} = \dfrac{1000}{3} \approx 333,33$ $[CHF/kWh]$, arrondi à $250$ $[CHF/kWh]$ pour simplifier. C'est $\dfrac{250}{0,1} = 2500$ fois plus cher que le réseau.
 
 11. Une pile a une tension $U0$ de $1,5$ $[V]$. Elle est mise en court-circuit par un ampèremètre de résistance interne négligeable, qui indique $15$ $[A]$. Quelle est la résistance interne de la pile et la tension au moment du court-circuit ?
 a) $r = 0,1$ $[Ω]$ et $U = 0$ $[V]$
