@@ -5,12 +5,12 @@ c) Énergie marémotrice, énergie chimique des batteries, énergie biomasse
 Réponse correcte : b
 Explication : Les centrales électriques conventionnelles utilisent principalement l'énergie nucléaire (centrales nucléaires), l'énergie thermique issue de la combustion de combustibles fossiles (centrales thermiques), et l'énergie hydraulique (barrages hydroélectriques). Les options a et c présentent des formes d'énergie renouvelables ou alternatives qui ne sont généralement pas considérées comme conventionnelles dans la production d'électricité à grande échelle.
 
-2. À partir de quelles sources énergétiques produit-on principalement l'énergie électrique en Suisse ?
+2. À partir de quelles sources énergétiques convertit-on principalement l'énergie électrique en Suisse ?
 a) Énergie nucléaire (40%) et énergie hydraulique (55%)
 b) Énergie solaire (35%) et énergie éolienne (45%)
 c) Biomasse (25%) et géothermie (65%)
 Réponse correcte: a
-Explication: En Suisse, l'énergie électrique est produite majoritairement à partir de l'énergie hydraulique (environ 55%) et de l'énergie nucléaire (environ 40%). Les énergies renouvelables comme le solaire et l'éolien représentent une part moins importante.
+Explication: En Suisse, l'énergie électrique est convertie majoritairement à partir de l'énergie hydraulique (environ 55%) et de l'énergie nucléaire (environ 40%). Les énergies renouvelables comme le solaire et l'éolien représentent une part moins importante.
 
 3. Dans une installation hydro-électrique, quel est l'ordre correct des transformations d'énergie ?
 a) Énergie potentielle → énergie cinétique → énergie mécanique → énergie électrique
