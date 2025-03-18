@@ -50,7 +50,7 @@ Explication: La section du conducteur est $S = \pi \cdot \dfrac{d^2}{4} = \pi \c
 8. Que se passe-t-il physiquement lorsqu'un courant traverse une résistance ?
 a) Une partie de l'énergie électrique est convertie en chaleur par collisions des électrons
 b) Les électrons sont complètement absorbés par le matériau
-c) Le courant génère un champ magnétique qui produit de la chaleur
+c) Le courant génère un champ magnétique qui va se transformer en chaleur
 Réponse correcte: a
 Explication: Lorsqu'un courant électrique traverse une résistance, les électrons libres entrent en collision avec les atomes du réseau cristallin, transférant une partie de leur énergie cinétique sous forme de chaleur. Ce phénomène, appelé effet Joule, est une conversion d'énergie électrique en énergie thermique.
 
