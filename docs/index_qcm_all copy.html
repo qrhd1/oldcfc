@@ -75,14 +75,9 @@
         }
         
         function extractChapterNumber(filename) {
-            // Modifié pour extraire les numéros de chapitre et sous-chapitre
-            const match = filename.match(/qcm_chapitre_(\d+)([a-z]?)_/);
-            if (match) {
-                const chapterNum = parseInt(match[1]);
-                const subChapter = match[2] || '';
-                return { chapterNum, subChapter };
-            }
-            return { chapterNum: 0, subChapter: '' };
+            // Extraire le numéro de chapitre du nom de fichier (ex: qcm_chapitre_1_iel.html -> 1)
+            const match = filename.match(/qcm_chapitre_(\d+)_/);
+            return match ? parseInt(match[1]) : 0;
         }
 
         function extractProfessionType(filename) {
@@ -100,16 +95,17 @@
             container.className = `file-item ${professionType}`;
 
             const fileLink = document.createElement('a');
+            // Utiliser l'URL pour afficher directement le contenu HTML depuis le répertoire docs
             fileLink.href = `https://qrhd1.github.io/oldcfc/${file.name}`;
-            fileLink.target = '_blank';
+            fileLink.target = '_blank'; // Ouvre dans un nouvel onglet
             fileLink.className = 'file-name';
             
-            // Modifié pour afficher correctement les sous-chapitres
+            // Simplifier l'affichage du nom du fichier
             let displayName = file.name;
             if (file.name.startsWith('qcm_chapitre_')) {
-                const { chapterNum, subChapter } = extractChapterNumber(file.name);
+                const chapterNum = extractChapterNumber(file.name);
                 const profession = extractProfessionType(file.name).toUpperCase();
-                displayName = `Chapitre ${chapterNum}${subChapter} - ${profession}`;
+                displayName = `Chapitre ${chapterNum} - ${profession}`;
             }
             
             fileLink.textContent = displayName;
@@ -121,19 +117,17 @@
         function displayFiles(files) {
             const container = document.getElementById('qcm-files');
             
-            // Modifié pour trier correctement les sous-chapitres
+            // Trier les fichiers par numéro de chapitre
             const sortedFiles = [...files].sort((a, b) => {
-                const { chapterNum: numA, subChapter: subA } = extractChapterNumber(a.name);
-                const { chapterNum: numB, subChapter: subB } = extractChapterNumber(b.name);
+                const numA = extractChapterNumber(a.name);
+                const numB = extractChapterNumber(b.name);
                 if (numA === numB) {
-                    if (subA === subB) {
-                        return a.name.localeCompare(b.name);
-                    }
-                    return subA.localeCompare(subB);
+                    return a.name.localeCompare(b.name);
                 }
                 return numA - numB;
             });
 
+            // Créer et ajouter les éléments pour chaque fichier
             sortedFiles.forEach(file => {
                 const fileElement = createFileElement(file);
                 container.appendChild(fileElement);
