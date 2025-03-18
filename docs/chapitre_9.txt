@@ -131,7 +131,7 @@ c) $0,1 [Ω]$
 Réponse correcte: a
 Explication: Le shunt doit laisser passer $(1 - 0,01) = 0,99 [A]$ tout en créant la même chute de tension que le cadre : $U = R_{cadre} \cdot I_{cadre} = 100 \cdot 0,01 = 1 [V]$. Donc $R_{shunt} = \dfrac{U}{I_{shunt}} = \dfrac{1}{0,99} = 1 [Ω]$.
 
-20. Un compteur a une constante c = 250 impulsions/kWh. Vous mesurez 10 impulsions un temps de $50 [s]$. Quelle est la puissance de l'installation ?
+20. Un compteur a une constante c = 250 impulsions/kWh. On mesure 10 impulsions un temps en $50 [s]$. Quelle est la puissance de l'installation ?
 a) $500 [W]$
 b) $720 [W]$
 c) $1800 [W]$
