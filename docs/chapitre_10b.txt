@@ -1,0 +1,90 @@
+19. Dans quel pays peut-on raccorder un récepteur alimenté en tension de crête de 155 V ?
+a) Aux États-Unis
+b) Au Royaume-Uni
+c) En France
+Réponse correcte: c
+Explication: Une tension de crête de 155 V correspond à une tension efficace de $\dfrac{155}{\sqrt{2}} \approx 110$ V. Cette tension correspond au réseau français où la tension efficace normalisée est de 230 V (avec une tolérance), donnant une tension de crête d'environ 325 V.
+
+20. Qu'entend-on par valeur efficace ?
+a) La moyenne des valeurs absolues d'un signal périodique
+b) La valeur du courant continu produisant le même effet thermique
+c) La valeur maximale atteinte par le signal alternatif
+Réponse correcte: b
+Explication: La valeur efficace d'un courant alternatif est la valeur du courant continu qui produirait le même effet thermique (même puissance dissipée) dans une résistance donnée. Mathématiquement, c'est la racine carrée de la moyenne des carrés des valeurs instantanées.
+
+21. Quel est le rapport entre valeur de crête et valeur efficace (signal sinusoïdal) ?
+a) $I_{eff} = \hat{I} \cdot \sqrt{2}$
+b) $I_{eff} = \dfrac{\hat{I}}{\sqrt{2}}$
+c) $I_{eff} = \dfrac{\hat{I}}{2}$
+Réponse correcte: b
+Explication: Pour un signal sinusoïdal, la valeur efficace est égale à la valeur de crête divisée par racine de 2 : $I_{eff} = \dfrac{\hat{I}}{\sqrt{2}} \approx 0,707 \cdot \hat{I}$.
+
+22. Quelle sera la tension maximale aux bornes d'une sonnette alimentée par un transformateur 24 V - 50 Hz ?
+a) 24 V
+b) $24 \cdot \sqrt{2}$ V
+c) $\dfrac{24}{\sqrt{2}}$ V
+Réponse correcte: b
+Explication: La tension de 24 V indiquée pour le transformateur est une valeur efficace. La tension maximale (ou de crête) sera donc $\hat{U} = U_{eff} \cdot \sqrt{2} = 24 \cdot \sqrt{2} \approx 34$ V.
+
+23. Combien de fois par seconde une lampe à incandescence de 100 W raccordée sur le réseau va-t-elle s'éteindre ?
+a) 50 fois
+b) 100 fois
+c) Elle ne s'éteint jamais
+Réponse correcte: c
+Explication: Une lampe à incandescence ne s'éteint jamais complètement lorsqu'elle est alimentée par un courant alternatif. L'inertie thermique du filament maintient ce dernier à une température élevée même lorsque le courant passe par zéro, ce qui se produit deux fois par période.
+
+24. Donner la définition de la valeur instantanée.
+a) La valeur du signal à un instant précis
+b) La valeur moyenne du signal sur une période
+c) La valeur la plus fréquemment atteinte par le signal
+Réponse correcte: a
+Explication: La valeur instantanée est la valeur du signal (courant ou tension) à un instant précis t. Pour un courant alternatif sinusoïdal, elle s'exprime par $i(t) = \hat{I} \cdot \sin(\omega t + \phi)$.
+
+25. On dispose d'un courant de 10 A (valeur efficace) – 50 Hz. Déterminer la valeur instantanée lorsque le vecteur fait un angle de +170° avec l'axe horizontal.
+a) -14,1 A
+b) 2,4 A
+c) -2,4 A
+Réponse correcte: a
+Explication: La valeur instantanée est $i = \hat{I} \cdot \sin(170°) = 10 \cdot \sqrt{2} \cdot \sin(170°) = 14,1 \cdot 0,9848 = -14,1$ A. Le sinus de 170° étant négatif, le courant est dans le sens opposé à la référence.
+
+26. Qu'entend-on par récepteur purement ohmique ?
+a) Un récepteur qui ne contient que des résistances
+b) Un récepteur dont la résistance varie avec la température
+c) Un récepteur sans résistance interne
+Réponse correcte: a
+Explication: Un récepteur purement ohmique (ou résistif) est un récepteur qui ne contient que des résistances, sans inductance ni capacité. Son impédance se réduit à sa résistance.
+
+27. Quel est le déphasage entre la tension et le courant dans le cas d'un récepteur purement ohmique ?
+a) $\varphi = 0°$ (en phase)
+b) $\varphi = 90°$ (courant en retard)
+c) $\varphi = -90°$ (courant en avance)
+Réponse correcte: a
+Explication: Dans un récepteur purement ohmique, la tension et le courant sont en phase, ce qui signifie que le déphasage est nul ($\varphi = 0°$).
+
+28. Qu'est-ce que la puissance active et quel est l'appareil qui la mesure ?
+a) L'énergie consommée par unité de temps, mesurée par un ampèremètre
+b) La puissance réellement consommée par le récepteur, mesurée par un wattmètre
+c) La puissance apparente du circuit, mesurée par un voltmètre
+Réponse correcte: b
+Explication: La puissance active est la puissance réellement consommée ou dissipée par un récepteur, transformée en une autre forme d'énergie (chaleur, travail mécanique, etc.). Elle est mesurée par un wattmètre.
+
+29. Quels sont les symboles de grandeur et d'unité de la puissance active ?
+a) $P$ en $[W]$
+b) $S$ en $[VA]$
+c) $Q$ en $[var]$
+Réponse correcte: a
+Explication: La puissance active est représentée par la lettre $P$ et s'exprime en watts $[W]$.
+
+30. Un radiateur électrique de résistance R = 45 Ω est branché sur le réseau 230 V. Calculer l'intensité dans la ligne.
+a) 5,1 A
+b) 7,2 A
+c) 10,4 A
+Réponse correcte: a
+Explication: Le radiateur étant un récepteur purement résistif, l'intensité est calculée par la loi d'Ohm : $I = \dfrac{U}{R} = \dfrac{230}{45} = 5,1$ A.
+
+31. Une lampe à incandescence de 75 W - 230 V fonctionne pendant 6 heures. Calculer sa résistance et combien de tours a fait le disque du compteur si la constante c = 250 tr/kWh ?
+a) $R = 705$ Ω et n = 1,8 tours
+b) $R = 705$ Ω et n = 1 tour
+c) $R = 705$ Ω et n = 1,8 tour
+Réponse correcte: a
+Explication: La résistance de la lampe est $R = \dfrac{U^2}{P} = \dfrac{230^2}{75} = 705$ Ω. L'énergie consommée est $W = P \cdot t = 75 \cdot 6 = 450$ Wh = 0,45 kWh. Le nombre de tours est $n = c \cdot W = 250 \cdot 0,45 = 112,5$ tours.
