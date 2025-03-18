@@ -117,10 +117,10 @@ c) Par comptage des oscillations d'un circuit résonnant
 Réponse correcte: b
 Explication: Un compteur d'énergie électrique fonctionne en intégrant la puissance instantanée dans le temps. Dans les compteurs électromécaniques, cela se fait via un disque tournant à une vitesse proportionnelle à la puissance, dont les tours sont comptés.
 
-18. Sur un voltmètre, vous disposez des calibres suivants: 50 [V], 100 [V], 300 [V] et 500 [V]. Sur quel calibre réglez-vous votre instrument pour une mesure à 80 [V] ?
-a) 50 [V]
-b) 100 [V]
-c) 300 [V]
+18. Sur un voltmètre, vous disposez des calibres suivants: $50 [V], 100 [V], 300 [V]$ et $500 [V]$. Sur quel calibre réglez-vous votre instrument pour une mesure à $80 [V]$ ?
+a) $50 [V]$
+b) $100 [V]$
+c) $300 [V]$
 Réponse correcte: b
 Explication: Pour une mesure de 80 [V], il faut choisir le calibre 100 [V] car c'est le plus petit calibre supérieur à la valeur à mesurer. Utiliser le calibre 50 [V] risquerait d'endommager l'instrument, tandis que les calibres 300 [V] ou 500 [V] donneraient une précision moindre.
 
@@ -131,9 +131,9 @@ c) $0,1 [Ω]$
 Réponse correcte: a
 Explication: Le shunt doit laisser passer $(1 - 0,01) = 0,99 [A]$ tout en créant la même chute de tension que le cadre : $U = R_{cadre} \cdot I_{cadre} = 100 \cdot 0,01 = 1 [V]$. Donc $R_{shunt} = \dfrac{U}{I_{shunt}} = \dfrac{1}{0,99} = 1 [Ω]$.
 
-20. Un compteur a une constante c = 250 impulsions/kWh. On mesure 10 impulsions un temps en $50 [s]$. Quelle est la puissance de l'installation ?
+20. Un compteur a une constante c = 250 impulsions/kWh. On mesure 10 impulsions en $50 [s]$. Quelle est la puissance de l'installation ?
 a) $500 [W]$
-b) $720 [W]$
-c) $1800 [W]$
-Réponse correcte: b
-Explication: La puissance se calcule par $P = \dfrac{n \cdot 3600}{c \cdot t}$ où n est le nombre de tours, t le temps en secondes et c la constante du compteur. Donc $P = \dfrac{10 \cdot 3600}{250 \cdot 50} = \dfrac{36000}{12500} = 2,88 [kWh] = 720 [W]$.
+b) $1720 [W]$
+c) $2880 [W]$
+Réponse correcte: c
+Explication: La puissance se calcule par $P = \dfrac{n \cdot 3600}{c \cdot t}$ où n est le nombre d'impulsions, t le temps en secondes et c la constante du compteur. Donc $P = \dfrac{10 \cdot 3600}{250 \cdot 50} = \dfrac{36000}{12500} = 2,88 [kW] = 2880 [W]$. Autre solution par une règle de 3 : $\dfrac{250}{1} = \dfrac{10}{W}$ donc $W = 0.04 [kWh]$; On déduit $P = \dfrac{W}{t} = \dfrac{0.04 \cdot 3600}{50} = 2880 [W]$
