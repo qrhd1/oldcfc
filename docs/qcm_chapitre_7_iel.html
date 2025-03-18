@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCM CHAPITRE 7 - à vérifier Magnétisme – Electromagnétisme</title>
+    <!-- Lien vers le fichier CSS externe -->
+    <link rel="stylesheet" href="custom_style.css">    
+    <!-- Ajout des scripts MathJax -->
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+          }
+        };
+    </script>     
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <h1>à vérifier ... QCM CHAPITRE 7 - Magnétisme – Electromagnétisme</h1>
+    
+    <div id="errorMsg" style="color: red; margin: 20px 0;"></div>
+    
+    <div id="loading">Chargement des questions...</div>
+    
+    <div id="quiz" style="display: none;"></div>
+    
+    <div id="scoreContainer" style="display: none;">
+        <button id="check-answers">Vérifier mes réponses</button>
+        <div class="score" id="score"></div>
+    </div>
+
+    <script>
+        // Objet pour stocker les informations du quiz
+        const quiz = {
+            questions: [],
+            correctAnswers: {},
+            explanations: {}
+        };
+
+        // Nom du fichier de questions (dans le même répertoire)
+        const QUIZ_FILE_NAME = 'chapitre_7.txt';
+        
+        // Charger automatiquement le fichier de questions au chargement de la page
+        window.addEventListener('DOMContentLoaded', function() {
+            loadQuizFile();
+        });
+        
+        // Fonction pour charger le fichier de questions
+        function loadQuizFile() {
+            fetch(QUIZ_FILE_NAME)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Erreur HTTP: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then(content => {
+                    try {
+                        // Traiter le contenu du fichier
+                        parseQuizFile(content);
+                        
+                        // Générer le HTML pour le quiz
+                        generateQuizHTML();
+                        
+                        // Cacher le chargement et afficher le quiz
+                        document.getElementById('loading').style.display = 'none';
+                        document.getElementById('quiz').style.display = 'block';
+                        document.getElementById('scoreContainer').style.display = 'block';
+                    } catch (error) {
+                        document.getElementById('loading').style.display = 'none';
+                        document.getElementById('errorMsg').textContent = 'Erreur lors du traitement du fichier: ' + error.message;
+                        console.error('Erreur:', error);
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('loading').style.display = 'none';
+                    document.getElementById('errorMsg').textContent = `Erreur lors du chargement du fichier: ${error.message}`;
+                    console.error('Erreur:', error);
+                });
+        }
+
+        // Fonction pour analyser le fichier de questions
+        function parseQuizFile(content) {
+            // Réinitialiser le quiz
+            quiz.questions = [];
+            quiz.correctAnswers = {};
+            quiz.explanations = {};
+            
+            // Diviser le contenu en lignes
+            const lines = content.split(/\r?\n/);
+            let currentQuestionIndex = null;
+            let currentQuestion = null;
+            let lineIndex = 0;
+            
+            while (lineIndex < lines.length) {
+                const line = lines[lineIndex].trim();
+                lineIndex++;
+                
+                // Ignorer les lignes vides
+                if (line === '') continue;
+                
+                // Vérifier si c'est une nouvelle question
+                const questionMatch = line.match(/^(\d+)\.\s+(.+)$/);
+                if (questionMatch) {
+                    // Si nous avions déjà une question en cours, l'ajouter au quiz
+                    if (currentQuestion) {
+                        quiz.questions.push(currentQuestion);
+                    }
+                    
+                    // Créer une nouvelle question
+                    currentQuestionIndex = questionMatch[1];
+                    currentQuestion = {
+                        id: 'q' + currentQuestionIndex,
+                        text: questionMatch[2],
+                        options: []
+                    };
+                    continue;
+                }
+                
+                // Vérifier si c'est une image pour la question
+                const questionImageMatch = line.match(/^IMAGE_QUESTION\s*:\s*(.+)$/i);
+                if (questionImageMatch && currentQuestion) {
+                    currentQuestion.image = questionImageMatch[1].trim();
+                    continue;
+                }
+                
+                // Vérifier si c'est une option de réponse
+                const optionMatch = line.match(/^([a-c])\)\s+(.+)$/);
+                if (optionMatch && currentQuestion) {
+                    const option = {
+                        id: optionMatch[1],
+                        text: optionMatch[2]
+                    };
+                    currentQuestion.options.push(option);
+                    continue;
+                }
+                
+                // Vérifier si c'est une image pour une option
+                const optionImageMatch = line.match(/^IMAGE_OPTION_([a-c])\s*:\s*(.+)$/i);
+                if (optionImageMatch && currentQuestion) {
+                    const optionId = optionImageMatch[1];
+                    const imagePath = optionImageMatch[2].trim();
+                    
+                    // Trouver l'option correspondante
+                    const option = currentQuestion.options.find(opt => opt.id === optionId);
+                    if (option) {
+                        option.image = imagePath;
+                    }
+                    continue;
+                }
+                
+                // Vérifier si c'est la réponse correcte
+                const correctAnswerMatch = line.match(/^Réponse\s+correcte\s*:\s*([a-c])$/i);
+                if (correctAnswerMatch && currentQuestion) {
+                    quiz.correctAnswers[currentQuestion.id] = correctAnswerMatch[1];
+                    continue;
+                }
+                
+                // Vérifier si c'est l'explication
+                const explanationMatch = line.match(/^Explication\s*:\s*(.+)$/i);
+                if (explanationMatch && currentQuestion) {
+                    quiz.explanations[currentQuestion.id] = explanationMatch[1];
+                    continue;
+                }
+                
+                // Vérifier si c'est une image pour l'explication
+                const explanationImageMatch = line.match(/^IMAGE_EXPLICATION\s*:\s*(.+)$/i);
+                if (explanationImageMatch && currentQuestion) {
+                    if (!quiz.explanationImages) {
+                        quiz.explanationImages = {};
+                    }
+                    quiz.explanationImages[currentQuestion.id] = explanationImageMatch[1].trim();
+                    continue;
+                }
+            }
+            
+            // Ajouter la dernière question si elle existe
+            if (currentQuestion) {
+                quiz.questions.push(currentQuestion);
+            }
+            
+            // Vérifier qu'il y a des questions
+            if (quiz.questions.length === 0) {
+                throw new Error('Aucune question trouvée dans le fichier');
+            }
+            
+            // Vérifier que chaque question a 3 options
+            for (const question of quiz.questions) {
+                if (question.options.length !== 3) {
+                    throw new Error(`La question ${question.id} n'a pas exactement 3 options`);
+                }
+                
+                // Vérifier qu'il y a une réponse correcte
+                if (!quiz.correctAnswers[question.id]) {
+                    throw new Error(`Pas de réponse correcte définie pour la question ${question.id}`);
+                }
+            }
+        }
+
+        // Fonction pour générer le HTML du quiz
+        function generateQuizHTML() {
+            const quizContainer = document.getElementById('quiz');
+            quizContainer.innerHTML = '';
+            
+            for (const question of quiz.questions) {
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'question';
+                questionDiv.id = question.id;
+                
+                const questionText = document.createElement('p');
+                questionText.innerHTML = `<strong>${question.id.substring(1)}. ${question.text}</strong>`;
+                questionDiv.appendChild(questionText);
+                
+                // Ajouter l'image de la question si elle existe
+                if (question.image) {
+                    const img = document.createElement('img');
+                    img.src = question.image;
+                    img.alt = `Image pour la question ${question.id.substring(1)}`;
+                    img.style.maxWidth = '100%';
+                    img.style.marginBottom = '10px';
+                    questionDiv.appendChild(img);
+                }
+                
+                const optionsDiv = document.createElement('div');
+                optionsDiv.className = 'options';
+                
+                for (const option of question.options) {
+                    const optionDiv = document.createElement('div');
+                    optionDiv.className = 'option';
+                    
+                    const input = document.createElement('input');
+                    input.type = 'radio';
+                    input.name = question.id;
+                    input.id = `${question.id}${option.id}`;
+                    input.value = option.id;
+                    
+                    const label = document.createElement('label');
+                    label.htmlFor = `${question.id}${option.id}`;
+                    label.innerHTML = option.text; // Utiliser innerHTML pour permettre le rendu des formules MathJax
+                    
+                    optionDiv.appendChild(input);
+                    optionDiv.appendChild(label);
+                    
+                    // Ajouter l'image de l'option si elle existe
+                    if (option.image) {
+                        const img = document.createElement('img');
+                        img.src = option.image;
+                        img.alt = `Image pour l'option ${option.id}`;
+                        img.style.maxWidth = '100%';
+                        img.style.margin = '5px 0 5px 25px';
+                        optionDiv.appendChild(document.createElement('br'));
+                        optionDiv.appendChild(img);
+                    }
+                    
+                    optionsDiv.appendChild(optionDiv);
+                }
+                
+                questionDiv.appendChild(optionsDiv);
+                
+                const resultDiv = document.createElement('div');
+                resultDiv.className = 'result';
+                resultDiv.id = `result${question.id.substring(1)}`;
+                questionDiv.appendChild(resultDiv);
+                
+                quizContainer.appendChild(questionDiv);
+            }
+            
+            // Ajouter l'écouteur d'événement pour le bouton de vérification
+            document.getElementById('check-answers').addEventListener('click', checkAnswers);
+            
+            // Rendre les formules MathJax après avoir généré le HTML
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        }
+
+        // Fonction pour vérifier les réponses
+        function checkAnswers() {
+            let score = 0;
+            const totalQuestions = quiz.questions.length;
+            
+            // Vérifier chaque question
+            for (const question of quiz.questions) {
+                const questionId = question.id;
+                const questionNumber = questionId.substring(1);
+                const selectedOption = document.querySelector(`input[name="${questionId}"]:checked`);
+                const resultElement = document.getElementById(`result${questionNumber}`);
+                
+                resultElement.style.display = 'block';
+                
+                if (selectedOption) {
+                    if (selectedOption.value === quiz.correctAnswers[questionId]) {
+                        let explanationHTML = `<div class="correct">✓ Correct! ${quiz.explanations[questionId] || ''}</div>`;
+                        
+                        // Ajouter l'image d'explication si elle existe
+                        if (quiz.explanationImages && quiz.explanationImages[questionId]) {
+                            explanationHTML += `<div class="explanation-image"><img src="${quiz.explanationImages[questionId]}" alt="Explication" style="max-width: 100%; margin-top: 10px;"></div>`;
+                        }
+                        
+                        resultElement.innerHTML = explanationHTML;
+                        score++;
+                    } else {
+                        let explanationHTML = `<div class="incorrect">✗ Incorrect. La bonne réponse est l'option ${quiz.correctAnswers[questionId].toUpperCase()}. ${quiz.explanations[questionId] || ''}</div>`;
+                        
+                        // Ajouter l'image d'explication si elle existe
+                        if (quiz.explanationImages && quiz.explanationImages[questionId]) {
+                            explanationHTML += `<div class="explanation-image"><img src="${quiz.explanationImages[questionId]}" alt="Explication" style="max-width: 100%; margin-top: 10px;"></div>`;
+                        }
+                        
+                        resultElement.innerHTML = explanationHTML;
+                    }
+                } else {
+                    let explanationHTML = `<div class="incorrect">✗ Aucune réponse sélectionnée. La bonne réponse est l'option ${quiz.correctAnswers[questionId].toUpperCase()}. ${quiz.explanations[questionId] || ''}</div>`;
+                    
+                    // Ajouter l'image d'explication si elle existe
+                    if (quiz.explanationImages && quiz.explanationImages[questionId]) {
+                        explanationHTML += `<div class="explanation-image"><img src="${quiz.explanationImages[questionId]}" alt="Explication" style="max-width: 100%; margin-top: 10px;"></div>`;
+                    }
+                    
+                    resultElement.innerHTML = explanationHTML;
+                }
+            }
+            
+            // Afficher le score
+            const scoreElement = document.getElementById('score');
+            const percentage = Math.round((score / totalQuestions) * 100);
+            scoreElement.innerHTML = `Votre score: ${score}/${totalQuestions} (${percentage}%)`;
+            
+            // Faire défiler vers le haut
+            window.scrollTo(0, 0);
+            
+            // Rendre les formules MathJax après avoir affiché les résultats
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
+        }
+    </script>
+</body>
+</html>

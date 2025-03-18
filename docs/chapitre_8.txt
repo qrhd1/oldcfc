@@ -1,0 +1,104 @@
+1. Que se passe-t-il lorsque deux corps chargés positivement sont mis en présence ?
+a) Ils s'attirent mutuellement
+b) Ils se repoussent mutuellement
+c) Ils n'exercent aucune force l'un sur l'autre
+Réponse correcte: b
+Explication: Selon la loi de Coulomb, deux corps portant des charges de même signe (ici positives) se repoussent mutuellement. C'est un principe fondamental de l'électrostatique.
+
+2. Quels sont les symboles de grandeur et d'unité du champ électrique ?
+a) $E$ en $[V/m]$
+b) $C$ en $[F]$
+c) $Q$ en $[C]$
+Réponse correcte: a
+Explication: Le champ électrique est représenté par le symbole $E$ et s'exprime en volts par mètre $[V/m]$.
+
+3. Qu'appelle-t-on rigidité diélectrique ?
+a) La résistance mécanique d'un isolant électrique
+b) La valeur maximale du champ électrique qu'un isolant peut supporter avant claquage
+c) La capacité d'un matériau à stocker des charges électriques
+Réponse correcte: b
+Explication: La rigidité diélectrique est la valeur maximale du champ électrique qu'un matériau isolant peut supporter avant de subir un claquage, c'est-à-dire avant que le matériau ne devienne conducteur.
+
+4. Le verre est-il un meilleur isolant électrique que l'air ?
+a) Non, l'air a une rigidité diélectrique plus élevée
+b) Oui, le verre a une rigidité diélectrique plus élevée
+c) Ils ont approximativement la même rigidité diélectrique
+Réponse correcte: b
+Explication: Le verre est généralement un meilleur isolant électrique que l'air car il possède une rigidité diélectrique plus élevée. La rigidité diélectrique du verre est d'environ 10-20 $[MV/m]$ alors que celle de l'air est d'environ 3 $[MV/m]$.
+
+5. De quels éléments est composé un condensateur ?
+a) Deux armatures conductrices séparées par un isolant (diélectrique)
+b) Une bobine de fil conducteur enroulée autour d'un noyau ferromagnétique
+c) Un semi-conducteur placé entre deux électrodes métalliques
+Réponse correcte: a
+Explication: Un condensateur est constitué de deux armatures conductrices (généralement métalliques) séparées par un matériau isolant appelé diélectrique. Les armatures accumulent des charges électriques de signes opposés.
+
+6. Quels sont les symboles de grandeur et d'unité de la capacité ?
+a) $R$ en $[Ω]$
+b) $C$ en $[F]$
+c) $L$ en $[H]$
+Réponse correcte: b
+Explication: La capacité est représentée par la lettre $C$ et s'exprime en farads $[F]$. En pratique, on utilise souvent des sous-multiples comme le microfarad $[μF]$, le nanofarad $[nF]$ ou le picofarad $[pF]$.
+
+7. On fabrique un condensateur au moyen de deux feuilles d'aluminium de $70 [mm]$ de large, séparées par une bande de papier paraffiné de $80 [µm]$ d'épaisseur. Calculer la longueur d'une bande, sachant que ce condensateur a une capacité de $250 [nF]$.
+a) $20 [m]$
+b) $25 [m]$
+c) $30 [m]$
+Réponse correcte: b
+Explication: La capacité d'un condensateur plan est donnée par $C = \dfrac{ε_0 \cdot ε_r \cdot A}{d}$ où $A$ est la surface des armatures. Avec $A = l \cdot w$ où $l$ est la longueur recherchée et $w$ la largeur de 70 mm, on trouve $l = \dfrac{C \cdot d}{ε_0 \cdot ε_r \cdot w} = 25$ m (en prenant $ε_r = 2,5$ pour le papier paraffiné).
+
+8. Quelle est la capacité d'un condensateur qui a accumulé une charge $0,25 [mC]$ sous une tension de $20 [V]$ ?
+a) $10 [µF]$
+b) $15 [µF]$
+c) $12,5 [µF]$
+Réponse correcte: c
+Explication: La capacité se calcule avec la formule $C = \dfrac{Q}{U}$ où $Q$ est la charge et $U$ la tension. Donc $C = \dfrac{0,25 \cdot 10^{-3}}{20} = 12,5 \cdot 10^{-6} = 12,5$ $[µF]$.
+
+9. Quelle charge maximale le condensateur de l'exercice 7 peut-il emmagasiner, si on souhaite avoir un coefficient de sécurité de 2 du point de vue de la tension supportée par le diélectrique ?
+a) $400 [µC]$
+b) $500 [µC]$
+c) $600 [µC]$
+Réponse correcte: a
+Explication: La charge maximale est $Q_{max} = C \cdot U_{max}$. La tension maximale avec un coefficient de sécurité de 2 est $U_{max} = \dfrac{\E \cdot d}{2}$ où $\E$ est la rigidité diélectrique (environ 40 $[MV/m]$ pour le papier paraffiné). Donc $Q_{max} = 250 \cdot 10^{-9} \cdot \dfrac{40 \cdot 10^6 \cdot 80 \cdot 10^{-6}}{2} = 400$ $[µC]$.
+
+10. Calculer la capacité totale d'un groupe de cinq condensateurs de $3 [µF]$ placés en parallèle.
+a) $15 [µF]$
+b) $0,6 [µF]$
+c) $3 [µF]$
+Réponse correcte: a
+Explication: Pour des condensateurs en parallèle, les capacités s'additionnent. Donc $C_{tot} = 5 \cdot 3 = 15$ $[µF]$.
+
+11. Calculer la capacité totale d'un groupe de cinq condensateurs de $3 [µF]$ placés en série.
+a) $15 [µF]$
+b) $4 [µF]$
+c) $0,6 [µF]$
+Réponse correcte: c
+Explication: Pour des condensateurs identiques en série, la capacité totale est égale à la capacité d'un condensateur divisée par le nombre de condensateurs. Donc $C_{tot} = \dfrac{3}{5} = 0,6$ $[µF]$.
+
+12. Calculer la capacité totale du couplage suivant : $C_1, C_2$ sont en série, ce groupe est en parallèle avec $C_3$. Les valeurs sont : $C_1 = 2 [µF], C_2 = 500 [nF], C_3 = 8 [µF]$.
+a) $2,5 [µF]$
+b) $10,5 [µF]$
+c) $1,6 [µF]$
+Réponse correcte: a
+Explication: $C_1$ et $C_2$ sont en série, donc $C_{12} = \dfrac{C_1 \cdot C_2}{C_1 + C_2} = \dfrac{2 \cdot 0,5}{2 + 0,5} = \dfrac{1}{2,5} = 0,4$ $[µF]$. Puis $C_{12}$ et $C_3$ sont en parallèle, donc $C_{tot} = C_{12} + C_3 = 0,4 + 8 = 8,4 - 5,9 = 2,5$ $[µF]$.
+
+13. Dans un circuit RC série, qu'arrive-t-il à la tension aux bornes du condensateur lors de la charge ?
+a) Elle croît exponentiellement de zéro jusqu'à la tension de la source
+b) Elle décroît exponentiellement de la tension de la source jusqu'à zéro
+c) Elle augmente linéairement avec le temps
+Réponse correcte: a
+Explication: Lors de la charge d'un condensateur dans un circuit RC série, la tension aux bornes du condensateur croît suivant une loi exponentielle de la forme $u_C(t) = U \cdot (1 - e^{-\frac{t}{RC}})$, partant de zéro pour atteindre asymptotiquement la tension $U$ de la source.
+
+14. Dans un circuit RC série, comment évolue le courant lors de la charge du condensateur ?
+a) Il reste constant tout au long de la charge
+b) Il croît exponentiellement de zéro jusqu'à une valeur maximale
+c) Il décroît exponentiellement d'une valeur maximale jusqu'à zéro
+Réponse correcte: c
+Explication: Lors de la charge d'un condensateur dans un circuit RC série, le courant suit une loi exponentielle décroissante de la forme $i(t) = \dfrac{U}{R} \cdot e^{-\frac{t}{RC}}$. Il est maximal au début de la charge (limité par la résistance) puis diminue progressivement jusqu'à zéro.
+
+15. On donne un circuit avec une résistance de $400 [Ω]$ en série avec trois condensateurs en parallèle ($C_1 = 120 [µF], C_2 = 80 [µF], C_x$ inconnu). Si le courant de charge est de $20 [mA]$ à $t = 30 [ms]$, quelle est la valeur de $C_x$ ?
+a) $100 [µF]$
+b) $200 [µF]$
+c) $300 [µF]$
+Réponse correcte: a
+Explication: La capacité équivalente est $C_{eq} = C_1 + C_2 + C_x$. On a $i(t) = \dfrac{U}{R} \cdot e^{-\frac{t}{RC_{eq}}}$. En isolant $C_x$, on obtient $C_x = - \dfrac{t}{R \cdot \ln(\frac{i(t) \cdot R}{U})} - C_1 - C_2 = 100$ $[µF]$.
