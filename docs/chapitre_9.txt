@@ -1,0 +1,139 @@
+1. Citer les trois catégories d'instrument de mesure.
+a) Analogiques, numériques et mixtes
+b) Voltmètres, ampèremètres et wattmètres
+c) Mécaniques, électrodynamiques et électroniques
+Réponse correcte: a
+Explication: Les trois catégories d'instruments de mesure sont les instruments analogiques (à affichage continu par aiguille), les instruments numériques (à affichage digital) et les instruments mixtes combinant les deux technologies.
+
+2. Que peut-on dire de l'influence d'un instrument de mesure sur le signal mesuré ?
+a) Un instrument idéal ne perturbe pas le signal mesuré
+b) Tous les instruments perturbent le signal qu'ils mesurent
+c) Seuls les instruments analogiques perturbent le signal mesuré
+Réponse correcte: b
+Explication: Tous les instruments de mesure perturbent dans une certaine mesure le signal qu'ils mesurent. L'importance de cette perturbation dépend du type d'instrument et de sa résistance interne.
+
+3. Comment fonctionne un instrument à cadre mobile ?
+a) Par attraction électromagnétique entre un aimant fixe et un cadre de spires parcouru par un courant
+b) Par effet Hall dans un semi-conducteur
+c) Par conversion analogique-numérique du signal d'entrée
+Réponse correcte: a
+Explication: Un instrument à cadre mobile fonctionne selon le principe de l'attraction électromagnétique entre un aimant permanent fixe et un cadre de spires parcouru par le courant à mesurer, ce qui crée un couple proportionnel à ce courant.
+
+4. Un appareil à cadre mobile avec pont de Graetz est-il polarisé ?
+a) Oui, il ne peut mesurer que des courants de polarité positive
+b) Non, il peut mesurer des courants alternatifs grâce au redressement
+c) Cela dépend de l'orientation du pont de Graetz
+Réponse correcte: b
+Explication: Un appareil à cadre mobile équipé d'un pont de Graetz (pont redresseur) n'est pas polarisé car le pont transforme le courant alternatif en courant continu pulsé, permettant ainsi la mesure des courants alternatifs.
+
+5. Comment fonctionne un instrument électrodynamique ?
+a) Par interaction entre deux bobines parcourues par le même courant
+b) Par attraction entre un aimant permanent et une bobine
+c) Par résonance électronique avec le signal mesuré
+Réponse correcte: a
+Explication: Un instrument électrodynamique fonctionne par l'interaction entre deux bobines : une bobine fixe et une bobine mobile, toutes deux parcourues par le courant à mesurer, créant ainsi un couple proportionnel au carré du courant.
+
+6. Quelle est la principale application de l'appareil électrodynamique ?
+a) La mesure des courants continus
+b) La mesure des tensions alternatives
+c) La mesure des puissances électriques
+Réponse correcte: c
+Explication: La principale application de l'appareil électrodynamique est la mesure des puissances électriques (wattmètre), car il permet de prendre en compte à la fois le courant, la tension et le déphasage entre les deux.
+
+7. Qu'est-ce qu'un appareil numérique ?
+a) Un appareil qui convertit le signal mesuré en valeur numérique affichée sur un écran
+b) Un appareil qui ne mesure que des valeurs entières
+c) Un appareil qui utilise exclusivement des composants électroniques
+Réponse correcte: a
+Explication: Un appareil numérique est un instrument qui convertit le signal analogique mesuré en une valeur numérique discrète qui est ensuite affichée sur un écran digital.
+
+8. Quel est l'ordre de grandeur de la résistance interne d'un ampèremètre ?
+a) Quelques ohms
+b) Quelques kilohms
+c) Quelques mégohms
+Réponse correcte: a
+Explication: Un ampèremètre idéal devrait avoir une résistance interne nulle. En pratique, la résistance interne d'un ampèremètre est de l'ordre de quelques ohms, suffisamment faible pour perturber le moins possible le circuit.
+
+9. À quoi sert un shunt ?
+a) À augmenter la résistance interne d'un voltmètre
+b) À élargir la plage de mesure d'un ampèremètre
+c) À convertir un courant alternatif en courant continu
+Réponse correcte: b
+Explication: Un shunt est une résistance de faible valeur placée en parallèle avec le galvanomètre d'un ampèremètre pour dériver une partie du courant et ainsi étendre sa plage de mesure.
+
+10. Comment fonctionne une pince ampèremétrique et comment la raccorde-t-on ?
+a) Elle mesure la tension induite dans une spire fermée et se raccorde en série
+b) Elle mesure le champ magnétique créé par un courant et s'ouvre pour entourer le conducteur
+c) Elle mesure la résistance du conducteur et se raccorde en parallèle
+Réponse correcte: b
+Explication: Une pince ampèremétrique mesure le courant en détectant le champ magnétique qu'il crée autour du conducteur. Elle s'ouvre pour entourer le conducteur sans avoir à interrompre le circuit, ce qui est son principal avantage.
+
+11. Quel est l'ordre de grandeur de la résistance interne d'un voltmètre ?
+a) Quelques ohms
+b) Quelques kilohms
+c) Quelques mégohms
+Réponse correcte: c
+Explication: Un voltmètre idéal devrait avoir une résistance interne infinie. En pratique, la résistance interne d'un voltmètre est de l'ordre de quelques mégohms, suffisamment élevée pour ne pas perturber significativement le circuit.
+
+12. À quoi sert une résistance additionnelle ?
+a) À augmenter la sensibilité d'un ampèremètre
+b) À élargir la plage de mesure d'un voltmètre
+c) À protéger l'instrument contre les surcharges
+Réponse correcte: b
+Explication: Une résistance additionnelle est connectée en série avec un voltmètre pour augmenter sa plage de mesure en réduisant la proportion de tension appliquée directement à l'instrument.
+
+13. À quoi sert un transformateur de tension ?
+a) À mesurer des courants très élevés
+b) À mesurer des tensions alternatives très élevées
+c) À convertir un courant continu en courant alternatif
+Réponse correcte: b
+Explication: Un transformateur de tension est utilisé pour mesurer des tensions alternatives élevées en les réduisant dans un rapport connu, permettant ainsi l'utilisation d'instruments de mesure standards.
+
+14. Quel réglage faut-il faire avant d'effectuer une mesure avec un ohmmètre ?
+a) Le calibrage du zéro
+b) La sélection de la tension d'alimentation
+c) L'étalonnage de la pleine échelle
+Réponse correcte: a
+Explication: Avant d'effectuer une mesure avec un ohmmètre, il faut procéder au calibrage du zéro en court-circuitant les pointes de touche et en ajustant le potentiomètre de zéro jusqu'à ce que l'aiguille indique zéro ohm (ou l'infini selon le type d'ohmmètre).
+
+15. Sur quel principe le fonctionnement du pont de Wheatstone est-il basé ?
+a) Sur l'équilibre entre deux branches d'un circuit en parallèle
+b) Sur la mesure directe de la résistance par la loi d'Ohm
+c) Sur la comparaison entre une résistance connue et une résistance inconnue
+Réponse correcte: c
+Explication: Le pont de Wheatstone est basé sur la comparaison entre une résistance inconnue et des résistances de référence. Lorsque le pont est équilibré (courant nul dans le galvanomètre), on peut déduire la valeur de la résistance inconnue.
+
+16. À quoi sert un contrôleur d'isolement ?
+a) À mesurer la tension de claquage d'un isolant
+b) À vérifier la résistance d'isolement entre parties conductrices et masse
+c) À tester la continuité des circuits électriques
+Réponse correcte: b
+Explication: Un contrôleur d'isolement (ou mégohmmètre) sert à mesurer la résistance d'isolement entre des parties conductrices normalement isolées les unes des autres ou par rapport à la terre, pour vérifier l'intégrité de l'isolation électrique.
+
+17. Comment fonctionne un compteur d'énergie électrique ?
+a) Par mesure directe de l'énergie consommée
+b) Par intégration de la puissance instantanée dans le temps
+c) Par comptage des oscillations d'un circuit résonnant
+Réponse correcte: b
+Explication: Un compteur d'énergie électrique fonctionne en intégrant la puissance instantanée dans le temps. Dans les compteurs électromécaniques, cela se fait via un disque tournant à une vitesse proportionnelle à la puissance, dont les tours sont comptés.
+
+18. Sur un voltmètre, vous disposez des calibres suivants: 50 [V], 100 [V], 300 [V] et 500 [V]. Sur quel calibre réglez-vous votre instrument pour une mesure à 80 [V] ?
+a) 50 [V]
+b) 100 [V]
+c) 300 [V]
+Réponse correcte: b
+Explication: Pour une mesure de 80 [V], il faut choisir le calibre 100 [V] car c'est le plus petit calibre supérieur à la valeur à mesurer. Utiliser le calibre 50 [V] risquerait d'endommager l'instrument, tandis que les calibres 300 [V] ou 500 [V] donneraient une précision moindre.
+
+19. Le cadre mobile d'un ampèremètre a une résistance de $100 [Ω]$. Le courant maximal pouvant le traverser est de $10 [mA]$. Calculer la résistance du shunt pour une étendue de mesure à $1 [A]$.
+a) $1 [Ω]$
+b) $1,01 [Ω]$
+c) $0,1 [Ω]$
+Réponse correcte: a
+Explication: Le shunt doit laisser passer $(1 - 0,01) = 0,99 [A]$ tout en créant la même chute de tension que le cadre : $U = R_{cadre} \cdot I_{cadre} = 100 \cdot 0,01 = 1 [V]$. Donc $R_{shunt} = \dfrac{U}{I_{shunt}} = \dfrac{1}{0,99} = 1 [Ω]$.
+
+20. Un compteur a une constante c = 250 impulsions/kWh. Vous mesurez 10 impulsions un temps de $50 [s]$. Quelle est la puissance de l'installation ?
+a) $500 [W]$
+b) $720 [W]$
+c) $1800 [W]$
+Réponse correcte: b
+Explication: La puissance se calcule par $P = \dfrac{n \cdot 3600}{c \cdot t}$ où n est le nombre de tours, t le temps en secondes et c la constante du compteur. Donc $P = \dfrac{10 \cdot 3600}{250 \cdot 50} = \dfrac{36000}{12500} = 2,88 [kWh] = 720 [W]$.
