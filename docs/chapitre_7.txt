@@ -125,7 +125,7 @@ Réponse correcte: b
 Explication: L'intensité du champ magnétique est représentée par la lettre $H$ et s'exprime en ampères par mètre $[A/m]$.
 
 19. Quel est le sens du champ magnétique à l'extérieur du noyau d'une bobine alimentée par une tension continue ?
-a) Par convention du Nord au Sud
+a) Par convention du nord au sud
 b) De gauche à droite
 c) Du pôle positif vers le pôle négatif
 Réponse correcte: a
