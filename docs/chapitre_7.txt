@@ -132,8 +132,8 @@ Réponse correcte: a
 Explication: Selon la règle de la main droite, lorsque les doigts suivent le sens du courant dans les spires de la bobine, le pouce indique le sens du champ magnétique. Dans ce cas, avec le courant allant du côté négatif vers le côté positif, le champ magnétique dans le noyau est orienté de droite à gauche.
 
 20. Quel est l'avantage d'avoir une bobine avec noyau ferromagnétique ?
-a) Le noyau ferromagnétique diminue le champ magnétique produit
-b) Le noyau ferromagnétique augmente considérablement le champ magnétique produit
+a) Le noyau ferromagnétique diminue le champ magnétique
+b) Le noyau ferromagnétique augmente considérablement le champ magnétique
 c) Le noyau ferromagnétique permet de réduire la masse de la bobine
 Réponse correcte: b
-Explication: Un noyau ferromagnétique concentre les lignes de champ magnétique et augmente considérablement l'intensité du champ magnétique produit par la bobine, grâce à sa perméabilité magnétique élevée.
+Explication: Un noyau ferromagnétique concentre les lignes de champ magnétique et augmente considérablement l'intensité du champ magnétique par la bobine, grâce à sa perméabilité magnétique élevée.
