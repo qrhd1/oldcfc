@@ -75,29 +75,29 @@
             return files.filter(file => file.name.endsWith('.html') && file.name.startsWith('qcm_'));
         }
         
-        function extractChapterInfo(filename) {
+        function extractChapterNumber(filename) {
+            // Modifié pour extraire les numéros de chapitre et sous-chapitre
             const match = filename.match(/qcm_chapitre_(\d+)([a-z]?)_/);
             if (match) {
-                return {
-                    chapterNum: parseInt(match[1]),
-                    subChapter: match[2] || '',
-                    profession: extractProfessionType(filename)
-                };
+                const chapterNum = parseInt(match[1]);
+                const subChapter = match[2] || '';
+                return { chapterNum, subChapter };
             }
-            return null;
+            return { chapterNum: 0, subChapter: '' };
         }
 
         function extractProfessionType(filename) {
-            if (filename.includes('_elm')) return 'ELM';
+            // Extraire le type de profession (elm, iel, pele, tlm)
+            if (filename.includes('_elm')) return 'elm';
             if (filename.includes('_iel')) return 'FET';
-            if (filename.includes('_pele')) return 'PELE';
-            if (filename.includes('_tlm')) return 'TLM';
+            if (filename.includes('_pele')) return 'pele';
+            if (filename.includes('_tlm')) return 'tlm';
             return '';
         }
 
         function createFileElement(file) {
             const container = document.createElement('div');
-            const professionType = extractProfessionType(file.name).toLowerCase();
+            const professionType = extractProfessionType(file.name);
             container.className = `file-item ${professionType}`;
 
             const fileLink = document.createElement('a');
@@ -105,54 +105,39 @@
             fileLink.target = '_blank';
             fileLink.className = 'file-name';
             
-            const chapterInfo = extractChapterInfo(file.name);
-            if (chapterInfo) {
-                fileLink.textContent = `${chapterInfo.subChapter.toUpperCase()} - ${chapterInfo.profession}`;
-            } else {
-                fileLink.textContent = file.name;
+            // Modifié pour afficher correctement les sous-chapitres
+            let displayName = file.name;
+            if (file.name.startsWith('qcm_chapitre_')) {
+                const { chapterNum, subChapter } = extractChapterNumber(file.name);
+                const profession = extractProfessionType(file.name).toUpperCase();
+                displayName = `Chapitre ${chapterNum}${subChapter} - ${profession}`;
             }
             
+            fileLink.textContent = displayName;
             container.appendChild(fileLink);
+
             return container;
         }
 
         function displayFiles(files) {
-            const container = document.getElementById('chapters-container');
-            const chapters = {};
-
-            files.forEach(file => {
-                const chapterInfo = extractChapterInfo(file.name);
-                if (chapterInfo) {
-                    if (!chapters[chapterInfo.chapterNum]) {
-                        chapters[chapterInfo.chapterNum] = [];
+            const container = document.getElementById('qcm-files');
+            
+            // Modifié pour trier correctement les sous-chapitres
+            const sortedFiles = [...files].sort((a, b) => {
+                const { chapterNum: numA, subChapter: subA } = extractChapterNumber(a.name);
+                const { chapterNum: numB, subChapter: subB } = extractChapterNumber(b.name);
+                if (numA === numB) {
+                    if (subA === subB) {
+                        return a.name.localeCompare(b.name);
                     }
-                    chapters[chapterInfo.chapterNum].push(file);
+                    return subA.localeCompare(subB);
                 }
+                return numA - numB;
             });
 
-            Object.keys(chapters).sort((a, b) => parseInt(a) - parseInt(b)).forEach(chapterNum => {
-                const chapterSection = document.createElement('div');
-                chapterSection.className = 'chapter-section';
-
-                const chapterTitle = document.createElement('div');
-                chapterTitle.className = 'chapter-title';
-                chapterTitle.textContent = `Chapitre ${chapterNum}`;
-                chapterSection.appendChild(chapterTitle);
-
-                const fileGrid = document.createElement('div');
-                fileGrid.className = 'file-grid';
-
-                chapters[chapterNum].sort((a, b) => {
-                    const infoA = extractChapterInfo(a.name);
-                    const infoB = extractChapterInfo(b.name);
-                    return infoA.subChapter.localeCompare(infoB.subChapter);
-                }).forEach(file => {
-                    const fileElement = createFileElement(file);
-                    fileGrid.appendChild(fileElement);
-                });
-
-                chapterSection.appendChild(fileGrid);
-                container.appendChild(chapterSection);
+            sortedFiles.forEach(file => {
+                const fileElement = createFileElement(file);
+                container.appendChild(fileElement);
             });
         }
 
@@ -162,7 +147,7 @@
                 displayFiles(files);
             } catch (error) {
                 console.error("Erreur lors du chargement des fichiers:", error);
-                const container = document.getElementById('chapters-container');
+                const container = document.getElementById('qcm-files');
                 container.innerHTML = '<p>Erreur lors du chargement des fichiers. Veuillez réessayer plus tard.</p>';
             }
         }
