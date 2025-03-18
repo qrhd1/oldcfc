@@ -1,90 +1,90 @@
-19. Dans quel pays peut-on raccorder un récepteur alimenté en tension de crête de 155 V ?
-a) Aux États-Unis
-b) Au Royaume-Uni
-c) En France
-Réponse correcte: c
-Explication: Une tension de crête de 155 V correspond à une tension efficace de $\dfrac{155}{\sqrt{2}} \approx 110$ V. Cette tension correspond au réseau français où la tension efficace normalisée est de 230 V (avec une tolérance), donnant une tension de crête d'environ 325 V.
-
-20. Qu'entend-on par valeur efficace ?
-a) La moyenne des valeurs absolues d'un signal périodique
-b) La valeur du courant continu produisant le même effet thermique
-c) La valeur maximale atteinte par le signal alternatif
-Réponse correcte: b
-Explication: La valeur efficace d'un courant alternatif est la valeur du courant continu qui produirait le même effet thermique (même puissance dissipée) dans une résistance donnée. Mathématiquement, c'est la racine carrée de la moyenne des carrés des valeurs instantanées.
-
-21. Quel est le rapport entre valeur de crête et valeur efficace (signal sinusoïdal) ?
-a) $I_{eff} = \hat{I} \cdot \sqrt{2}$
-b) $I_{eff} = \dfrac{\hat{I}}{\sqrt{2}}$
-c) $I_{eff} = \dfrac{\hat{I}}{2}$
-Réponse correcte: b
-Explication: Pour un signal sinusoïdal, la valeur efficace est égale à la valeur de crête divisée par racine de 2 : $I_{eff} = \dfrac{\hat{I}}{\sqrt{2}} \approx 0,707 \cdot \hat{I}$.
-
-22. Quelle sera la tension maximale aux bornes d'une sonnette alimentée par un transformateur 24 V - 50 Hz ?
-a) 24 V
-b) $24 \cdot \sqrt{2}$ V
-c) $\dfrac{24}{\sqrt{2}}$ V
-Réponse correcte: b
-Explication: La tension de 24 V indiquée pour le transformateur est une valeur efficace. La tension maximale (ou de crête) sera donc $\hat{U} = U_{eff} \cdot \sqrt{2} = 24 \cdot \sqrt{2} \approx 34$ V.
-
-23. Combien de fois par seconde une lampe à incandescence de 100 W raccordée sur le réseau va-t-elle s'éteindre ?
-a) 50 fois
-b) 100 fois
-c) Elle ne s'éteint jamais
-Réponse correcte: c
-Explication: Une lampe à incandescence ne s'éteint jamais complètement lorsqu'elle est alimentée par un courant alternatif. L'inertie thermique du filament maintient ce dernier à une température élevée même lorsque le courant passe par zéro, ce qui se produit deux fois par période.
-
-24. Donner la définition de la valeur instantanée.
-a) La valeur du signal à un instant précis
-b) La valeur moyenne du signal sur une période
-c) La valeur la plus fréquemment atteinte par le signal
+32. Sous quelle tension est alimentée une résistance de 25 Ω dont le courant est de 5 A ?
+a) 125 V
+b) 110 V
+c) 220 V
 Réponse correcte: a
-Explication: La valeur instantanée est la valeur du signal (courant ou tension) à un instant précis t. Pour un courant alternatif sinusoïdal, elle s'exprime par $i(t) = \hat{I} \cdot \sin(\omega t + \phi)$.
+Explication: En appliquant la loi d'Ohm, la tension aux bornes de la résistance est $U = R \cdot I = 25 \cdot 5 = 125$ V.
 
-25. On dispose d'un courant de 10 A (valeur efficace) – 50 Hz. Déterminer la valeur instantanée lorsque le vecteur fait un angle de +170° avec l'axe horizontal.
-a) -14,1 A
-b) 2,4 A
-c) -2,4 A
+33. Qu'entend-on par récepteur purement inductif ?
+a) Un récepteur qui ne contient que des inductances, sans résistance
+b) Un récepteur qui n'absorbe que de la puissance réactive
+c) Un récepteur dont le facteur de puissance est égal à zéro
 Réponse correcte: a
-Explication: La valeur instantanée est $i = \hat{I} \cdot \sin(170°) = 10 \cdot \sqrt{2} \cdot \sin(170°) = 14,1 \cdot 0,9848 = -14,1$ A. Le sinus de 170° étant négatif, le courant est dans le sens opposé à la référence.
+Explication: Un récepteur purement inductif est un récepteur idéal qui ne contient que des inductances (bobines) sans résistance. Dans la pratique, tous les récepteurs inductifs possèdent une certaine résistance.
 
-26. Qu'entend-on par récepteur purement ohmique ?
-a) Un récepteur qui ne contient que des résistances
-b) Un récepteur dont la résistance varie avec la température
-c) Un récepteur sans résistance interne
-Réponse correcte: a
-Explication: Un récepteur purement ohmique (ou résistif) est un récepteur qui ne contient que des résistances, sans inductance ni capacité. Son impédance se réduit à sa résistance.
+34. Pourquoi la tension et le courant sont-ils déphasés dans un récepteur purement inductif ?
+a) Parce que le courant varie plus rapidement que la tension
+b) Parce que la tension s'oppose aux variations de courant (loi de Lenz)
+c) Parce que la résistance du circuit change avec la fréquence
+Réponse correcte: b
+Explication: Dans un récepteur inductif, la tension est proportionnelle à la dérivée du courant ($u = L \cdot \dfrac{di}{dt}$) et s'oppose à ses variations selon la loi de Lenz. Cette opposition crée un décalage temporel, donc un déphasage, entre la tension et le courant.
 
-27. Quel est le déphasage entre la tension et le courant dans le cas d'un récepteur purement ohmique ?
+35. Quel est le déphasage entre la tension et le courant dans le cas d'un récepteur purement inductif ?
 a) $\varphi = 0°$ (en phase)
-b) $\varphi = 90°$ (courant en retard)
+b) $\varphi = +90°$ (tension en avance)
 c) $\varphi = -90°$ (courant en avance)
-Réponse correcte: a
-Explication: Dans un récepteur purement ohmique, la tension et le courant sont en phase, ce qui signifie que le déphasage est nul ($\varphi = 0°$).
-
-28. Qu'est-ce que la puissance active et quel est l'appareil qui la mesure ?
-a) L'énergie consommée par unité de temps, mesurée par un ampèremètre
-b) La puissance réellement consommée par le récepteur, mesurée par un wattmètre
-c) La puissance apparente du circuit, mesurée par un voltmètre
 Réponse correcte: b
-Explication: La puissance active est la puissance réellement consommée ou dissipée par un récepteur, transformée en une autre forme d'énergie (chaleur, travail mécanique, etc.). Elle est mesurée par un wattmètre.
+Explication: Dans un récepteur purement inductif, la tension est en avance de 90° sur le courant, ce qui correspond à un déphasage $\varphi = +90°$. On dit aussi que le courant est en retard de 90° sur la tension.
 
-29. Quels sont les symboles de grandeur et d'unité de la puissance active ?
+36. Donner la définition de la réactance d'induction.
+a) La résistance qu'offre une bobine au courant continu
+b) La résistance qu'offre une bobine au courant alternatif
+c) Le rapport entre la tension et le courant dans une bobine idéale
+Réponse correcte: c
+Explication: La réactance d'induction est l'opposition qu'offre une bobine idéale au passage du courant alternatif. C'est le rapport entre la tension efficace et le courant efficace dans une bobine pure : $X_L = \dfrac{U}{I} = L \cdot \omega = 2\pi f \cdot L$.
+
+37. Quels sont les symboles de grandeur et d'unité de la réactance d'induction ?
+a) $L$ en $[H]$
+b) $X_L$ en $[Ω]$
+c) $Z$ en $[Ω]$
+Réponse correcte: b
+Explication: La réactance d'induction est symbolisée par $X_L$ et s'exprime en ohms $[Ω]$, comme la résistance.
+
+38. Une bobine de résistance négligeable est raccordée sous 230 V - 50 Hz. Calculer l'intensité du courant qui la traverse si son inductance est de 0,2 H.
+a) 3,66 A
+b) 5,18 A
+c) 7,33 A
+Réponse correcte: a
+Explication: La réactance de la bobine est $X_L = 2\pi f \cdot L = 2\pi \cdot 50 \cdot 0,2 = 62,8$ $[Ω]$. Le courant est donc $I = \dfrac{U}{X_L} = \dfrac{230}{62,8} = 3,66$ A.
+
+39. Qu'est-ce que la puissance réactive et quel est l'appareil qui la mesure ?
+a) La puissance dissipée sous forme de chaleur, mesurée par un wattmètre
+b) La puissance échangée entre la source et les éléments réactifs, mesurée par un varmètre
+c) La puissance apparente du circuit, mesurée par un voltampèremètre
+Réponse correcte: b
+Explication: La puissance réactive est la puissance qui est échangée périodiquement entre la source et les éléments réactifs du circuit (inductances et condensateurs) sans être consommée. Elle est mesurée par un varmètre.
+
+40. Quels sont les symboles de grandeur et d'unité de la puissance réactive ?
 a) $P$ en $[W]$
 b) $S$ en $[VA]$
 c) $Q$ en $[var]$
-Réponse correcte: a
-Explication: La puissance active est représentée par la lettre $P$ et s'exprime en watts $[W]$.
+Réponse correcte: c
+Explication: La puissance réactive est représentée par la lettre $Q$ et s'exprime en voltampères réactifs $[var]$.
 
-30. Un radiateur électrique de résistance R = 45 Ω est branché sur le réseau 230 V. Calculer l'intensité dans la ligne.
-a) 5,1 A
-b) 7,2 A
-c) 10,4 A
+41. Une bobine de résistance négligeable est parcourue par un courant de 0,5 A sous une tension de 230 V - 50 Hz. Calculer son inductance.
+a) 0,73 H
+b) 1,46 H
+c) 0,37 H
 Réponse correcte: a
-Explication: Le radiateur étant un récepteur purement résistif, l'intensité est calculée par la loi d'Ohm : $I = \dfrac{U}{R} = \dfrac{230}{45} = 5,1$ A.
+Explication: La réactance de la bobine est $X_L = \dfrac{U}{I} = \dfrac{230}{0,5} = 460$ $[Ω]$. L'inductance est donc $L = \dfrac{X_L}{2\pi f} = \dfrac{460}{2\pi \cdot 50} = 1,46$ H.
 
-31. Une lampe à incandescence de 75 W - 230 V fonctionne pendant 6 heures. Calculer sa résistance et combien de tours a fait le disque du compteur si la constante c = 250 tr/kWh ?
-a) $R = 705$ Ω et n = 1,8 tours
-b) $R = 705$ Ω et n = 1 tour
-c) $R = 705$ Ω et n = 1,8 tour
+42. Calculer sous quelle tension il faut alimenter une bobine pure, si L = 0,5 H et que le courant ne doit pas dépasser 0,4 A, dans le cas où f = 50 Hz.
+a) 63 V
+b) 44 V
+c) 126 V
 Réponse correcte: a
-Explication: La résistance de la lampe est $R = \dfrac{U^2}{P} = \dfrac{230^2}{75} = 705$ Ω. L'énergie consommée est $W = P \cdot t = 75 \cdot 6 = 450$ Wh = 0,45 kWh. Le nombre de tours est $n = c \cdot W = 250 \cdot 0,45 = 112,5$ tours.
+Explication: La réactance de la bobine est $X_L = 2\pi f \cdot L = 2\pi \cdot 50 \cdot 0,5 = 157$ $[Ω]$. La tension maximale est donc $U = X_L \cdot I = 157 \cdot 0,4 = 63$ V.
+
+43. Qu'entend-on par récepteur purement capacitif ?
+a) Un récepteur qui ne contient que des condensateurs, sans résistance
+b) Un récepteur qui fournit de la puissance réactive
+c) Un récepteur dont le facteur de puissance est négatif
+Réponse correcte: a
+Explication: Un récepteur purement capacitif est un récepteur idéal qui ne contient que des condensateurs sans résistance. Dans la pratique, tous les récepteurs capacitifs possèdent une certaine résistance.
+
+44. Pourquoi la tension et le courant sont-ils déphasés dans un récepteur purement capacitif ?
+a) Parce que le courant varie plus lentement que la tension
+b) Parce que la tension est proportionnelle à l'intégrale du courant
+c) Parce que le courant est proportionnel à la dérivée de la tension
+Réponse correcte: c
+Explication: Dans un condensateur, le courant est proportionnel à la dérivée de la tension ($i = C \cdot \dfrac{du}{dt}$). Cela signifie que le courant atteint son maximum quand la tension varie le plus rapidement, créant un déphasage entre les deux grandeurs.
