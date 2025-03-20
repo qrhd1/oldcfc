@@ -1,0 +1,76 @@
+1. Qu'est-ce qu'un système de courant alternatif triphasé ?
+a) Un système comprenant trois circuits indépendants avec des tensions identiques
+b) Un système comprenant trois courants alternatifs sinusoïdaux de même fréquence, décalés de 120° l'un par rapport à l'autre
+c) Un système permettant d'obtenir trois tensions différentes à partir d'un seul générateur
+Réponse correcte: b
+Explication: Un système triphasé est constitué de trois courants alternatifs sinusoïdaux de même fréquence et de même amplitude, mais décalés dans le temps de 120° (ou $\frac{2\pi}{3}$ rad) les uns par rapport aux autres.
+
+2. Trois courants alternatifs triphasés ont une intensité efficace de 5 A chacun. Comment sont-ils représentés vectoriellement ?
+a) Par trois vecteurs de même longueur formant entre eux des angles de 60°
+b) Par trois vecteurs de même longueur formant entre eux des angles de 120°
+c) Par trois vecteurs de longueurs différentes formant un triangle équilatéral
+Réponse correcte: b
+Explication: Dans un système triphasé équilibré, les trois courants sont représentés par trois vecteurs de même longueur (5 A dans ce cas) formant entre eux des angles de 120°. Ces vecteurs tournent à la même vitesse angulaire.
+
+3. Quelle est la différence entre la tension de phase et la tension réseau ?
+a) La tension de phase est mesurée entre une phase et le neutre, la tension réseau entre deux phases
+b) La tension de phase est égale à la tension réseau divisée par 3
+c) La tension de phase est la valeur de crête, la tension réseau est la valeur efficace
+Réponse correcte: a
+Explication: La tension de phase ($U_{ph}$) est la tension mesurée entre une phase et le neutre, tandis que la tension réseau ou tension composée ($U_{res}$ ou $U$) est la tension mesurée entre deux phases du système triphasé.
+
+4. La tension entre deux phases d'un réseau triphasé est de 400 V. Calculer la tension entre phase et neutre.
+a) 133 V
+b) 231 V
+c) 400 V
+Réponse correcte: b
+Explication: Dans un système triphasé équilibré, la relation entre la tension réseau et la tension de phase est : $U_{ph} = \dfrac{U_{res}}{\sqrt{3}} = \dfrac{400}{\sqrt{3}} = 231$ V.
+
+5. Sur notre réseau, sous quelle tension sont alimentées les impédances d'un récepteur triphasé branché en étoile ?
+a) 400 V
+b) 230 V
+c) 690 V
+Réponse correcte: b
+Explication: Dans un montage en étoile, chaque impédance est alimentée sous la tension de phase, qui est de 230 V sur le réseau européen standard (pour une tension réseau de 400 V).
+
+6. Un corps de chauffe de 5 kW comprend trois résistances raccordées en étoile. La tension est de 110/190 V. Calculer l'intensité du courant dans la ligne.
+a) 15,2 A
+b) 26,3 A
+c) 8,8 A
+Réponse correcte: a
+Explication: Pour un récepteur triphasé équilibré en étoile, l'intensité du courant dans la ligne est $I = \dfrac{P}{3 \cdot U_{ph} \cdot \cos\varphi} = \dfrac{5000}{3 \cdot 110 \cdot 1} = 15,2$ A. (La tension de phase est 110 V, et $\cos\varphi = 1$ pour une résistance pure).
+
+7. Un moteur triphasé raccordé en étoile absorbe une intensité du courant de 10 A sous la tension du réseau. Son facteur de puissance est de 0,8. Calculer l'impédance de chaque enroulement.
+a) 40 Ω
+b) 23,1 Ω
+c) 13,8 Ω
+Réponse correcte: b
+Explication: L'impédance de chaque enroulement est $Z = \dfrac{U_{ph}}{I} = \dfrac{230}{10} = 23$ Ω. La tension de phase est de 230 V puisque le moteur est branché en étoile sur un réseau standard.
+
+8. Un moteur triphasé porte les indications suivantes : P = 20 kW ; U = 400 V ; Y ; cos ϕ = 0,9 ; rendement 0,8. Calculer le courant circulant dans la ligne.
+a) 40,1 A
+b) 23,1 A
+c) 69,4 A
+Réponse correcte: a
+Explication: La puissance électrique absorbée est $P_{abs} = \dfrac{P}{\eta} = \dfrac{20}{0,8} = 25$ kW. Le courant en ligne est donc $I = \dfrac{P_{abs}}{√3 \cdot U \cdot \cos\varphi} = \dfrac{25000}{√3 \cdot 400 \cdot 0,9} = 40,1$ A.
+
+9. Un corps de chauffe de 7500 W monté en étoile sans neutre est alimenté par le réseau. Calculer, si un fil de la ligne est coupé, l'intensité du courant dans chaque fil de la ligne et la puissance absorbée.
+a) 11,5 A et 5000 W
+b) 16,3 A et 3750 W
+c) 0 A et 0 W
+Réponse correcte: c
+Explication: Dans un montage en étoile sans neutre, si un fil de ligne est coupé, le circuit est ouvert et aucun courant ne peut circuler. La puissance absorbée est donc nulle (0 W) et l'intensité dans les fils restants est de 0 A.
+
+10. Dans quel cas de charge triphasée y a-t-il un courant dans le conducteur neutre ?
+a) Lorsque le système est équilibré
+b) Lorsque le système est déséquilibré
+c) Dans tous les cas, équilibré ou déséquilibré
+Réponse correcte: b
+Explication: Dans un système triphasé équilibré, la somme vectorielle des trois courants de phase est nulle, donc aucun courant ne circule dans le neutre. Ce n'est que dans le cas d'un système déséquilibré qu'un courant peut circuler dans le conducteur neutre.
+
+11. Comment calcule-t-on la puissance totale installée dans un réseau triphasé déséquilibré avec conducteur neutre ?
+a) En faisant la somme des trois puissances de phase
+b) En multipliant la puissance d'une phase par 3
+c) En utilisant la formule $P = \sqrt{3} \cdot U \cdot I \cdot \cos\varphi$
+Réponse correcte: a
+Explication: Dans un réseau triphasé déséquilibré, la puissance totale est la somme des puissances individuelles de chaque phase : $P_{tot} = P_1 + P_2 + P_3$. Chaque puissance de phase se calcule avec $P_i = U_{ph} \cdot I_i \cdot \cos\varphi_i$.

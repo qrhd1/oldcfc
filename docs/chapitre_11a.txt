@@ -1,0 +1,69 @@
+12. Un récepteur triphasé équilibré dont le facteur de puissance vaut 0,9 est raccordé en étoile avec neutre sur un réseau $230/400 [V]$. L'intensité du courant dans la ligne est de $15 [A]$. Calculer la puissance active de ce récepteur.
+a) $5,4 [kW]$
+b) $9,3 [kW]$
+c) $10,4 [kW]$
+Réponse correcte: b
+Explication: La puissance active d'un récepteur triphasé équilibré est $P = 3 \cdot U_{ph} \cdot I \cdot \cos\varphi = 3 \cdot 230 \cdot 15 \cdot 0,9 = 9315 [W] = 9,3 [kW]$.
+
+13. Un récepteur triphasé comprend trois résistances de $50 [Ω]$ en étoile. La tension d'alimentation est de $3×200 [V]$. Calculer la puissance totale.
+a) $2400 [W]
+b) $4800 [W]
+c) $8000 [W]
+Réponse correcte: a
+Explication: La puissance de chaque phase est $P_{ph} = \dfrac{U_{ph}^2}{R} = \dfrac{200^2}{50} = 800 [W]$. La puissance totale est donc $P_{tot} = 3 \cdot P_{ph} = 3 \cdot 800 = 2400 [W]$.
+
+14. Quel risque y a-t-il à déconnecter le conducteur neutre d'un système triphasé déséquilibré ?
+a) Aucun risque, le système continue à fonctionner normalement
+b) Un risque de surtension sur certaines phases et de sous-tension sur d'autres
+c) Un risque de court-circuit entre les phases
+Réponse correcte: b
+Explication: Dans un système triphasé déséquilibré, si le conducteur neutre est déconnecté, les tensions entre phase et neutre ne sont plus égales ni stabilisées. Certains récepteurs peuvent alors être soumis à des surtensions (risque de destruction) tandis que d'autres subissent des sous-tensions.
+
+15. Dans quel ordre doit-on déconnecter les conducteurs d'une ligne triphasée sous tension ?
+a) D'abord les conducteurs de phase, ensuite le neutre
+b) D'abord le neutre, ensuite les conducteurs de phase
+c) L'ordre n'a pas d'importance
+Réponse correcte: a
+Explication: Pour des raisons de sécurité, on doit d'abord déconnecter les conducteurs de phase (qui portent la tension par rapport au neutre) et ensuite le conducteur neutre. Cela évite de se retrouver dans la situation dangereuse décrite à la question précédente.
+
+16. Dans quel ordre doit-on connecter les conducteurs d'une ligne triphasée sous tension ?
+a) D'abord le neutre, ensuite les conducteurs de phase
+b) D'abord les conducteurs de phase, ensuite le neutre
+c) L'ordre n'a pas d'importance
+Réponse correcte: a
+Explication: Pour des raisons de sécurité, lors de la connexion d'une ligne triphasée sous tension, il faut d'abord connecter le conducteur neutre (qui établit la référence de potentiel) puis les conducteurs de phase. Cela permet d'éviter des déséquilibres de tension dangereux lors de l'opération.
+
+17. Une ligne alimente entre phase et neutre les récepteurs résistifs suivants : L1: deux récepteurs de 45 [Ω] et un de 75 [Ω], L2: quatre récepteurs de 100 [Ω], L3: un récepteur de 20 [Ω]. Les récepteurs sont tous branchés sous 230 [V]. Calculer le courant dans le conducteur neutre.
+a) $3,65 [A]\angle 0^\circ$
+b) $7,7 [A]\angle -14^\circ$
+c) $3,56 [A]\angle 34^\circ$
+Réponse correcte: c
+Explication: Pour chaque phase, on calcule le courant : $I_1 = \dfrac{230}{\left(\dfrac{1}{\dfrac{1}{45}+\dfrac{1}{45}+\dfrac{1}{75}}\right)} = 13,343 [A]$, $I_2 = \dfrac{230}{100/4} = 9,2 [A]$, $I_3 = \dfrac{230}{20} = 11,5 [A]$. Le courant dans le neutre est la somme vectorielle de ces trois courants, soit $I_N = 3,56 [A]\angle 34.1^\circ$. Avec la TI-30(Mathprint) 13.343(2nd)(complex)(1)0+9.238(2nd)(complex)(1)-120+11.547(2nd)(complex)(1)120(enter)---- $3.564\angle34.127^\circ$
+
+18. Un récepteur est constitué de trois résistances (15 [Ω], 20 [Ω] et 40 [[Ω]]) couplées en étoile avec neutre. Calculer la tension réseau sachant que la puissance active totale est de 1750 [W].
+a) 230 [V]
+b) 400 [V]
+c) 690 [V]
+Réponse correcte: a
+Explication: Pour un système en étoile, la puissance de chaque phase est $P_{ph} = \dfrac{U_{ph}^2}{R_{ph}}$. La puissance totale est $P_{tot} = \dfrac{U_{ph}^2}{R_1} + \dfrac{U_{ph}^2}{R_2} + \dfrac{U_{ph}^2}{R_3} = U_{ph}^2(\dfrac{1}{15} + \dfrac{1}{20} + \dfrac{1}{40}) = 1750$. On trouve $U_{ph} = 230$ [V], ce qui correspond à une tension réseau de 400 [V].
+
+19. Depuis un coupe-circuit 2LN sont raccordées vingt-quatre armatures TL de 40 [W] - cos ϕ = 0,5. Les lignes L1 et L2 alimentent chacune douze armatures. Calculer le courant dans le neutre.
+a) 0 [A]
+b) 1,25 [A]
+c) 2,5 [A]
+Réponse correcte: c
+Explication: Chaque armature consomme $I = \dfrac{P}{U \cdot \cos\varphi} = \dfrac{40}{230 \cdot 0,5} = 0,35$ [A]. Le courant dans chaque ligne est donc $I_1 = I_2 = 12 \cdot 0,35 = 4,2$ [A]. Ces courants étant en opposition de phase (déphasés de 180°), le courant dans le neutre est $I_N = |I_1 - I_2| = 0$ [A] si les courants sont purement résistifs. Mais avec $\cos\varphi = 0,5$, il y a une composante réactive et $I_N = 2 \cdot I_1 \cdot \sin(\arccos(0,5)) = 2,5$ [A].
+
+20. Un fer à repasser 230 [V] - 1000 [W] est branché entre le conducteur polaire L1 et le neutre. Un corps de chauffe de 100 [W] est raccordé entre le conducteur L2 et le neutre. Calculer la tension aux bornes de chacun des récepteurs lorsque le conducteur neutre est interrompu.
+a) 420 [V] pour le fer à repasser et 10 [V] pour le corps de chauffe
+b) 10 [V] pour le fer à repasser et 420 [V] pour le corps de chauffe
+c) 210 [V] pour chaque récepteur
+Réponse correcte: a
+Explication: Lorsque le neutre est interrompu, les deux appareils se retrouvent en série entre L1 et L2, sous une tension de 400 [V]. La tension se répartit alors proportionnellement aux résistances : $U_{fer} = 400 \cdot \dfrac{R_{fer}}{R_{fer} + R_{chauffe}} = 400 \cdot \dfrac{230^2/1000}{230^2/1000 + 230^2/100} = 400 \cdot \dfrac{1}{1+10} = 36$ [V] et $U_{chauffe} = 400 - 36 = 364$ [V].
+
+21. Sur notre réseau, sous quelle tension sont alimentées les impédances d'un récepteur triphasé branché en triangle ?
+a) 230 [V]
+b) 400 [V]
+c) 690 [V]
+Réponse correcte: b
+Explication: Dans un montage en triangle, chaque impédance est directement raccordée entre deux phases du réseau. Elle est donc alimentée sous la tension réseau (ou tension composée), qui est de 400 [V] en Europe.
