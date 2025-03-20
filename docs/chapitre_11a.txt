@@ -3,7 +3,7 @@ a) $5,4 [kW]$
 b) $9,3 [kW]$
 c) $10,4 [kW]$
 Réponse correcte: b
-Explication: La puissance active d'un récepteur triphasé équilibré est $P = 3 \cdot U_{ph} \cdot I \cdot \cos\varphi = 3 \cdot 230 \cdot 15 \cdot 0,9 = 9315 [W] = 9,3 [kW]$.
+Explication: La puissance active d'un récepteur triphasé équilibré est $P = 3 \cdot U_{ph} \cdot I_{ph} \cdot \cos\varphi = 3 \cdot 230 \cdot 15 \cdot 0,9 = 9315 [W] = 9,3 [kW]$.
 
 13. Un récepteur triphasé comprend trois résistances de $50 [Ω]$ en étoile. La tension d'alimentation est de $3×200 [V]$. Calculer la puissance totale.
 a) $2400 [W]$
@@ -45,9 +45,9 @@ a) $230 [V]$
 b) $400 [V]$
 c) $690 [V]$
 Réponse correcte: a
-Explication: Pour un système en étoile, la puissance de chaque phase est $P_{ph} = \dfrac{U_{ph}^2}{R_{ph}}$. La puissance totale est $P_{tot} = \dfrac{U_{ph}^2}{R_1} + \dfrac{U_{ph}^2}{R_2} + \dfrac{U_{ph}^2}{R_3} = U_{ph}^2(\dfrac{1}{15} + \dfrac{1}{20} + \dfrac{1}{40}) = 1750$. On trouve $U_{ph} = 230$ [V], ce qui correspond à une tension réseau de 400 [V].
+Explication: Pour un système en étoile, la puissance de chaque phase est $P_{ph} = \dfrac{U_{ph}^2}{R_{ph}}$. La puissance totale est $P_{tot} = \dfrac{U_{ph}^2}{R_1} + \dfrac{U_{ph}^2}{R_2} + \dfrac{U_{ph}^2}{R_3} = U_{ph}^2(\dfrac{1}{15} + \dfrac{1}{20} + \dfrac{1}{40}) = 1750 [W]$. On trouve $U_{ph} = 230$ [V], ce qui correspond à une tension réseau de 400 [V].
 
-19. Depuis un coupe-circuit 2LN sont raccordées vingt-quatre armatures TL de $40 [W] \quad cos \varphi = 0,5$. Les lignes L1 et L2 alimentent chacune douze armatures. Calculer le courant dans le neutre.
+19. Depuis un disjoncteur 2LN sont raccordées vingt-quatre armatures TL de $40 [W]; \ cos \varphi = 0,5$. Les lignes L1 et L2 alimentent chacune douze armatures. Calculer le courant dans le neutre.
 a) $0 [A]$
 b) $1,25 [A]$
 c) $2,5 [A]$
