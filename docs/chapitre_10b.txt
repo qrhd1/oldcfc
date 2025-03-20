@@ -1,9 +1,9 @@
-32. Sous quelle tension est alimentée une résistance de 25 Ω dont le courant est de 5 A ?
-a) 125 V
-b) 110 V
-c) 220 V
+32. Sous quelle tension est alimentée une résistance de $25 [Ω]$ dont le courant est de $5 [A]$ ?
+a) $125 [V]$
+b) $110 [V]$
+c) $220 [V]$
 Réponse correcte: a
-Explication: En appliquant la loi d'Ohm, la tension aux bornes de la résistance est $U = R \cdot I = 25 \cdot 5 = 125$ V.
+Explication: En appliquant la loi d'Ohm, la tension aux bornes de la résistance est $U = R \cdot I = 25 \cdot 5 = 125 [V]$.
 
 33. Qu'entend-on par récepteur purement inductif ?
 a) Un récepteur qui ne contient que des inductances, sans résistance
@@ -17,7 +17,7 @@ a) Parce que le courant varie plus rapidement que la tension
 b) Parce que la tension s'oppose aux variations de courant (loi de Lenz)
 c) Parce que la résistance du circuit change avec la fréquence
 Réponse correcte: b
-Explication: Dans un récepteur inductif, la tension est proportionnelle à la dérivée du courant ($u = L \cdot \dfrac{di}{dt}$) et s'oppose à ses variations selon la loi de Lenz. Cette opposition crée un décalage temporel, donc un déphasage, entre la tension et le courant.
+Explication: Dans un récepteur inductif, l'établissement du courant s'oppose à ses variations selon la loi de Lenz. Cette opposition crée un décalage temporel, donc un déphasage, entre la tension et le courant. La bobine stocke temporairement l'énergie sous forme magnétique lors de l'augmentation du courant, puis la restitue au circuit lors de sa diminution. Cette alternance constante crée un décalage temporel entre la tension appliquée et l'établissement du courant
 
 35. Quel est le déphasage entre la tension et le courant dans le cas d'un récepteur purement inductif ?
 a) $\varphi = 0°$ (en phase)
@@ -40,12 +40,12 @@ c) $Z$ en $[Ω]$
 Réponse correcte: b
 Explication: La réactance d'induction est symbolisée par $X_L$ et s'exprime en ohms $[Ω]$, comme la résistance.
 
-38. Une bobine de résistance négligeable est raccordée sous 230 V - 50 Hz. Calculer l'intensité du courant qui la traverse si son inductance est de 0,2 H.
-a) 3,66 A
-b) 5,18 A
-c) 7,33 A
+38. Une bobine de résistance négligeable est raccordée sous $230 [V] - 50 [Hz]$. Calculer l'intensité du courant qui la traverse si son inductance est de $0,2 [H]$.
+a) $3,66 [A]$
+b) $5,18 [A]$
+c) $7,33 [A]$
 Réponse correcte: a
-Explication: La réactance de la bobine est $X_L = 2\pi f \cdot L = 2\pi \cdot 50 \cdot 0,2 = 62,8$ $[Ω]$. Le courant est donc $I = \dfrac{U}{X_L} = \dfrac{230}{62,8} = 3,66$ A.
+Explication: La réactance de la bobine est $X_L = 2\pi f \cdot L = 2\pi \cdot 50 \cdot 0,2 = 62,8$ $[Ω]$. Le courant est donc $I = \dfrac{U}{X_L} = \dfrac{230}{62,8} = 3,66 [A]$.
 
 39. Qu'est-ce que la puissance réactive et quel est l'appareil qui la mesure ?
 a) La puissance dissipée sous forme de chaleur, mesurée par un wattmètre
@@ -61,30 +61,30 @@ c) $Q$ en $[var]$
 Réponse correcte: c
 Explication: La puissance réactive est représentée par la lettre $Q$ et s'exprime en voltampères réactifs $[var]$.
 
-41. Une bobine de résistance négligeable est parcourue par un courant de 0,5 A sous une tension de 230 V - 50 Hz. Calculer son inductance.
-a) 0,73 H
-b) 1,46 H
-c) 0,37 H
+41. Une bobine de résistance négligeable est parcourue par un courant de $0,5 [A]$ sous une tension de $230 [V] - 50 [Hz]$. Calculer son inductance.
+a) $0,73 [H]$
+b) $1,46 [H]$
+c) $0,37 [H]$
 Réponse correcte: a
-Explication: La réactance de la bobine est $X_L = \dfrac{U}{I} = \dfrac{230}{0,5} = 460$ $[Ω]$. L'inductance est donc $L = \dfrac{X_L}{2\pi f} = \dfrac{460}{2\pi \cdot 50} = 1,46$ H.
+Explication: La réactance de la bobine est $X_L = \dfrac{U}{I} = \dfrac{230}{0,5} = 460 [Ω]$. L'inductance est donc $L = \dfrac{X_L}{2\pi f} = \dfrac{460}{2\pi \cdot 50} = 1,46 [H]$.
 
-42. Calculer sous quelle tension il faut alimenter une bobine pure, si L = 0,5 H et que le courant ne doit pas dépasser 0,4 A, dans le cas où f = 50 Hz.
-a) 63 V
-b) 44 V
-c) 126 V
+42. Calculer sous quelle tension il faut alimenter une bobine pure, si $L = 0,5 [H]$ et que le courant ne doit pas dépasser $0,4 [A]$, dans le cas où $f = 50 [Hz]$.
+a) $63 [V]$
+b) $44 [V]$
+c) $126 [V]$
 Réponse correcte: a
-Explication: La réactance de la bobine est $X_L = 2\pi f \cdot L = 2\pi \cdot 50 \cdot 0,5 = 157$ $[Ω]$. La tension maximale est donc $U = X_L \cdot I = 157 \cdot 0,4 = 63$ V.
+Explication: La réactance de la bobine est $X_L = 2\pi f \cdot L = 2\pi \cdot 50 \cdot 0,5 = 157 [Ω]$. La tension maximale est donc $U = X_L \cdot I = 157 \cdot 0,4 = 63 [V]$.
 
 43. Qu'entend-on par récepteur purement capacitif ?
-a) Un récepteur qui ne contient que des condensateurs, sans résistance
+a) Un récepteur dont le facteur de puissance est négatif
 b) Un récepteur qui fournit de la puissance réactive
-c) Un récepteur dont le facteur de puissance est négatif
-Réponse correcte: a
+c) Un récepteur qui ne contient que des condensateurs, sans résistance
+Réponse correcte: c
 Explication: Un récepteur purement capacitif est un récepteur idéal qui ne contient que des condensateurs sans résistance. Dans la pratique, tous les récepteurs capacitifs possèdent une certaine résistance.
 
 44. Pourquoi la tension et le courant sont-ils déphasés dans un récepteur purement capacitif ?
 a) Parce que le courant varie plus lentement que la tension
-b) Parce que la tension est proportionnelle à l'intégrale du courant
-c) Parce que le courant est proportionnel à la dérivée de la tension
+b) Parce que le courant varie plus rapidement que la tension qui est bloquée par le condensateur
+c) Quand le condensateur est déchargé le courant est maximum avant la tension
 Réponse correcte: c
-Explication: Dans un condensateur, le courant est proportionnel à la dérivée de la tension ($i = C \cdot \dfrac{du}{dt}$). Cela signifie que le courant atteint son maximum quand la tension varie le plus rapidement, créant un déphasage entre les deux grandeurs.
+Explication: Au début d'une alternance positive (tension nulle mais en croissance), le condensateur est vide → courant maximal pour charger les armatures. Lorsque la tension atteint son maximum, le condensateur est saturé → courant nul. En début d'alternance négative, le condensateur se décharge violemment → courant maximal inverse.
