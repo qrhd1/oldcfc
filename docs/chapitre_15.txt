@@ -103,10 +103,10 @@ c) $K$ en $[cd/W]$
 Réponse correcte: a
 Explication: L'efficacité lumineuse est généralement représentée par la lettre grecque êta ($\eta$) et s'exprime en lumens par watt $[lm/W]$.
 
-16. Quelle est l'efficacité d'un tube fluorescent de 35 W produisant un flux lumineux de 2750 lm ?
-a) 75 lm/W
-b) 78,6 lm/W
-c) 80 lm/W
+16. Quelle est l'efficacité d'un tube fluorescent de $35 [W]$ produisant un flux lumineux de $2750 [lm]$ ?
+a) $75 [lm/W]$
+b) $78,6 [lm/W]$
+c) $80 [lm/W]$
 Réponse correcte: b
 Explication: L'efficacité lumineuse se calcule par $\eta = \dfrac{\Phi}{P} = \dfrac{2750}{35} = 78,6$ $[lm/W]$.
 
@@ -118,7 +118,7 @@ Réponse correcte: a
 Explication: Les sources lumineuses ayant les meilleures efficacités lumineuses sont les LED modernes et certaines lampes à décharge à haute pression comme les lampes à sodium haute pression, qui peuvent atteindre des efficacités de 100 à 150 lm/W ou plus.
 
 18. Pourquoi faut-il tenir compte, lors du calcul d'un éclairage, du rendement de l'éclairage ?
-a) Parce que le rendement affecte la durée de vie des lampes
+a) Parce que le rendement affecte la durée de vie des lampes et aussi la lumière change les couleurs de la peinture
 b) Parce qu'une partie du flux lumineux est perdue dans le luminaire ou n'atteint pas la zone à éclairer
 c) Parce que le rendement détermine la couleur de la lumière émise
 Réponse correcte: b
