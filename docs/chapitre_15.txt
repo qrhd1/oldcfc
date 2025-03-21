@@ -1,0 +1,160 @@
+1. Qu'est-ce que la lumière ?
+a) Une forme d'énergie électromagnétique visible par l'œil humain
+b) Des particules se déplaçant dans l'espace
+c) Un phénomène exclusivement artificiel créé par les sources lumineuses
+Réponse correcte: a
+Explication: La lumière est une forme d'énergie électromagnétique, plus précisément la partie du spectre électromagnétique visible par l'œil humain, comprise approximativement entre 380 et 780 nanomètres de longueur d'onde.
+
+2. Quel est le but principal des sources de lumière artificielles ?
+a) Créer des effets décoratifs dans les espaces intérieurs
+b) Remplacer la lumière naturelle quand celle-ci est insuffisante
+c) Économiser l'énergie électrique
+Réponse correcte: b
+Explication: Le but principal des sources de lumière artificielles est de remplacer ou de compléter la lumière naturelle (solaire) lorsque celle-ci est insuffisante ou absente, afin de permettre la vision et les activités humaines.
+
+3. Qu'est-ce que la longueur d'onde ?
+a) La distance parcourue par la lumière en une seconde
+b) La distance entre deux crêtes consécutives d'une onde
+c) L'intensité de la lumière émise par une source
+Réponse correcte: b
+Explication: La longueur d'onde est la distance entre deux points consécutifs d'une onde qui sont en phase, comme deux crêtes ou deux creux. Pour la lumière visible, elle détermine la couleur perçue.
+
+4. Quels sont les symboles de grandeur et d'unité de la longueur d'onde ?
+a) $\lambda$ en $[m]$
+b) $f$ en $[Hz]$
+c) $v$ en $[m/s]$
+Réponse correcte: a
+Explication: La longueur d'onde est représentée par la lettre grecque lambda ($\lambda$) et s'exprime en mètres $[m]$ ou plus souvent en nanomètres $[nm]$ pour la lumière visible.
+
+5. Quelle est la longueur d'onde et la couleur d'un rayon lumineux de fréquence 500·10¹² Hz émis par une lampe à vapeur de sodium ?
+a) $600 [nm]$, jaune
+b) $400 [nm]$, violet
+c) $700 [nm]$, rouge
+Réponse correcte: a
+Explication: La longueur d'onde est calculée par $\lambda = \dfrac{c}{f}$, où c est la vitesse de la lumière. Donc $\lambda = \dfrac{3 \cdot 10^8}{500 \cdot 10^{12}} = 600 \cdot 10^{-9} = 600$ $[nm]$. Cette longueur d'onde correspond à la couleur jaune, caractéristique des lampes à vapeur de sodium.
+
+6. Que représente la température de couleur et en quelle unité est-elle exprimée ?
+a) La chaleur émise par une source lumineuse, en degrés Celsius
+b) L'apparence de la couleur émise par une source, en kelvins
+c) L'efficacité énergétique d'une lampe, en watts par kelvin
+Réponse correcte: b
+Explication: La température de couleur représente l'apparence de la couleur émise par une source lumineuse, par référence à la couleur d'un corps noir chauffé à cette température. Elle s'exprime en kelvins $[K]$. Les températures basses (2700-3000K) donnent une lumière chaude (jaunâtre), les températures élevées (5000-6500K) une lumière froide (bleutée).
+
+7. Que représente l'indice de rendu des couleurs ?
+a) La capacité d'une source à restituer correctement les couleurs des objets éclairés
+b) Le nombre de couleurs différentes émises par une source lumineuse
+c) L'intensité de chaque couleur dans le spectre d'une lampe
+Réponse correcte: a
+Explication: L'indice de rendu des couleurs (IRC ou Ra) mesure la capacité d'une source lumineuse à restituer fidèlement les couleurs des objets qu'elle éclaire, par rapport à une source de référence. Il s'exprime sur une échelle de 0 à 100, 100 étant la meilleure restitution possible.
+
+8. Quelle doit être la composition du spectre de la lampe pour que celle-ci reproduise le plus fidèlement les couleurs de l'objet ?
+a) Un spectre identique à celui de l'objet éclairé
+b) Un spectre concentré uniquement sur les couleurs primaires visibles
+c) Un spectre continu couvrant toutes les longueurs d'onde visibles
+Réponse correcte: c
+Explication: Pour reproduire fidèlement les couleurs d'un objet, une lampe doit avoir un spectre lumineux continu et équilibré, couvrant toutes les longueurs d'onde visibles. Plus le spectre est complet (comme celui de la lumière du jour), meilleur sera le rendu des couleurs.
+
+9. Qu'est-ce que l'intensité lumineuse ?
+a) La quantité totale de lumière émise par une source dans une direction donnée
+b) La puissance lumineuse émise par une source dans une direction donnée
+c) La lumière reçue par une surface
+Réponse correcte: b
+Explication: L'intensité lumineuse est la puissance lumineuse émise par une source ponctuelle dans une direction donnée, par unité d'angle solide. Elle caractérise la concentration du flux lumineux dans l'espace.
+
+10. Quels sont les symboles de grandeur et d'unité de l'intensité lumineuse ?
+a) $I$ en $[cd]$
+b) $\Phi$ en $[lm]$
+c) $E$ en $[lx]$
+Réponse correcte: a
+Explication: L'intensité lumineuse est représentée par la lettre $I$ et s'exprime en candelas $[cd]$, qui est l'une des sept unités de base du Système International.
+
+11. Qu'est-ce que le flux lumineux ?
+a) La quantité totale de lumière émise par une source dans toutes les directions
+b) La vitesse à laquelle la lumière se propage
+c) La quantité de lumière reçue par une surface
+Réponse correcte: a
+Explication: Le flux lumineux est la quantité totale de lumière émise par une source dans toutes les directions de l'espace. Il mesure la puissance lumineuse totale perçue par l'œil humain.
+
+12. Quels sont les symboles de grandeur et d'unité du flux lumineux ?
+a) $\Phi$ en $[lm]$
+b) $I$ en $[cd]$
+c) $E$ en $[lx]$
+Réponse correcte: a
+Explication: Le flux lumineux est représenté par la lettre grecque phi ($\Phi$) et s'exprime en lumens $[lm]$.
+
+13. Qu'est-ce qu'une courbe photométrique ?
+a) Un graphique montrant la répartition de l'intensité lumineuse d'une source dans l'espace
+b) La variation du flux lumineux en fonction de la puissance électrique
+c) L'évolution de l'éclairement en fonction de la distance
+Réponse correcte: a
+Explication: Une courbe photométrique (ou diagramme polaire) est une représentation graphique de la distribution spatiale de l'intensité lumineuse émise par une source dans différentes directions. Elle est essentielle pour la conception d'éclairage.
+
+14. Qu'est-ce que l'efficacité lumineuse ?
+a) Le rapport entre le flux lumineux émis et la puissance électrique consommée
+b) La durée de vie d'une lampe
+c) La capacité d'une lampe à concentrer la lumière dans une direction
+Réponse correcte: a
+Explication: L'efficacité lumineuse (ou rendement lumineux) est le rapport entre le flux lumineux émis par une source et la puissance électrique qu'elle consomme. Elle mesure donc l'efficacité de conversion de l'énergie électrique en lumière visible.
+
+15. Quels sont les symboles de grandeur et d'unité de l'efficacité lumineuse ?
+a) $\eta$ en $[lm/W]$
+b) $\epsilon$ en $[W/lm]$
+c) $K$ en $[cd/W]$
+Réponse correcte: a
+Explication: L'efficacité lumineuse est généralement représentée par la lettre grecque êta ($\eta$) et s'exprime en lumens par watt $[lm/W]$.
+
+16. Quelle est l'efficacité d'un tube fluorescent de 35 W produisant un flux lumineux de 2750 lm ?
+a) 75 lm/W
+b) 78,6 lm/W
+c) 80 lm/W
+Réponse correcte: b
+Explication: L'efficacité lumineuse se calcule par $\eta = \dfrac{\Phi}{P} = \dfrac{2750}{35} = 78,6$ $[lm/W]$.
+
+17. Quelles sont les lampes possédant la meilleure efficacité lumineuse ?
+a) Les lampes LED et les lampes à décharge à haute pression
+b) Les lampes à incandescence et les lampes halogènes
+c) Les lampes fluorescentes compactes et les néons
+Réponse correcte: a
+Explication: Les sources lumineuses ayant les meilleures efficacités lumineuses sont les LED modernes et certaines lampes à décharge à haute pression comme les lampes à sodium haute pression, qui peuvent atteindre des efficacités de 100 à 150 lm/W ou plus.
+
+18. Pourquoi faut-il tenir compte, lors du calcul d'un éclairage, du rendement de l'éclairage ?
+a) Parce que le rendement affecte la durée de vie des lampes
+b) Parce qu'une partie du flux lumineux est perdue dans le luminaire ou n'atteint pas la zone à éclairer
+c) Parce que le rendement détermine la couleur de la lumière émise
+Réponse correcte: b
+Explication: Le rendement de l'éclairage tient compte du fait qu'une partie du flux lumineux émis par les lampes est absorbée par le luminaire ou n'atteint pas la zone à éclairer. Ce rendement est influencé par la conception du luminaire, la réflexion des surfaces, etc.
+
+19. Qu'est-ce que l'éclairement ?
+a) Le flux lumineux reçu par unité de surface
+b) La luminosité d'une source de lumière
+c) Le nombre de sources lumineuses dans un espace donné
+Réponse correcte: a
+Explication: L'éclairement est le flux lumineux reçu par unité de surface. Il caractérise la quantité de lumière qui tombe sur une surface et détermine donc la visibilité des objets.
+
+20. Quels sont les symboles de grandeur et d'unité de l'éclairement ?
+a) $L$ en $[cd/m^2]$
+b) $I$ en $[cd]$
+c) $E$ en $[lx]$
+Réponse correcte: c
+Explication: L'éclairement est représenté par la lettre $E$ et s'exprime en lux $[lx]$, ce qui équivaut à des lumens par mètre carré $[lm/m^2]$.
+
+21. Comment s'appelle l'appareil permettant de mesurer l'éclairement ?
+a) Un luxmètre
+b) Un photomètre
+c) Un luminancemètre
+Réponse correcte: a
+Explication: L'appareil utilisé pour mesurer l'éclairement est le luxmètre. Il est constitué d'une cellule photoélectrique qui convertit la lumière reçue en un signal électrique proportionnel à l'éclairement.
+
+22. De quelle façon diminue l'intensité lumineuse en fonction de la distance ?
+a) Proportionnellement à la distance
+b) Proportionnellement au carré de la distance
+c) Proportionnellement au cube de la distance
+Réponse correcte: b
+Explication: Selon la loi de l'inverse du carré de la distance, l'intensité lumineuse (ou l'éclairement) diminue proportionnellement au carré de la distance à la source. Si la distance double, l'éclairement est divisé par quatre.
+
+23. Qu'est-ce que la luminance ?
+a) L'intensité lumineuse par unité de surface apparente
+b) Le flux lumineux total émis par une source
+c) L'éclairement d'une surface par plusieurs sources
+Réponse correcte: a
+Explication: La luminance est l'intensité lumineuse émise ou réfléchie par unité de surface apparente dans une direction donnée. Elle caractérise la "brillance" perçue d'une surface telle qu'elle est vue par l'œil.
