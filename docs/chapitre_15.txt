@@ -26,7 +26,7 @@ c) $v$ en $[m/s]$
 Réponse correcte: a
 Explication: La longueur d'onde est représentée par la lettre grecque lambda ($\lambda$) et s'exprime en mètres $[m]$ ou plus souvent en nanomètres $[nm]$ pour la lumière visible.
 
-5. Quelle est la longueur d'onde et la couleur d'un rayon lumineux de fréquence 500·10¹² Hz émis par une lampe à vapeur de sodium ?
+5. Quelle est la longueur d'onde et la couleur d'un rayon lumineux de fréquence $500·10^{12} [Hz]$ émis par une lampe à vapeur de sodium ?
 a) $600 [nm]$, jaune
 b) $400 [nm]$, violet
 c) $700 [nm]$, rouge
