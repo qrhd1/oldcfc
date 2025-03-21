@@ -115,7 +115,7 @@ a) Les lampes LED et les lampes à décharge à haute pression
 b) Les lampes à incandescence et les lampes halogènes
 c) Les lampes fluorescentes compactes et les néons
 Réponse correcte: a
-Explication: Les sources lumineuses ayant les meilleures efficacités lumineuses sont les LED modernes et certaines lampes à décharge à haute pression comme les lampes à sodium haute pression, qui peuvent atteindre des efficacités de 100 à 150 lm/W ou plus.
+Explication: Les sources lumineuses ayant les meilleures efficacités lumineuses sont les LED modernes et certaines lampes à décharge à haute pression comme les lampes à sodium haute pression, qui peuvent atteindre des efficacités de $100 [lm/W]$ à $150 [lm/W]$ ou plus.
 
 18. Pourquoi faut-il tenir compte, lors du calcul d'un éclairage, du rendement de l'éclairage ?
 a) Parce que le rendement affecte la durée de vie des lampes et aussi la lumière change les couleurs de la peinture
