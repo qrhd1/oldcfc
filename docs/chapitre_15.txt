@@ -97,9 +97,9 @@ Réponse correcte: a
 Explication: L'efficacité lumineuse (ou rendement lumineux) est le rapport entre le flux lumineux émis par une source et la puissance électrique qu'elle consomme. Elle mesure donc l'efficacité de conversion de l'énergie électrique en lumière visible.
 
 15. Quels sont les symboles de grandeur et d'unité de l'efficacité lumineuse ?
-a) $\eta$ en $[lm/W]$
+a) $K$ en $[lm/W]$
 b) $\epsilon$ en $[W/lm]$
-c) $K$ en $[cd/W]$
+c) $\eta$ en $[cd/W]$
 Réponse correcte: a
 Explication: L'efficacité lumineuse est généralement représentée par la lettre grecque êta ($\eta$) et s'exprime en lumens par watt $[lm/W]$.
 
