@@ -1,0 +1,146 @@
+1. Pourquoi le circuit magnétique des transformateurs est-il fermé, en fer et feuilleté ?
+a) Pour limiter les pertes par courants de Foucault et maximiser le flux magnétique
+b) Pour augmenter la résistance électrique du circuit magnétique
+c) Pour faciliter le refroidissement du transformateur
+Réponse correcte: a
+Explication: Le circuit magnétique est fermé pour canaliser le flux magnétique, en fer pour sa perméabilité élevée qui favorise la circulation du flux, et feuilleté pour limiter les courants de Foucault qui créeraient des pertes supplémentaires.
+
+2. Un transformateur monophasé possède deux bobinages de 225 et 25 spires, placés sur un circuit magnétique dont la section vaut 45 $[cm^2]$. L'induction maximale dans ce circuit est de 1 $[T]$. Déterminer la FEM induite dans le bobinage de 225 spires si la fréquence est de 50 $[Hz]$.
+a) 507 $[V]$
+b) 252 $[V]$
+c) 405 $[V]$
+Réponse correcte: a
+Explication: La FEM induite se calcule par la loi de Faraday : $E = 4,44 \cdot f \cdot N \cdot B_{max} \cdot S = 4,44 \cdot 50 \cdot 225 \cdot 1 \cdot 45 \cdot 10^{-4} = 507$ $[V]$.
+
+3. Une bobine est placée sur un circuit magnétique dont la section vaut 15 $[cm^2]$. On désire pouvoir alimenter cette bobine sous 230 $[V]$ - 50 $[Hz]$. Combien de spires cette bobine doit-elle avoir si l'induction maximale dans le circuit ne doit pas dépasser 1,2 $[T]$ ?
+a) 285 spires
+b) 575 spires
+c) 230 spires
+Réponse correcte: a
+Explication: On admet que $E = U = 230$ $[V]$. On isole $N$ dans la formule de la FEM induite : $N = \dfrac{E}{4,44 \cdot f \cdot B_{max} \cdot S} = \dfrac{230}{4,44 \cdot 50 \cdot 1,2 \cdot 15 \cdot 10^{-4}} = 285$ spires.
+
+4. Un transformateur monophasé de 3 $[kVA]$ est alimenté sous 400 $[V]$ - 50 $[Hz]$. Le secondaire comporte 315 spires et produit une tension de 230 $[V]$. Calculer le nombre de spires du primaire.
+a) 547 spires
+b) 432 spires
+c) 630 spires
+Réponse correcte: a
+Explication: Le rapport de transformation est égal au rapport des tensions et au rapport des nombres de spires : $\dfrac{N_1}{N_2} = \dfrac{U_1}{U_2}$, donc $N_1 = N_2 \cdot \dfrac{U_1}{U_2} = 315 \cdot \dfrac{400}{230} = 547$ spires.
+
+5. Pourquoi peut-on dire que les pertes fer d'un transformateur sont en général constantes ?
+a) Parce qu'elles ne dépendent que de l'induction dans le circuit magnétique
+b) Parce qu'elles ne dépendent que de la tension d'alimentation et de la fréquence
+c) Parce qu'elles ne dépendent que de la température du circuit magnétique
+Réponse correcte: b
+Explication: Les pertes fer (pertes par hystérésis et par courants de Foucault) ne dépendent que de la tension d'alimentation et de la fréquence, qui sont généralement constantes lors du fonctionnement normal d'un transformateur.
+
+6. Au moyen de quel essai peut-on mesurer les pertes fer ?
+a) Essai en court-circuit
+b) Essai à vide
+c) Essai en charge nominale
+Réponse correcte: b
+Explication: L'essai à vide (secondaire ouvert) permet de mesurer les pertes fer car dans ces conditions, le transformateur ne consomme pratiquement que la puissance nécessaire pour magnétiser le circuit et compenser les pertes fer.
+
+7. Pourquoi les pertes fer sont-elles négligeables dans l'essai en court-circuit ?
+a) Parce que la tension appliquée est très faible
+b) Parce que la charge secondaire est nulle
+c) Parce que le courant primaire est nominal
+Réponse correcte: a
+Explication: Dans l'essai en court-circuit, on applique une tension réduite au primaire (généralement 5-10% de la tension nominale) pour obtenir le courant nominal. Cette tension réduite entraîne une induction magnétique très faible, rendant les pertes fer négligeables.
+
+8. Pourquoi le rendement d'un transformateur est-il si élevé ?
+a) Parce qu'il n'y a pas de pièces en mouvement
+b) Parce que les pertes sont très faibles par rapport à la puissance transmise
+c) Parce que la transformation se fait à haute tension
+Réponse correcte: b
+Explication: Le rendement d'un transformateur est élevé car les seules pertes sont les pertes fer (relativement constantes) et les pertes Joule (proportionnelles au carré du courant), qui sont faibles par rapport à la puissance transmise.
+
+9. Pourquoi la plaque signalétique des transformateurs indique-t-elle la puissance apparente $S$ et non la puissance active $P$ de l'appareil ?
+a) Parce que la puissance active dépend du facteur de puissance de la charge
+b) Parce que les transformateurs sont dimensionnés pour le courant qu'ils peuvent supporter
+c) Parce que la puissance apparente est toujours supérieure à la puissance active
+Réponse correcte: b
+Explication: La puissance apparente est indiquée car elle est proportionnelle au courant, et ce sont les échauffements dus au courant qui déterminent les limites thermiques du transformateur, indépendamment du facteur de puissance de la charge.
+
+10. Un transformateur 230 $[V]$ / 35 $[V]$ dont le rendement est de 0,85 débite une puissance maximum de 350 $[W]$ au secondaire dans un récepteur dont le facteur de puissance vaut 0,65. Calculer le diamètre du fil utilisé pour le bobinage primaire sachant que la densité de courant admissible est de 2,5 $[A/mm^2]$.
+a) 1,2 $[mm]$
+b) 0,85 $[mm]$
+c) 0,6 $[mm]$
+Réponse correcte: a
+Explication: La puissance apparente au secondaire est $S_2 = \dfrac{P_2}{\cos\varphi_2} = \dfrac{350}{0,65} = 538$ $[VA]$. Le courant primaire est $I_1 = \dfrac{S_2 \cdot \eta}{U_1} = \dfrac{538 \cdot 0,85}{230} = 2$ $[A]$. La section du fil est $S = \dfrac{I_1}{d} = \dfrac{2}{2,5} = 0,8$ $[mm^2]$. Le diamètre est $D = 2\sqrt{\dfrac{S}{\pi}} = 2\sqrt{\dfrac{0,8}{\pi}} = 1,2$ $[mm]$.
+
+11. Un transformateur 230 $[V]$ / 45 $[V]$ de 1250 $[VA]$ débite sa puissance maximum au secondaire dans un récepteur dont le facteur de puissance vaut 0,7. Les pertes magnétiques (constantes) valent 35 $[W]$. La résistance du bobinage primaire est de 1,5 $[Ω]$, celle du bobinage secondaire de 0,12 $[Ω]$. Calculer le rendement du transformateur dans ce cas de charge.
+a) 0,95
+b) 0,92
+c) 0,88
+Réponse correcte: b
+Explication: La puissance active au secondaire est $P_2 = S_2 \cdot \cos\varphi_2 = 1250 \cdot 0,7 = 875$ $[W]$. Le courant secondaire est $I_2 = \dfrac{S_2}{U_2} = \dfrac{1250}{45} = 27,8$ $[A]$. Le courant primaire est $I_1 = \dfrac{S_2}{U_1} = \dfrac{1250}{230} = 5,4$ $[A]$. Les pertes Joule sont $P_j = R_1 \cdot I_1^2 + R_2 \cdot I_2^2 = 1,5 \cdot 5,4^2 + 0,12 \cdot 27,8^2 = 43,7 + 92,8 = 136,5$ $[W]$. Les pertes totales sont $P_{pertes} = P_{fer} + P_j = 35 + 136,5 = 171,5$ $[W]$. Le rendement est $\eta = \dfrac{P_2}{P_2 + P_{pertes}} = \dfrac{875}{875 + 171,5} = 0,92$.
+
+12. Quels sont les avantages de l'autotransformateur ?
+a) Économie de cuivre, meilleur rendement, et faibles chutes de tension
+b) Meilleure isolation entre primaire et secondaire
+c) Plus grande plage de réglage de la tension secondaire
+Réponse correcte: a
+Explication: L'autotransformateur, ayant un enroulement commun au primaire et au secondaire, nécessite moins de cuivre, a un meilleur rendement grâce à des pertes Joule réduites, et présente de faibles chutes de tension dues à sa structure.
+
+13. Dans quels domaines l'utilisation de l'autotransformateur n'est-elle pas autorisée ?
+a) Dans les applications nécessitant une isolation galvanique
+b) Dans les applications à haute tension
+c) Dans les applications à forte puissance
+Réponse correcte: a
+Explication: L'autotransformateur n'est pas autorisé dans les applications nécessitant une isolation galvanique entre primaire et secondaire, comme les transformateurs de sécurité pour l'alimentation des circuits TBTS (Très Basse Tension de Sécurité).
+
+14. Un autotransformateur est prévu pour les tensions suivantes : primaire 230 $[V]$ ; secondaire à 2 sorties, 45 $[V]$ ou 115 $[V]$. Le bobinage secondaire est prévu pour une intensité maximale de 5 $[A]$. Calculer la puissance apparente pour la sortie 45 $[V]$.
+a) 225 $[VA]$
+b) 575 $[VA]$
+c) 1150 $[VA]$
+Réponse correcte: a
+Explication: Pour un autotransformateur utilisé en abaisseur, la puissance apparente est $S = U_2 \cdot I_2 = 45 \cdot 5 = 225$ $[VA]$.
+
+15. Quelle propriété particulière cherche-t-on à obtenir dans un transformateur à fuites magnétiques ?
+a) Une réactance de fuite élevée pour limiter le courant de court-circuit
+b) Une meilleure régulation de tension
+c) Un meilleur rendement énergétique
+Réponse correcte: a
+Explication: Dans un transformateur à fuites magnétiques, on cherche volontairement à obtenir une réactance de fuite élevée pour limiter le courant de court-circuit et obtenir des caractéristiques de sortie particulières, comme une impédance de sortie élevée.
+
+16. Citer trois utilisations des transformateurs à fuites magnétiques.
+a) Soudage à l'arc, alimentation de lampes à décharge, limitation de courant
+b) Distribution d'électricité, éclairage domestique, chauffage
+c) Mesure de tension, mesure de courant, protection différentielle
+Réponse correcte: a
+Explication: Les transformateurs à fuites magnétiques sont utilisés principalement pour le soudage à l'arc (où la caractéristique tombante est recherchée), l'alimentation des lampes à décharge (pour stabiliser le courant), et comme limiteurs de courant dans certaines applications industrielles.
+
+17. Dans quel cas utilise-t-on un TI ?
+a) Pour mesurer les courants élevés
+b) Pour abaisser la tension dans les installations domestiques
+c) Pour améliorer le facteur de puissance
+Réponse correcte: a
+Explication: Un transformateur d'intensité (TI) est utilisé pour mesurer les courants élevés en toute sécurité. Il permet d'obtenir au secondaire un courant proportionnel au courant primaire mais beaucoup plus faible, compatible avec les appareils de mesure.
+
+18. Quelle précaution doit-on prendre lors de l'utilisation d'un TI ?
+a) Ne jamais ouvrir le circuit secondaire quand le primaire est sous tension
+b) Ne jamais mettre le primaire en court-circuit
+c) Toujours connecter une résistance au secondaire
+Réponse correcte: a
+Explication: Il ne faut jamais ouvrir le circuit secondaire d'un TI quand le primaire est parcouru par un courant, car cela provoquerait l'apparition de tensions très élevées au secondaire pouvant être dangereuses et endommager l'isolation.
+
+19. Pour quelle intensité normalisée le bobinage secondaire des TI est-il dimensionné ?
+a) 5 $[A]$ ou 1 $[A]$
+b) 10 $[A]$ ou 20 $[A]$
+c) 0,5 $[A]$ ou 0,1 $[A]$
+Réponse correcte: a
+Explication: Le bobinage secondaire des transformateurs d'intensité (TI) est habituellement dimensionné pour les intensités normalisées de 5 $[A]$ ou 1 $[A]$, qui sont compatibles avec les appareils de mesure et de protection standards.
+
+20. Pour quelle tension normalisée le bobinage secondaire des TP est-il dimensionné ?
+a) 100 $[V]$ ou 110 $[V]$
+b) 230 $[V]$ ou 400 $[V]$
+c) 24 $[V]$ ou 48 $[V]$
+Réponse correcte: a
+Explication: Le bobinage secondaire des transformateurs de potentiel (TP) est généralement dimensionné pour les tensions normalisées de 100 $[V]$ ou 110 $[V]$, compatibles avec les appareils de mesure standards.
+
+21. Un transformateur triphasé de 120 $[kVA]$ possède les caractéristiques suivantes : primaire 6 $[kV]$ entre phases, 3 bobines de 2500 spires, couplées en étoile ; secondaire avec 3 bobines de 250 spires, couplées en triangle. Calculer la tension réseau au secondaire.
+a) 600 $[V]$
+b) 346 $[V]$
+c) 400 $[V]$
+Réponse correcte: a
+Explication: Dans un transformateur Y/D, le rapport de transformation entre tensions composées est $m = \dfrac{U_1}{U_2} = \dfrac{N_1}{N_2} \cdot \dfrac{1}{\sqrt{3}}$. Donc $U_2 = \dfrac{U_1 \cdot N_2 \cdot \sqrt{3}}{N_1} = \dfrac{6000 \cdot 250 \cdot \sqrt{3}}{2500} = 600$ $[V]$.
