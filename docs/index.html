@@ -90,6 +90,19 @@
             100% { border-color: orange; }
         }
         
+        .novelty-item {
+            border: 2px solid #e72696 !important;
+            animation: pulse-glow 2s infinite;
+            background-color: #fff0f5 !important;
+            justify-content: center; /* Centrage vertical du contenu */
+        }
+
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 0 0 rgba(231, 38, 150, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(231, 38, 150, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(231, 38, 150, 0); }
+        }
+
         .button-container {
             display: flex;
             align-items: center;
@@ -201,6 +214,22 @@
             const container = document.createElement('div');
             container.className = 'file-item';
 
+            // Gestion de l'élément spécial "Nouveauté" (Lien externe Flashcards)
+            const noveltyFile = files.find(f => f.isNovelty);
+            if (noveltyFile) {
+                container.classList.add('novelty-item');
+                container.style.minHeight = '70px'; // Assure une hauteur suffisante pour 2 lignes
+                const link = document.createElement('a');
+                link.href = noveltyFile.download_url;
+                link.target = '_blank';
+                link.className = 'file-name';
+                link.style.fontWeight = 'bold';
+                link.style.lineHeight = '1.4'; // Améliore la lisibilité sur deux lignes
+                link.innerHTML = " NOUVEAUTÉ 2026 <br>EXERCICES de révision PQ";
+                container.appendChild(link);
+                return container;
+            }
+
             // Trouver le fichier "donnee"
             const donneeFile = files.find(f => f.name.toLowerCase().includes('donnee'));
             const corrigeFile = files.find(f => f.name.toLowerCase().includes('corrige'));
@@ -259,6 +288,18 @@
         async function main() {
             const files = await fetchFiles();
             const groupedFiles = groupFiles(files);
+
+            // Injection de la nouveauté 2026 pour chaque catégorie de métier
+            const professions = ['elm', 'iel', 'pele', 'tlm'];
+            professions.forEach(prof => {
+                if (!groupedFiles[prof]['2026']) groupedFiles[prof]['2026'] = [];
+                groupedFiles[prof]['2026'].push({
+                    name: '2026 NOUVEAUX EXERCICES PQ',
+                    download_url: 'https://cfctselec.github.io/',
+                    isNovelty: true
+                });
+            });
+
             displayGroupedFiles(groupedFiles);
         }
 
