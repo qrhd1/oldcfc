@@ -112,7 +112,7 @@
 </head>
 <body>
     <div class="section-header">
-        <h1>Fichiers PDF CFC (2026.01.11)</h1>
+        <h1>Fichiers PDF CFC (<span id="auto-date"></span>)</h1>
         <button class="success-button home" onclick="window.open('https://cfctselec.github.io/cfcflashcards/', '_blank');">D'autres façons de réviser votre CFC</button>
     </div>
 
@@ -286,6 +286,13 @@
         }
 
         async function main() {
+            // Mise à jour automatique de la date (format AAAA.MM.JJ)
+            const now = new Date();
+            const yyyy = now.getFullYear();
+            const mm = String(now.getMonth() + 1).padStart(2, '0');
+            const dd = String(now.getDate()).padStart(2, '0');
+            document.getElementById('auto-date').textContent = `${yyyy}.${mm}.${dd}`;
+
             const files = await fetchFiles();
             const groupedFiles = groupFiles(files);
 
